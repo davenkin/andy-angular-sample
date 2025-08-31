@@ -1,5 +1,6 @@
 import {ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChangeDetection} from '@angular/core';
 import {provideRouter} from '@angular/router';
+import Material from '@primeuix/themes/material';
 
 import {routes} from './app.routes';
 import {all} from "primelocale";
@@ -12,6 +13,9 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     providePrimeNG({
       translation: all.zh_CN,
+      theme: {
+        preset: Material
+      }
     })
   ]
 };
