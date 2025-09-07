@@ -28,7 +28,7 @@
     "@angular/forms": "^20.2.0",
     "@angular/platform-browser": "^20.2.0",
     "@angular/router": "^20.2.0",
-    "@davenkin/angular-library-sample": "^0.0.5",
+    "@davenkin/angular-library-sample": "^0.0.6",
     "@primeuix/themes": "^1.2.3",
     "primeicons": "^7.0.0",
     "primelocale": "^2.1.7",
@@ -38,8 +38,8 @@
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
-    "@angular/build": "^20.2.1",
-    "@angular/cli": "^20.2.1",
+    "@angular/build": "^20.2.2",
+    "@angular/cli": "^20.2.2",
     "@angular/compiler-cli": "^20.2.0",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.9.0",
