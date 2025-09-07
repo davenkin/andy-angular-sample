@@ -5,10 +5,11 @@ import {FormsModule} from '@angular/forms';
 import {IconField} from 'primeng/iconfield';
 import {InputIcon} from 'primeng/inputicon';
 import {InputText} from 'primeng/inputtext';
+import {HelloWorld} from '@davenkin/angular-library-sample';
 
 @Component({
   selector: 'app-root',
-  imports: [Button, FormsModule, DatePicker, IconField, InputIcon, InputText],
+  imports: [Button, FormsModule, DatePicker, IconField, InputIcon, InputText, HelloWorld],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
