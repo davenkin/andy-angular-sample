@@ -1,23 +1,20 @@
-import {Component, signal} from '@angular/core';
-import {Button} from 'primeng/button';
-import {DatePicker} from 'primeng/datepicker';
+import {Component} from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {IconField} from 'primeng/iconfield';
-import {InputIcon} from 'primeng/inputicon';
-import {InputText} from 'primeng/inputtext';
 import {HelloWorld} from '@davenkin/angular-library-sample';
+import {Button} from 'primeng/button';
+import Keycloak from 'keycloak-js';
 
 @Component({
   selector: 'app-root',
-  imports: [Button, FormsModule, DatePicker, IconField, InputIcon, InputText, HelloWorld],
+  imports: [FormsModule, HelloWorld, Button],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('andy-angular-sample');
-  date: Array<Date | null> = [];
+  constructor(private keycloak: Keycloak) {
+  }
 
-  ha() {
-    console.info('hello');
+  check() {
+    console.info(this.keycloak.isTokenExpired());
   }
 }

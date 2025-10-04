@@ -2,24 +2,6 @@
   <div class="another-hello-world">This is another hello world.</div>
 </hello-world>
 
-<p-button label="Check"/>
-
-<p-datepicker [(ngModel)]="date"
-              [showButtonBar]="true"
-              [showTime]="true"
-              selectionMode="range"/>
-
-{{ date }}
-<div>
-  <p-iconfield style="display: inline-block">
-    <input type="text" pInputText placeholder="Search"/>
-    <p-inputicon (click)="ha()" class="pi pi-search"/>
-  </p-iconfield>
-</div>
-
-<p-iconfield iconPosition="right">
-  <input type="text" pInputText/>
-  <p-inputicon class="pi pi-spinner pi-spin"/>
-</p-iconfield>
+<p-button label="Check" (onClick)="check()"/>
 
 
