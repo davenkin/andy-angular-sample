@@ -25,6 +25,5 @@ export const routes: Routes = [
         component: PublicComponent2
       }
     ]
-
   }
 ];
