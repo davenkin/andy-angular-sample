@@ -1,3 +1,26 @@
+todo:
+- 目录结构
+- keycloak引入，以及interceptor添加access token和updatetoken()
+- 统一处理401，403，404和500错误，不统一处理409业务错误
+- 路由时，console下再分2级路由，全空白的一个，有主菜单的一个，其下再分三级路由；public下默认再分一下，只是全部空白的子页面
+- 后端api的数据模型跟着后端api走，模型本身不要和任何组件产生耦合
+- 统一分页查询结构
+- 对于console页面，需要获取当前用户信息，其实也可以在onAuthSuccess时获取，比如基本信息和ui权限信息，CurrentUser
+- 统一几种重要颜色，几种字体颜色，常规字体颜色，强调字体颜色，placeholder字体颜色
+- 统一一些边距尺寸等
+- css名称全部用中划线，css变量也全部用中划线
+- 统一loading icon，调用api时传入参数 
+- 使用css reset，并通过@layer将其变成最低优先级
+- 统一console页面的整体页面结构
+- 多语言
+- 枚举类型全部用ts的enum
+- 全部使用standalone的组件
+- 使用@for和@if等
+- 使用takeuntildestroy()
+- 状态管理优先使用BehaviourSubject
+- 启用environment
+
+
 ## Introduction
 
 This is a sample Angular project with the following features:
@@ -34,13 +57,6 @@ To execute unit tests with the [Karma](https://karma-runner.github.io) test runn
 ```
 npm test
 ```
-
-## Integrations
-
-| Integration point                  | Purpose                                                                          | Mechanism |
-|------------------------------------|----------------------------------------------------------------------------------|-----------|
-| deviceet-device-management-service | This is the main backend API providing functionalities on device management etc. | HTTP      |
-| Keycloak                           | User authentication(login)                                                       | HTTP      |
 
 ## Architecture Decision Records (ADRs)
 
