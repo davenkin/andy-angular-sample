@@ -6,10 +6,10 @@ import {Router, RouterOutlet} from '@angular/router';
 @Component({
   selector: 'app-root',
   imports: [FormsModule, Button, RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.scss'
+  templateUrl: './root.component.html',
+  styleUrl: './root.component.scss'
 })
-export class App {
+export class RootComponent {
 
   constructor(private router: Router) {
   }

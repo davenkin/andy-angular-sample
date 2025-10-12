@@ -1,7 +1,7 @@
 import {Routes} from '@angular/router';
-import {Hello} from '../hello/hello';
-import {PublicComponent} from '../public-component/public-component';
-import {PublicComponent2} from '../public-component2/public-component2';
+import {Hello} from 'hello/hello';
+import {PublicComponent} from 'public-component/public-component';
+import {PublicComponent2} from 'public-component2/public-component2';
 
 export const routes: Routes = [
   {
