@@ -10,10 +10,10 @@ export function responseErrorInterceptor(req: HttpRequest<unknown>, next: HttpHa
       keycloak.login();
     }
     if (error.status === 403) {
-      //todo: toast message
+      //todo: impl
     }
     if (error.status === 500) {
-      //todo: toast message
+      //todo: impl
     }
     return throwError(() => error);
   }));
