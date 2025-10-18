@@ -3,7 +3,7 @@ import {catchError, Observable, throwError} from 'rxjs';
 import {inject} from '@angular/core';
 import Keycloak from 'keycloak-js';
 
-export function responseErrorInterceptor(req: HttpRequest<unknown>, next: HttpHandlerFn): Observable<HttpEvent<unknown>> {
+export function apiResponseErrorInterceptor(req: HttpRequest<unknown>, next: HttpHandlerFn): Observable<HttpEvent<unknown>> {
   let keycloak = inject(Keycloak);
   return next(req).pipe(catchError((error: HttpErrorResponse) => {
     if (error.status === 401) {
