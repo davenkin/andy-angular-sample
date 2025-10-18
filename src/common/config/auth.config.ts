@@ -20,8 +20,7 @@ export function provideKeycloak(): EnvironmentProviders {
     provideAppInitializer(async () => {
       try {
         return await inject(Keycloak).init({
-          onLoad: 'check-sso',
-          silentCheckSsoRedirectUri: `${location.origin}/silent-check-sso.html`
+          checkLoginIframe: false,
         });
       } catch (error) {
         console.error('Error while initialize keycloak.', error);
@@ -33,7 +32,7 @@ export function provideKeycloak(): EnvironmentProviders {
       let keycloak = inject(Keycloak);
       router.events.pipe(takeUntilDestroyed()).subscribe(event => {
         if (event instanceof GuardsCheckStart) {
-          if (!event.url.startsWith('/public') && !keycloak.authenticated) {
+          if (!event.url.startsWith('/public') && event.url !== '/' && !keycloak.authenticated) {
             keycloak.login({redirectUri: window.location.origin + event.url});
           }
         }

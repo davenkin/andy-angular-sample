@@ -1,0 +1,18 @@
+// This file includes global styles, such as css variables and other global css settings
+
+@layer global {
+  // Global CSS variables
+  :root {
+    --primary-color: var(--p-primary-color);
+    --14px: calc(14rem / 16);
+  }
+
+  // Global CSS styles
+  :root {
+    font-size: 100%;
+  }
+
+  body {
+    font-size: var(--14px);
+  }
+}

@@ -18,8 +18,14 @@ export const applicationConfig: ApplicationConfig = {
     providePrimeNG({
       translation: all.zh_CN,
       theme: {
-        preset: Lara
-      }
+        preset: Lara,
+        options: {
+          cssLayer: {
+            name: 'primeng',
+            order: 'reset, global, primeng, utility'
+          }
+        }
+      },
     }),
     provideKeycloak(),
     provideHttpClient(withInterceptors([includeBearerTokenInterceptor, apiResponseErrorInterceptor])),
