@@ -5,8 +5,9 @@ import {routes} from './routes.config';
 import {all} from "primelocale";
 import {providePrimeNG} from 'primeng/config';
 import {provideAnimationsAsync} from '@angular/platform-browser/animations/async';
-import {includeBearerTokenInterceptor, provideKeycloak, responseErrorInterceptor} from 'common/config/auth.config';
+import {includeBearerTokenInterceptor, provideKeycloak} from 'common/config/auth.config';
 import {provideHttpClient, withInterceptors} from '@angular/common/http';
+import {responseErrorInterceptor} from './error.config';
 
 export const applicationConfig: ApplicationConfig = {
   providers: [

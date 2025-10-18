@@ -1,5 +1,5 @@
-import {HttpErrorResponse, HttpEvent, HttpHandlerFn, HttpRequest} from '@angular/common/http';
-import {catchError, from, mergeMap, Observable, throwError} from 'rxjs';
+import {HttpEvent, HttpHandlerFn, HttpRequest} from '@angular/common/http';
+import {from, mergeMap, Observable} from 'rxjs';
 import {EnvironmentProviders, inject, makeEnvironmentProviders, provideAppInitializer} from '@angular/core';
 import Keycloak from 'keycloak-js';
 import {GuardsCheckStart, Router} from '@angular/router';
@@ -33,7 +33,7 @@ export function provideKeycloak(): EnvironmentProviders {
       let keycloak = inject(Keycloak);
       router.events.pipe(takeUntilDestroyed()).subscribe(event => {
         if (event instanceof GuardsCheckStart) {
-          if (!event.url.startsWith('/public') && (!keycloak.authenticated || keycloak.isTokenExpired())) {
+          if (!event.url.startsWith('/public') && !keycloak.authenticated) {
             keycloak.login({redirectUri: window.location.origin + event.url});
           }
         }
@@ -44,14 +44,16 @@ export function provideKeycloak(): EnvironmentProviders {
 
 type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'OPTIONS' | 'HEAD' | 'PATCH';
 
+// either urlPattern or urlIncluded matches
 interface UrlCondition {
-  urlPattern: RegExp;
+  urlPattern?: RegExp;
+  urlIncluded?: string;
   httpMethods?: HttpMethod[]
 }
 
 function canMatch(req: HttpRequest<unknown>, condition: UrlCondition) {
-  let patternMatched = condition.urlPattern.test(req.url);
-  if (!patternMatched) {
+  let urlMatched = condition.urlPattern?.test(req.url) || (condition.urlIncluded ? req.url.includes(condition.urlIncluded) : false);
+  if (!urlMatched) {
     return false;
   }
 
@@ -77,20 +79,4 @@ export function includeBearerTokenInterceptor(req: HttpRequest<unknown>, next: H
     }
     return next(req);
   }))
-}
-
-export function responseErrorInterceptor(req: HttpRequest<unknown>, next: HttpHandlerFn): Observable<HttpEvent<unknown>> {
-  let keycloak = inject(Keycloak);
-  return next(req).pipe(catchError((error: HttpErrorResponse) => {
-    if (error.status === 401) {
-      keycloak.login();
-    }
-    if (error.status === 403) {
-      //todo: toast message
-    }
-    if (error.status === 500) {
-      //todo: toast message
-    }
-    return throwError(() => error);
-  }));
 }
