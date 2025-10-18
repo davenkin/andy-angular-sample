@@ -5,7 +5,7 @@ import Keycloak from 'keycloak-js';
 import {GuardsCheckStart, Router} from '@angular/router';
 import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
 
-const BEARER_TOKEN_EXCLUDED_URLS: UrlCondition[] = [];
+const AUTH_EXCLUDED_URLS: UrlCondition[] = [];
 
 export function provideKeycloak(): EnvironmentProviders {
   return makeEnvironmentProviders([
@@ -61,7 +61,7 @@ function canMatch(req: HttpRequest<unknown>, condition: UrlCondition) {
 }
 
 export function includeBearerTokenInterceptor(req: HttpRequest<unknown>, next: HttpHandlerFn): Observable<HttpEvent<unknown>> {
-  let shouldExclude = BEARER_TOKEN_EXCLUDED_URLS.some(it => canMatch(req, it));
+  let shouldExclude = AUTH_EXCLUDED_URLS.some(it => canMatch(req, it));
   if (shouldExclude) {
     return next(req);
   }
