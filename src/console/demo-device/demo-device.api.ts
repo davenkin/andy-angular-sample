@@ -1,7 +1,7 @@
-import {PagedQuery} from 'common/utils/pagination.utils';
+import {PageQuery} from 'common/utils/pagination.utils';
 import {CpuArchitecture, OsType} from 'common/model/common.model';
 
-export interface DemoDevicePagedQuery extends PagedQuery {
+export interface PageDemoDevicesQuery extends PageQuery {
   osType?: OsType;
   cpuArchitecture?: CpuArchitecture;
 }

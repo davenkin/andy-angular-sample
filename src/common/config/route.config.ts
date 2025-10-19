@@ -2,6 +2,7 @@ import {Routes} from '@angular/router';
 import {DemoHomePageComponent} from 'public/demo-home-page/demo-home-page.component';
 import {DesignSystemPageComponent} from 'public/design-system/design-system-page.component';
 import {DemoDeviceListPageComponent} from 'console/demo-device/list-page/demo-device-list-page.component';
+import {ConsolePageLayoutComponent} from 'common/component/console-page-layout/console-page-layout.component';
 
 export const routes: Routes = [
   {
@@ -10,8 +11,19 @@ export const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'demo-devices',
-    component: DemoDeviceListPageComponent
+    path: 'console',
+    component: ConsolePageLayoutComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'demo-devices',
+        pathMatch: 'full'
+      },
+      {
+        path: 'demo-devices',
+        component: DemoDeviceListPageComponent
+      },
+    ]
   },
   {
     path: 'public',

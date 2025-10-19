@@ -1,4 +1,4 @@
-export interface PagedQuery {
+export interface PageQuery {
   pageNumber: number;
   pageSize: number;
   pageSort?: string[];
