@@ -1,0 +1,31 @@
+// This file includes global styles, such as css variables and other global css settings
+
+@layer global {
+  // Global CSS variables
+  :root {
+    --primary-color: var(--p-primary-color);
+    --default-font-size: 16; // browsers often set the default font size to 16
+    --1px: calc(1rem / var(--default-font-size));
+    --2px: calc(2rem / var(--default-font-size));
+    --3px: calc(3rem / var(--default-font-size));
+    --4px: calc(4rem / var(--default-font-size));
+    --5px: calc(5rem / var(--default-font-size));
+    --14px: calc(14rem / var(--default-font-size));
+  }
+
+  // Global color variables
+  :root {
+    --emerald-50: #ecfdf5;
+    --blue-600: #2563eb;
+  }
+
+  // Global CSS styles
+  :root {
+    font-size: 100%;
+    font-family: 'Arial', 'Helvetica', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', 'WenQuanYi Micro Hei', 'STXihei', '华文细黑', 'Georgia', 'Times New Roman', 'sans-serif';
+  }
+
+  body {
+    font-size: var(--14px);
+  }
+}

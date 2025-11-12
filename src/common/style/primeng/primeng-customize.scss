@@ -1,0 +1,11 @@
+// This file does NOT customize PrimeNG's own selectors, but contains your own custom selectors that works closely with PrimeNG's components
+// Selector naming convention: cp-xxx, the prefix 'cp' means 'Customize PrimeNG'
+// In order avoid conflict, please use cp-xxx selector along with PrimeNG's selectors to target the elements precisely
+
+p-button.cp-text-only-button {
+  button {
+    span {
+      font-weight: normal;
+    }
+  }
+}

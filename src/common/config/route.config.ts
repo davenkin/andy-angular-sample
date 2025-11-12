@@ -1,7 +1,7 @@
 import {Routes} from '@angular/router';
-import {DemoHomePageComponent} from 'public/demo-home-page/demo-home-page.component';
-import {DesignSystemPageComponent} from 'public/design-system/design-system-page.component';
-import {DemoDeviceListPageComponent} from 'console/demo-device/list-page/demo-device-list-page.component';
+import {DemoHomePage} from 'public/demo-home-page/demo-home.page';
+import {DesignSystemPage} from 'public/design-system/design-system.page';
+import {DemoDeviceListPage} from 'console/demo-device/list-page/demo-device-list.page';
 import {ConsolePageLayoutComponent} from 'common/component/console-page-layout/console-page-layout.component';
 
 export const routes: Routes = [
@@ -21,7 +21,7 @@ export const routes: Routes = [
       },
       {
         path: 'demo-devices',
-        component: DemoDeviceListPageComponent
+        component: DemoDeviceListPage
       },
     ]
   },
@@ -35,11 +35,11 @@ export const routes: Routes = [
       },
       {
         path: 'demo-home',
-        component: DemoHomePageComponent
+        component: DemoHomePage
       },
       {
         path: 'design-system',
-        component: DesignSystemPageComponent
+        component: DesignSystemPage
       }
     ]
   }
