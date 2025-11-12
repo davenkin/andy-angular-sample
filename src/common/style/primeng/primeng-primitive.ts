@@ -1,11 +1,11 @@
 export const PRIMENG_PRIMITIVE = {
   borderRadius: {
     none: '0',
-    xs: '2px',
-    sm: '4px',
-    md: '6px',
-    lg: '8px',
-    xl: '12px'
+    xs: 'var(--2px)',
+    sm: 'var(--4px)',
+    md: 'var(--6px)',
+    lg: 'var(--8px)',
+    xl: 'var(--12px)'
   },
   emerald: {
     50: '#ecfdf5',
@@ -144,7 +144,7 @@ export const PRIMENG_PRIMITIVE = {
     300: '#93c5fd',
     400: '#60a5fa',
     500: '#3b82f6',
-    600: 'var(--blue-600)',
+    600: '#2563eb',
     700: '#1d4ed8',
     800: '#1e40af',
     900: '#1e3a8a',
