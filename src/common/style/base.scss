@@ -1,7 +1,40 @@
-// This file contains the color palette to be referenced by other parts of the application
-// This file should NOT be modified
+// This file includes base styles and CSS variables for the whole application
 
 @layer global {
+  body {
+    color: var(--normal-text-color);
+    font-family: 'Arial', 'Helvetica', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', 'WenQuanYi Micro Hei', 'STXihei', '华文细黑', 'Georgia', 'Times New Roman', 'sans-serif';
+  }
+
+  // Global CSS variables
+  :root {
+    --primary-color: var(--blue-600);
+    --normal-text-color: var(--neutral-700);
+    --emphasis-text-color: var(--neutral-900);
+    --placeholder-text-color: var(--neutral-300);
+    --default-font-size: 16; // browsers often set the default font size to 16
+    --1px: calc(1rem / var(--default-font-size));
+    --2px: calc(2rem / var(--default-font-size));
+    --3px: calc(3rem / var(--default-font-size));
+    --4px: calc(4rem / var(--default-font-size));
+    --5px: calc(5rem / var(--default-font-size));
+    --6px: calc(6rem / var(--default-font-size));
+    --7px: calc(7rem / var(--default-font-size));
+    --8px: calc(8rem / var(--default-font-size));
+    --9px: calc(9rem / var(--default-font-size));
+    --10px: calc(10rem / var(--default-font-size));
+    --11px: calc(11rem / var(--default-font-size));
+    --12px: calc(12rem / var(--default-font-size));
+    --13px: calc(13rem / var(--default-font-size));
+    --14px: calc(14rem / var(--default-font-size));
+  }
+
+  // Global CSS styles
+  :root {
+    font-size: var(--14px);
+  }
+
+  // Color palettes
   :root {
     --emerald-50: #ecfdf5;
     --emerald-100: #d1fae5;

@@ -7,7 +7,7 @@ import {provideAnimationsAsync} from '@angular/platform-browser/animations/async
 import {includeBearerTokenInterceptor, provideKeycloak} from 'common/config/auth.config';
 import {provideHttpClient, withInterceptors} from '@angular/common/http';
 import {apiResponseErrorInterceptor} from './error.config';
-import {PRIMENG_PRESET} from 'common/style/primeng/primeng-preset';
+import {PRIMENG_PRESET} from 'common/style/primeng/preset/primeng-preset';
 
 export const applicationConfig: ApplicationConfig = {
   providers: [
@@ -22,7 +22,7 @@ export const applicationConfig: ApplicationConfig = {
         options: {
           cssLayer: {
             name: 'primeng',
-            order: 'reset, global, primeng, utility'
+            order: 'reset, base, primeng, utility'
           }
         }
       },

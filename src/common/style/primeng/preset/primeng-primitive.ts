@@ -8,17 +8,17 @@ export const PRIMENG_PRIMITIVE = {
     xl: 'var(--12px)'
   },
   emerald: {
-    50: '#ecfdf5',
-    100: '#d1fae5',
-    200: '#a7f3d0',
-    300: '#6ee7b7',
-    400: '#34d399',
-    500: '#10b981',
-    600: '#059669',
-    700: '#047857',
-    800: '#065f46',
-    900: '#064e3b',
-    950: '#022c22'
+    50: 'var(--emerald-50)',
+    100: 'var(--emerald-100)',
+    200: 'var(--emerald-200)',
+    300: 'var(--emerald-300)',
+    400: 'var(--emerald-400)',
+    500: 'var(--emerald-500)',
+    600: 'var(--emerald-600)',
+    700: 'var(--emerald-700)',
+    800: 'var(--emerald-800)',
+    900: 'var(--emerald-900)',
+    950: 'var(--emerald-950)'
   },
   green: {
     50: '#f0fdf4',
