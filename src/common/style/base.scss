@@ -1,6 +1,11 @@
 // This file includes base styles and CSS variables for the whole application
 
 @layer global {
+  // Global CSS styles
+  :root {
+    font-size: var(--14px);
+  }
+
   body {
     color: var(--normal-text-color);
     font-family: 'Arial', 'Helvetica', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', 'WenQuanYi Micro Hei', 'STXihei', '华文细黑', 'Georgia', 'Times New Roman', 'sans-serif';
@@ -27,11 +32,6 @@
     --12px: calc(12rem / var(--default-font-size));
     --13px: calc(13rem / var(--default-font-size));
     --14px: calc(14rem / var(--default-font-size));
-  }
-
-  // Global CSS styles
-  :root {
-    font-size: var(--14px);
   }
 
   // Color palettes

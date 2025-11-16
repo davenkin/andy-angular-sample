@@ -1,4 +1,4 @@
-# CSS strategies
+# CSS strategy
 
 ## Context
 
@@ -21,24 +21,23 @@ CSS styles can roughly been split into the following categories:
 - Utilities styles that can be shared/referenced by all components
 
 
-Normally you add your styles in the following places:
+Normally you add your CSS styles in the following places:
 
-- The components' own SCSS files: These files reside adjacent to your own components class files
+- The components' own CSS files: These files reside adjacent to your components' class files
 - The `src/style` folder: This folder contains styles that are global or shared, with the following files:
   - `primeng/preset/primeng-components.ts`: This file contains customization to PrimeNG's individual components using [PrimeNG's theming mechanism](https://primeng.org/theming)
   - `primeng/preset/primeng-preset.ts`: This is the PrimeNG preset, normally you don't touch this file
-  - `primeng/preset/primeng-sematic.ts`: This file contains customizations that are shared by all PrimeNG's components using [PrimeNG's theming mechanism](https://primeng.org/theming)
-  - `primeng/primeng-customize.scss`: This file contains you own styles for customizing PrimeNG
+  - `primeng/preset/primeng-sematic.ts`: This file contains customizations that are shared by all PrimeNG's components using PrimeNG's theming mechanism
+  - `primeng/primeng-customize.scss`: This file contains you own styles for customizing PrimeNG components
   - `primeng/primeng-override.scss`: This file contains customization for PrimeNG's own CSS selectors
   - `base.scss`: This file contains globally applied styles and CSS variables
   - `reset.scss`: This file contains global styles for [CSS reset](https://meyerweb.com/eric/tools/css/reset/), normally you don't touch this file
   - `utility.scss`: This file contains utility styles that can be shared/referenced by all components
 
-When you try to add CSS styles, go through the following steps in order to decide where to put the styles:
+When you try to add CSS styles, go through the following steps to decide where to put the styles. (The red boxes are the key decision points. There are multiple files related to PrimeNG customization, pay attention to the their applying order.)
 
-1. Does your style apply specifically(which means the style does not apply to globally or does not apply to a certain type PrimeNG components) to your current component, in the component's own CSS files, otherwise move on
-2. Does your style relate to PrimeNG, if so can it be customized using [PrimeNG's theme](https://primeng.org/theming), if so, first sematic, then component, if cannot done with theme, then first primeng-override.scss then primeng-customize.scss
-3. Can you style been extracted into utility styles, such as margin top 10, if so go to utility.scss, otherwise global.scss
+![how-to-decide-where-to-put-css-styles](../ADRs/asset/how-to-decide-where-to-put-css-styles.png)
+
 
 #### CSS layers
 
@@ -49,8 +48,8 @@ The common principle for arranging css layers is that: default global styles sho
 There are 5 CSS layers, from lowest priority to highest priority:
 
 - `reset`: CSS reset, used only in `reset.scss`
-- `global`: Global styles, used only in `global.scss`
-- `primeng`: PrimeNG components styles, including `primeng-preset.ts`, `primeng-primitive.ts`, `primeng-sematic.ts` and `primeng-components.ts`
+- `base`: Base global styles, used only in `base.scss`
+- `primeng`: PrimeNG components styles, those configured using PrimeNG's theme mechanism fall into this layer, such as `primeng-preset.ts`, `primeng-primitive.ts`, `primeng-sematic.ts` and `primeng-components.ts`. Other customization files, such as `primeng-override.scss` and `primeng-customize.scss`, do not belong to this layer, but stay unlayered.
 - `utility`: Utility styles
 - unlayered: Your own components' styles
 
@@ -64,7 +63,7 @@ The CSS layers priority is configured by `theme.options.cssLayer.order` in `main
         options: {
           cssLayer: {
             name: 'primeng',
-            order: 'reset, global, primeng, utility'
+            order: 'reset, base, primeng, utility'
           }
         }
       },
