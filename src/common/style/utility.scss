@@ -1,6 +1,6 @@
-// This file contains utility css styles
+// This file contains utility css styles that can be referenced directly by components
 // All utility css selectors are wrapped inside `utility` css layer which is put at a very high priority, please refer to `src/common/config/main.config.ts` for more details on css layers
-// All utility css selectors should start with `u-` which means 'Utility'
+// All utility css selectors should start with `u-` which means 'Utility' to distinguish from other css selectors
 
 @layer utility {
   .u-margin-top-10 {

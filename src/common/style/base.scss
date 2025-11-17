@@ -1,37 +1,109 @@
-// This file includes base styles and CSS variables for the whole application
+// This file includes base styles and CSS variables that are globally applied for the whole application
 
-@layer global {
-  // Global CSS styles
-  :root {
-    font-size: var(--14px);
-  }
-
+@layer base {
+  // Base global CSS styles
   body {
-    color: var(--normal-text-color);
+    font-size: var(--14px);
+    color: var(--regular-text-color);
     font-family: 'Arial', 'Helvetica', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', 'WenQuanYi Micro Hei', 'STXihei', '华文细黑', 'Georgia', 'Times New Roman', 'sans-serif';
   }
 
-  // Global CSS variables
+  // Base global CSS variables
   :root {
     --primary-color: var(--blue-600);
-    --normal-text-color: var(--neutral-700);
+    --regular-text-color: var(--neutral-700);
     --emphasis-text-color: var(--neutral-900);
     --placeholder-text-color: var(--neutral-300);
-    --default-font-size: 16; // browsers often set the default font size to 16
-    --1px: calc(1rem / var(--default-font-size));
-    --2px: calc(2rem / var(--default-font-size));
-    --3px: calc(3rem / var(--default-font-size));
-    --4px: calc(4rem / var(--default-font-size));
-    --5px: calc(5rem / var(--default-font-size));
-    --6px: calc(6rem / var(--default-font-size));
-    --7px: calc(7rem / var(--default-font-size));
-    --8px: calc(8rem / var(--default-font-size));
-    --9px: calc(9rem / var(--default-font-size));
-    --10px: calc(10rem / var(--default-font-size));
-    --11px: calc(11rem / var(--default-font-size));
-    --12px: calc(12rem / var(--default-font-size));
-    --13px: calc(13rem / var(--default-font-size));
-    --14px: calc(14rem / var(--default-font-size));
+    --small-control-height: var(--24px);
+    --medium-control-height: var(--32px);
+    --large-control-height: var(--40px);
+
+    --default-root-font-size: 16; // browsers often set the default root font size to 16px
+    --1px: calc(1rem / var(--default-root-font-size));
+    --2px: calc(2rem / var(--default-root-font-size));
+    --3px: calc(3rem / var(--default-root-font-size));
+    --4px: calc(4rem / var(--default-root-font-size));
+    --5px: calc(5rem / var(--default-root-font-size));
+    --6px: calc(6rem / var(--default-root-font-size));
+    --7px: calc(7rem / var(--default-root-font-size));
+    --8px: calc(8rem / var(--default-root-font-size));
+    --9px: calc(9rem / var(--default-root-font-size));
+    --10px: calc(10rem / var(--default-root-font-size));
+    --11px: calc(11rem / var(--default-root-font-size));
+    --12px: calc(12rem / var(--default-root-font-size));
+    --13px: calc(13rem / var(--default-root-font-size));
+    --14px: calc(14rem / var(--default-root-font-size));
+    --15px: calc(15rem / var(--default-root-font-size));
+    --16px: calc(16rem / var(--default-root-font-size));
+    --17px: calc(17rem / var(--default-root-font-size));
+    --18px: calc(18rem / var(--default-root-font-size));
+    --19px: calc(19rem / var(--default-root-font-size));
+    --20px: calc(20rem / var(--default-root-font-size));
+    --24px: calc(24rem / var(--default-root-font-size));
+    --30px: calc(30rem / var(--default-root-font-size));
+    --32px: calc(32rem / var(--default-root-font-size));
+    --40px: calc(40rem / var(--default-root-font-size));
+    --50px: calc(50rem / var(--default-root-font-size));
+    --60px: calc(60rem / var(--default-root-font-size));
+    --70px: calc(70rem / var(--default-root-font-size));
+    --80px: calc(80rem / var(--default-root-font-size));
+    --90px: calc(90rem / var(--default-root-font-size));
+    --100px: calc(100rem / var(--default-root-font-size));
+    --200px: calc(200rem / var(--default-root-font-size));
+    --300px: calc(300rem / var(--default-root-font-size));
+    --400px: calc(400rem / var(--default-root-font-size));
+    --500px: calc(500rem / var(--default-root-font-size));
+    --600px: calc(600rem / var(--default-root-font-size));
+    --700px: calc(700rem / var(--default-root-font-size));
+    --800px: calc(800rem / var(--default-root-font-size));
+  }
+
+  // Common colors, when you need a custom color(for example some status tag might require multiple colors), choose it from here
+  :root {
+    --emerald-light-color: var(--emerald-50);
+    --emerald-main-color: var(--emerald-700);
+    --green-light-color: var(--green-50);
+    --green-main-color: var(--green-700);
+    --lime-light-color: var(--lime-50);
+    --lime-main-color: var(--lime-700);
+    --red-light-color: var(--red-50);
+    --red-main-color: var(--red-700);
+    --orange-light-color: var(--orange-50);
+    --orange-main-color: var(--orange-700);
+    --amber-light-color: var(--amber-50);
+    --amber-main-color: var(--amber-700);
+    --yellow-light-color: var(--yellow-50);
+    --yellow-main-color: var(--yellow-700);
+    --teal-light-color: var(--teal-50);
+    --teal-main-color: var(--teal-700);
+    --cyan-light-color: var(--cyan-50);
+    --cyan-main-color: var(--cyan-700);
+    --sky-light-color: var(--sky-50);
+    --sky-main-color: var(--sky-700);
+    --blue-light-color: var(--blue-50);
+    --blue-main-color: var(--blue-700);
+    --indigo-light-color: var(--indigo-50);
+    --indigo-main-color: var(--indigo-700);
+    --violet-light-color: var(--violet-50);
+    --violet-main-color: var(--violet-700);
+    --purple-light-color: var(--purple-50);
+    --purple-main-color: var(--purple-700);
+    --fuchsia-light-color: var(--fuchsia-50);
+    --fuchsia-main-color: var(--fuchsia-700);
+    --pink-light-color: var(--pink-50);
+    --pink-main-color: var(--pink-700);
+    --rose-light-color: var(--rose-50);
+    --rose-main-color: var(--rose-700);
+    --slate-light-color: var(--slate-50);
+    --slate-main-color: var(--slate-700);
+    --gray-light-color: var(--gray-50);
+    --gray-main-color: var(--gray-700);
+    --zinc-light-color: var(--zinc-50);
+    --zinc-main-color: var(--zinc-700);
+    --neutral-light-color: var(--neutral-50);
+    --neutral-main-color: var(--neutral-700);
+    --stone-light-color: var(--stone-50);
+    --stone-main-color: var(--stone-700);
   }
 
   // Color palettes

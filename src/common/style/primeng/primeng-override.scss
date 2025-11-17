@@ -1,3 +1,48 @@
-// This file ONLY contains PrimeNG's own selectors to be overridden
-// If you need to add your own css selectors to customize PrimeNG's components, please add them in 'primeng-customize.scss'
+// This file should ONLY contain PrimeNG's own selectors to be overridden
 // In order to avoid conflicts, please always use the components' tag name as the selector prefix
+
+p-button {
+  button.p-button-text {
+    padding: 0 var(--8px);
+    height: var(--medium-control-height);
+
+    .p-button-label {
+      font-weight: normal;
+    }
+  }
+
+  button.p-button-text.p-button-sm {
+    padding: 0 var(--6px);
+    height: var(--small-control-height);
+
+    .p-button-label {
+      font-weight: normal;
+    }
+  }
+
+  button.p-button-text.p-button-lg {
+    padding: 0 var(--10px);
+    height: var(--large-control-height);
+
+    .p-button-label {
+      font-weight: normal;
+    }
+  }
+
+  button.p-button-text.p-button-icon-only {
+    width: var(--medium-control-height);
+    aspect-ratio: 1;
+    padding: 0;
+  }
+
+  button.p-button-text.p-button-icon-only.p-button-sm {
+    width: var(--small-control-height);
+    aspect-ratio: 1;
+    padding: 0;
+  }
+
+  button.p-button-text.p-button-icon-only.p-button-lg {
+    width: var(--large-control-height);
+    padding: 0;
+  }
+}
