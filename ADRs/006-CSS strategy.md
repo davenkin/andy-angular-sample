@@ -7,7 +7,7 @@ In web development, CSS can easily get messed up if no strategies/principles are
 ## Decision
 
 - We follow a consistent approach to decide where to put different types of CSS styles
-- We use [CSS layers](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@layer) to control the priorities of different types of styles.
+- We use [CSS layers](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@layer) to control the priorities of different types of styles
 
 ## Implementation
 
