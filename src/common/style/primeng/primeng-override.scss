@@ -2,46 +2,22 @@
 // In order to avoid conflicts, please always use the components' tag name as the selector prefix
 
 p-button {
-  button.p-button {
-    padding: 0 var(--16px);
-    height: var(--40px);
-  }
-
-  button.p-button.p-button-sm {
-    padding: 0 var(--12px);
-    height: var(--32px);
-  }
-
-  button.p-button.p-button-lg {
-    padding: 0 var(--20px);
-    height: var(--48px);
+  button.p-button.p-button-text {
+    .p-button-label {
+      font-weight: normal;
+    }
   }
 
   button.p-button.p-button-text {
-    padding: 0 var(--8px);
-    height: var(--medium-control-height);
-
-    .p-button-label {
-      font-weight: normal;
-    }
+    padding: var(--4px) var(--10px);
   }
 
   button.p-button.p-button-text.p-button-sm {
-    padding: 0 var(--6px);
-    height: var(--small-control-height);
-
-    .p-button-label {
-      font-weight: normal;
-    }
+    padding: var(--2px) var(--8px);
   }
 
   button.p-button.p-button-text.p-button-lg {
-    padding: 0 var(--10px);
-    height: var(--large-control-height);
-
-    .p-button-label {
-      font-weight: normal;
-    }
+    padding: var(--6px) var(--12px);
   }
 
   button.p-button.p-button-icon-only {
