@@ -1,8 +1,8 @@
 // This file is the entry point for all global styles
 
-@import "common/style/reset";
-@import "common/style/base";
-@import "common/style/utility";
-@import "common/style/primeng/primeng-customize";
-@import "common/style/primeng/primeng-override";
-@import "primeicons/primeicons.css";
+@use "common/style/reset";
+@use "common/style/base";
+@use "common/style/utility";
+@use "common/style/primeng/primeng-customize";
+@use "common/style/primeng/primeng-override";
+@use "primeicons/primeicons.css";
