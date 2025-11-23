@@ -6,6 +6,7 @@ import {Component, Input} from '@angular/core';
   styleUrl: './svg-icon.component.scss'
 })
 export class SvgIconComponent {
+  // todo:
   @Input() name: string = '';
   @Input() alt: string = 'icon';
 }

@@ -2,6 +2,10 @@
 
 @layer base {
   // Base global CSS styles
+  :root {
+    font-size: calc(14rem / 16); // set the default root font-size to 14px (browsers often set the default root font size to 16px)
+  }
+
   body {
     font-size: var(--14px);
     color: var(--regular-text-color);
@@ -18,46 +22,46 @@
     --medium-control-height: var(--32px);
     --large-control-height: var(--40px);
 
-    --default-root-font-size: 16; // browsers often set the default root font size to 16px
-    --1px: calc(1rem / var(--default-root-font-size));
-    --2px: calc(2rem / var(--default-root-font-size));
-    --3px: calc(3rem / var(--default-root-font-size));
-    --4px: calc(4rem / var(--default-root-font-size));
-    --5px: calc(5rem / var(--default-root-font-size));
-    --6px: calc(6rem / var(--default-root-font-size));
-    --7px: calc(7rem / var(--default-root-font-size));
-    --8px: calc(8rem / var(--default-root-font-size));
-    --9px: calc(9rem / var(--default-root-font-size));
-    --10px: calc(10rem / var(--default-root-font-size));
-    --11px: calc(11rem / var(--default-root-font-size));
-    --12px: calc(12rem / var(--default-root-font-size));
-    --13px: calc(13rem / var(--default-root-font-size));
-    --14px: calc(14rem / var(--default-root-font-size));
-    --15px: calc(15rem / var(--default-root-font-size));
-    --16px: calc(16rem / var(--default-root-font-size));
-    --17px: calc(17rem / var(--default-root-font-size));
-    --18px: calc(18rem / var(--default-root-font-size));
-    --19px: calc(19rem / var(--default-root-font-size));
-    --20px: calc(20rem / var(--default-root-font-size));
-    --24px: calc(24rem / var(--default-root-font-size));
-    --30px: calc(30rem / var(--default-root-font-size));
-    --32px: calc(32rem / var(--default-root-font-size));
-    --40px: calc(40rem / var(--default-root-font-size));
-    --48px: calc(48rem / var(--default-root-font-size));
-    --50px: calc(50rem / var(--default-root-font-size));
-    --56px: calc(56rem / var(--default-root-font-size));
-    --60px: calc(60rem / var(--default-root-font-size));
-    --70px: calc(70rem / var(--default-root-font-size));
-    --80px: calc(80rem / var(--default-root-font-size));
-    --90px: calc(90rem / var(--default-root-font-size));
-    --100px: calc(100rem / var(--default-root-font-size));
-    --200px: calc(200rem / var(--default-root-font-size));
-    --300px: calc(300rem / var(--default-root-font-size));
-    --400px: calc(400rem / var(--default-root-font-size));
-    --500px: calc(500rem / var(--default-root-font-size));
-    --600px: calc(600rem / var(--default-root-font-size));
-    --700px: calc(700rem / var(--default-root-font-size));
-    --800px: calc(800rem / var(--default-root-font-size));
+    --root-font-size: 14;
+    --1px: calc(1rem / var(--root-font-size));
+    --2px: calc(2rem / var(--root-font-size));
+    --3px: calc(3rem / var(--root-font-size));
+    --4px: calc(4rem / var(--root-font-size));
+    --5px: calc(5rem / var(--root-font-size));
+    --6px: calc(6rem / var(--root-font-size));
+    --7px: calc(7rem / var(--root-font-size));
+    --8px: calc(8rem / var(--root-font-size));
+    --9px: calc(9rem / var(--root-font-size));
+    --10px: calc(10rem / var(--root-font-size));
+    --11px: calc(11rem / var(--root-font-size));
+    --12px: calc(12rem / var(--root-font-size));
+    --13px: calc(13rem / var(--root-font-size));
+    --14px: calc(14rem / var(--root-font-size));
+    --15px: calc(15rem / var(--root-font-size));
+    --16px: calc(16rem / var(--root-font-size));
+    --17px: calc(17rem / var(--root-font-size));
+    --18px: calc(18rem / var(--root-font-size));
+    --19px: calc(19rem / var(--root-font-size));
+    --20px: calc(20rem / var(--root-font-size));
+    --24px: calc(24rem / var(--root-font-size));
+    --30px: calc(30rem / var(--root-font-size));
+    --32px: calc(32rem / var(--root-font-size));
+    --40px: calc(40rem / var(--root-font-size));
+    --48px: calc(48rem / var(--root-font-size));
+    --50px: calc(50rem / var(--root-font-size));
+    --56px: calc(56rem / var(--root-font-size));
+    --60px: calc(60rem / var(--root-font-size));
+    --70px: calc(70rem / var(--root-font-size));
+    --80px: calc(80rem / var(--root-font-size));
+    --90px: calc(90rem / var(--root-font-size));
+    --100px: calc(100rem / var(--root-font-size));
+    --200px: calc(200rem / var(--root-font-size));
+    --300px: calc(300rem / var(--root-font-size));
+    --400px: calc(400rem / var(--root-font-size));
+    --500px: calc(500rem / var(--root-font-size));
+    --600px: calc(600rem / var(--root-font-size));
+    --700px: calc(700rem / var(--root-font-size));
+    --800px: calc(800rem / var(--root-font-size));
   }
 
   // Common colors, when you need a custom color(for example some status tag might require multiple colors), choose it from here

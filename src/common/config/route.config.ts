@@ -2,7 +2,9 @@ import {Routes} from '@angular/router';
 import {DemoHomePage} from 'public/demo-home-page/demo-home.page';
 import {DesignSystemPage} from 'public/design-system/design-system.page';
 import {DemoDeviceListPage} from 'console/demo-device/list-page/demo-device-list.page';
-import {ConsolePageLayoutComponent} from 'common/component/console-page-layout/console-page-layout.component';
+import {ConsolePageMainComponent} from 'common/component/console-page-main/console-page-main.component';
+import {ConsolePageBaseComponent} from 'common/component/console-page-base/console-page-base.component';
+import {RemoteDesktopComponent} from 'console/demo-device/remote-operation/remote-desktop/remote-desktop.component';
 
 export const routes: Routes = [
   {
@@ -12,17 +14,27 @@ export const routes: Routes = [
   },
   {
     path: 'console',
-    component: ConsolePageLayoutComponent,
+    component: ConsolePageBaseComponent,
     children: [
       {
         path: '',
-        redirectTo: 'demo-devices',
+        redirectTo: 'main/demo-devices',
         pathMatch: 'full'
       },
       {
-        path: 'demo-devices',
-        component: DemoDeviceListPage
+        path: 'main',
+        component: ConsolePageMainComponent,
+        children: [
+          {
+            path: 'demo-devices',
+            component: DemoDeviceListPage
+          },
+        ]
       },
+      {
+        path: 'remote-desktop',
+        component: RemoteDesktopComponent
+      }
     ]
   },
   {
