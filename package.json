@@ -30,6 +30,7 @@
     "@angular/router": "^20.2.0",
     "@primeuix/themes": "^1.2.3",
     "keycloak-js": "^26.2.0",
+    "ngx-spinner": "^19.0.0",
     "primeicons": "^7.0.0",
     "primelocale": "^2.1.7",
     "primeng": "^20.0.1",
