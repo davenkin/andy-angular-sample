@@ -13,11 +13,7 @@
 <p-button icon="pi pi-times" [text]="true" size="large"/>
 <p-button label="确定" variant="text"/>
 <p-button label="确定" variant="text" size="small"/>
-<p-button label="确定" variant="text" size="large" (onClick)="show()"/>
+<p-button label="显示Global Spinner" variant="text" size="large" (onClick)="showGlobalSpinner()"/>
 <a routerLink="/public/design-system">Design System测试</a>
 <a routerLink="/console/main/demo-devices">设备列表</a>
 <a routerLink="/console/remote-desktop">远程桌面</a>
-
-<!--<div style="width:300px;height:300px;position: fixed;top:0;left:0;background: red">-->
-  <app-loading-spinner name="abc"></app-loading-spinner>
-<!--</div>-->

@@ -14,7 +14,7 @@ We follow the below naming conventions:
 | Pages with list data                    | xxx-list.page.ts     | `demo-device-list.page.ts`     |                                |
 | Components in table cells               | xxx.cell.ts          | `device-name.cell.ts`          |                                |
 | Dialog components                       | xxx.dialog.ts        | `edit-device-name.dialog.ts`   |                                |
-| Regular components                      | xxx.components.ts    | `loading-spinner.component.ts`        |                                |
+| Regular components                      | xxx.components.ts    | `spinner.component.ts`        |                                |
 | Directives                              | xxx.directive.ts     | `file-size.directive.ts`       |                                |
 | API clients                             | xxx.api.ts           | `demo-device.api.ts`           |                                |
 | Store services                          | xxx-store.service.ts | `demo-device-store.service.ts` |                                |

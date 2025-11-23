@@ -10,7 +10,7 @@ todo:
 - 统一几种重要颜色，几种字体颜色，常规字体颜色，强调字体颜色，placeholder字体颜色
 - 统一一些边距尺寸等
 - css名称全部用中划线，css变量也全部用中划线
-- 统一loading icon，调用api时传入参数
+- 统一spinner，调用api时传入参数
 - 使用css reset，并通过@layer将其变成最低优先级
 - 统一console页面的整体页面结构
 - 多语言

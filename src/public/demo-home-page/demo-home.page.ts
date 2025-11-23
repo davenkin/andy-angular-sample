@@ -1,25 +1,22 @@
-import {Component, ViewChild} from '@angular/core';
+import {Component} from '@angular/core';
 import {RouterLink} from '@angular/router';
 import {Button} from 'primeng/button';
-import {NgxSpinnerComponent, NgxSpinnerService} from 'ngx-spinner';
-import {LoadingSpinnerComponent} from 'common/component/loading-spinner/loading-spinner.component';
+import {SpinnerService} from 'common/service/spinner.service';
 
 @Component({
   selector: 'app-demo-home-page',
   imports: [
     RouterLink,
-    Button,
-    NgxSpinnerComponent,
-    LoadingSpinnerComponent
+    Button
   ],
   templateUrl: './demo-home.page.html',
   styleUrl: './demo-home.page.scss'
 })
 export class DemoHomePage {
-  constructor(private spinner: NgxSpinnerService) {
+  constructor(protected spinnerService: SpinnerService) {
   }
 
-  show() {
-    this.spinner.show('abc');
+  showGlobalSpinner() {
+    this.spinnerService.showGlobalSpinner();
   }
 }
