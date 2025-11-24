@@ -1,9 +1,7 @@
 import {HttpEvent, HttpHandlerFn, HttpRequest} from '@angular/common/http';
-import {from, mergeMap, Observable} from 'rxjs';
+import {from, Observable, switchMap} from 'rxjs';
 import {EnvironmentProviders, inject, makeEnvironmentProviders, provideAppInitializer} from '@angular/core';
 import Keycloak from 'keycloak-js';
-import {GuardsCheckStart, Router} from '@angular/router';
-import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
 
 const AUTH_EXCLUDED_URLS: UrlCondition[] = [];
 
@@ -26,17 +24,6 @@ export function provideKeycloak(): EnvironmentProviders {
         console.error('Error while initialize keycloak.', error);
         throw error;
       }
-    }),
-    provideAppInitializer(() => {
-      let router = inject(Router);
-      let keycloak = inject(Keycloak);
-      router.events.pipe(takeUntilDestroyed()).subscribe(event => {
-        if (event instanceof GuardsCheckStart) {
-          if (!event.url.startsWith('/public') && event.url !== '/' && !keycloak.authenticated) {
-            keycloak.login({redirectUri: window.location.origin + event.url});
-          }
-        }
-      });
     }),
   ]);
 }
@@ -67,8 +54,8 @@ export function includeBearerTokenInterceptor(req: HttpRequest<unknown>, next: H
 
   let keycloak = inject(Keycloak);
   return from((async () => {
-    return await keycloak.updateToken().catch(() => false);
-  })()).pipe(mergeMap(() => {
+    return await keycloak.updateToken(60).catch(() => false);
+  })()).pipe(switchMap(() => {
     if (keycloak.token) {
       return next(req.clone({
         setHeaders: {

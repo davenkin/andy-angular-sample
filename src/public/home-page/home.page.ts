@@ -4,15 +4,15 @@ import {Button} from 'primeng/button';
 import {SpinnerService} from 'common/service/spinner.service';
 
 @Component({
-  selector: 'app-demo-home-page',
+  selector: 'app-home-page',
   imports: [
     RouterLink,
     Button
   ],
-  templateUrl: './demo-home.page.html',
-  styleUrl: './demo-home.page.scss'
+  templateUrl: './home.page.html',
+  styleUrl: './home.page.scss'
 })
-export class DemoHomePage {
+export class HomePage {
   constructor(protected spinnerService: SpinnerService) {
   }
 
