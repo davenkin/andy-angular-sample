@@ -1,1 +1,36 @@
-<div>This is the design system page listing all components used by the system.</div>
+<h1>图标</h1>
+<h3 class="u-margin-top-15">图标列表</h3>
+<div class="u-flex u-gap-30 u-margin-top-5 u-flex-item-centered">
+  @for (icon of allIcons; track icon) {
+    <div class="u-flex-column u-flex-item-centered">
+      <app-icon [icon]="icon"></app-icon>
+      <div>{{ icon }}</div>
+    </div>
+  }
+</div>
+
+<h3 class="u-margin-top-15">图标颜色</h3>
+<div class="u-flex u-gap-30 u-margin-top-5 u-flex-item-centered">
+  <div class="u-flex-column u-flex-item-centered">
+    <app-icon icon="box" class="colored-icon-red"></app-icon>
+    <div>box</div>
+  </div>
+
+  <div class="u-flex-column u-flex-item-centered">
+    <app-icon icon="calendar" class="colored-icon-blue"></app-icon>
+    <div>calendar</div>
+  </div>
+</div>
+
+<h3 class="u-margin-top-15">图标尺寸</h3>
+<div class="u-flex u-gap-30 u-margin-top-5 u-flex-item-centered">
+  <div class="u-flex-column u-flex-item-centered">
+    <app-icon icon="box" class="u-font-size-14"></app-icon>
+    <div>box</div>
+  </div>
+
+  <div class="u-flex-column u-flex-item-centered">
+    <app-icon icon="calendar" class="u-font-size-20"></app-icon>
+    <div>calendar</div>
+  </div>
+</div>

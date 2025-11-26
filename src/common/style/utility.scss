@@ -3,7 +3,44 @@
 // All utility css selectors should start with `u-` which means 'Utility' to distinguish from other css selectors
 
 @layer utility {
+  .u-flex {
+    display: flex;
+  }
+
+  .u-flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .u-flex-item-centered {
+    align-items: center;
+  }
+
+  .u-gap-15 {
+    gap: var(--15px);
+  }
+
+  .u-gap-30 {
+    gap: var(--30px);
+  }
+
+  .u-margin-top-5 {
+    margin-top: var(--5px);
+  }
+
   .u-margin-top-10 {
     margin-top: var(--10px);
+  }
+
+  .u-margin-top-15 {
+    margin-top: var(--15px);
+  }
+
+  .u-font-size-14 {
+    font-size: var(--14px);
+  }
+
+  .u-font-size-20 {
+    font-size: var(--20px);
   }
 }
