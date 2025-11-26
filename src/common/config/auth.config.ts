@@ -54,7 +54,12 @@ export function includeBearerTokenInterceptor(req: HttpRequest<unknown>, next: H
 
   let keycloak = inject(Keycloak);
   return from((async () => {
-    return await keycloak.updateToken(60).catch(() => false);
+    return await keycloak.updateToken(60)
+      .catch((result) => {
+        if (!result) {
+          keycloak.login();
+        }
+      });
   })()).pipe(switchMap(() => {
     if (keycloak.token) {
       return next(req.clone({
