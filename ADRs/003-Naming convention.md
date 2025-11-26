@@ -21,7 +21,7 @@ We follow the below naming conventions:
 | Regular services                        | xxx.service.ts       | `feature-toggle.service.ts`    |                                |
 | Files containing data models            | xxx.model.ts         | `common.model.ts`              |                                |
 | CSS classes                             | xxx-yyy              | `main-content`                 | Use all lowercases with dashes |
-| CSS variables                           | --xxx-yyy            | `--regular-text-color`         | Use all lowercases with dashes |
+| CSS variables                           | --xxx-yyy            | `--primary-text-color`         | Use all lowercases with dashes |
 | Class names                             | AbcXyz               | `DemoDeviceListPage`           |                                |
 | JS variable names                       | abcXyz               | `currentState`                 |                                |
 | Utility class file names                | xxx.utils.ts         | `pagination.utils.ts`          |                                |

@@ -8,15 +8,15 @@
 
   body {
     font-size: var(--14px);
-    color: var(--regular-text-color);
+    color: var(--primary-text-color);
     font-family: 'Arial', 'Helvetica', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', 'WenQuanYi Micro Hei', 'STXihei', '华文细黑', 'Georgia', 'Times New Roman', 'sans-serif';
   }
 
   // Base global CSS variables
   :root {
     --primary-color: var(--blue-600);
-    --regular-text-color: var(--neutral-700);
-    --emphasis-text-color: var(--neutral-900);
+    --primary-text-color: var(--neutral-700);
+    --emphasis-text-color: var(--neutral-800);
     --placeholder-text-color: var(--neutral-300);
     --small-control-height: var(--24px);
     --medium-control-height: var(--32px);
