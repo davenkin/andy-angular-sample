@@ -16,6 +16,10 @@
     align-items: center;
   }
 
+  .u-flex-justify-content-end {
+    justify-content: flex-end;
+  }
+
   .u-gap-15 {
     gap: var(--15px);
   }
