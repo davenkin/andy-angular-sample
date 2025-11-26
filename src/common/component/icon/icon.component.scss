@@ -1,0 +1,14 @@
+:host {
+  display: contents;
+}
+
+.svg-container {
+  display: contents;
+
+  ::ng-deep {
+    svg {
+      width: 1.4em;
+      height: 1.4em;
+    }
+  }
+}
