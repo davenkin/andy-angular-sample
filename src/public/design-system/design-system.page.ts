@@ -17,7 +17,56 @@ import {RouterLink} from '@angular/router';
 })
 export class DesignSystemPage {
 
-  get allIcons() {
+  get allIcons(): IconType[] {
     return Object.keys(iconRegistry) as IconType[];
+  }
+
+  get allCommonColors(): string[] {
+    return [
+      '--emerald-light',
+      '--emerald-main',
+      '--green-light',
+      '--green-main',
+      '--lime-light',
+      '--lime-main',
+      '--red-light',
+      '--red-main',
+      '--orange-light',
+      '--orange-main',
+      '--amber-light',
+      '--amber-main',
+      '--yellow-light',
+      '--yellow-main',
+      '--teal-light',
+      '--teal-main',
+      '--cyan-light',
+      '--cyan-main',
+      '--sky-light',
+      '--sky-main',
+      '--blue-light',
+      '--blue-main',
+      '--indigo-light',
+      '--indigo-main',
+      '--violet-light',
+      '--violet-main',
+      '--purple-light',
+      '--purple-main',
+      '--fuchsia-light',
+      '--fuchsia-main',
+      '--pink-light',
+      '--pink-main',
+      '--rose-light',
+      '--rose-main',
+      '--slate-light',
+      '--slate-main',
+      '--gray-light',
+      '--gray-main',
+      '--zinc-light',
+      '--zinc-main',
+      '--neutral-light',
+      '--neutral-main',
+      '--stone-light',
+      '--stone-main',
+    ];
   }
 }

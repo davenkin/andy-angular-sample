@@ -1,6 +1,77 @@
 :host {
   display: block;
-  padding: var(--24px) var(--30px);
+}
+
+.the-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  padding: var(--10px) var(--30px);
+  background: white;
+  border-bottom: var(--1px) solid var(--split-line-color);
+}
+
+.header-left {
+  font-size: var(--32px);
+  font-weight: 700;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--15px);
+}
+
+.main-content {
+  padding: var(--30px);
+}
+
+.section-title {
+  color: var(--emphasis-text-color);
+  margin-top: var(--30px);
+}
+
+.section-sub-title {
+  color: var(--emphasis-text-color);
+  margin-top: var(--15px);
+}
+
+.common-color-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--30px);
+}
+
+.common-color-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--5px);
+  width: var(--150px);
+}
+
+.common-color-legend {
+  width: var(--30px);
+  border-radius: var(--4px);
+  aspect-ratio: 1;
+}
+
+.icon-section {
+  display: flex;
+  align-items: center;
+  gap: var(--30px);
+  margin-top: var(--5px);
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .colored-icon-red {
