@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 import iconRegistry from 'common/component/icon/icon-registry';
 import {DomSanitizer} from '@angular/platform-browser';
 
@@ -7,7 +7,8 @@ export type IconType = keyof typeof iconRegistry;
 @Component({
   selector: 'app-icon',
   templateUrl: './icon.component.html',
-  styleUrl: './icon.component.scss'
+  styleUrl: './icon.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class IconComponent {
   @Input({required: true}) icon?: IconType;
