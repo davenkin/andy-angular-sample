@@ -4,7 +4,7 @@ export const PRIMENG_SEMATIC = {
     width: '0',
     style: 'none',
     color: 'transparent',
-    offset: '0'
+    offset: '0',
   },
   disabledOpacity: '0.6',
   iconSize: '1rem',
@@ -20,7 +20,7 @@ export const PRIMENG_SEMATIC = {
     700: '{blue.700}',
     800: '{blue.800}',
     900: '{blue.900}',
-    950: '{blue.950}'
+    950: '{blue.950}',
   },
   formField: {
     paddingX: '0.75rem',
@@ -28,12 +28,12 @@ export const PRIMENG_SEMATIC = {
     sm: {
       fontSize: '0.875rem',
       paddingX: '0.625rem',
-      paddingY: '0.5rem'
+      paddingY: '0.5rem',
     },
     lg: {
       fontSize: '1.125rem',
       paddingX: '0.875rem',
-      paddingY: '0.75rem'
+      paddingY: '0.75rem',
     },
     borderRadius: '{border.radius.md}',
     focusRing: {
@@ -41,67 +41,67 @@ export const PRIMENG_SEMATIC = {
       style: '{focus.ring.style}',
       color: '{focus.ring.color}',
       offset: '{focus.ring.offset}',
-      shadow: '{focus.ring.shadow}'
+      shadow: '{focus.ring.shadow}',
     },
-    transitionDuration: '{transition.duration}'
+    transitionDuration: '{transition.duration}',
   },
   list: {
     padding: '0.5rem 0',
     gap: '0',
     header: {
-      padding: '0.625rem 1rem 0 1rem'
+      padding: '0.625rem 1rem 0 1rem',
     },
     option: {
       padding: '0.625rem 1rem',
-      borderRadius: '0'
+      borderRadius: '0',
     },
     optionGroup: {
       padding: '0.625rem 1rem',
-      fontWeight: '600'
-    }
+      fontWeight: '600',
+    },
   },
   content: {
-    borderRadius: '{border.radius.md}'
+    borderRadius: '{border.radius.md}',
   },
   mask: {
-    transitionDuration: '0.15s'
+    transitionDuration: '0.15s',
   },
   navigation: {
     list: {
       padding: '0.5rem 0',
-      gap: '0'
+      gap: '0',
     },
     item: {
       padding: '0.625rem 1rem',
       borderRadius: '0',
-      gap: '0.5rem'
+      gap: '0.5rem',
     },
     submenuLabel: {
       padding: '0.625rem 1rem',
-      fontWeight: '600'
+      fontWeight: '600',
     },
     submenuIcon: {
-      size: '0.875rem'
-    }
+      size: '0.875rem',
+    },
   },
   overlay: {
     select: {
       borderRadius: '{border.radius.md}',
-      shadow: '0 2px 12px 0 rgba(0, 0, 0, 0.1)'
+      shadow: '0 2px 12px 0 rgba(0, 0, 0, 0.1)',
     },
     popover: {
       borderRadius: '{border.radius.md}',
       padding: '1rem',
-      shadow: '0 1px 3px rgba(0, 0, 0, 0.1)'
+      shadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
     },
     modal: {
       borderRadius: '{border.radius.xl}',
       padding: '1.5rem',
-      shadow: '0 1px 3px rgba(0, 0, 0, 0.3)'
+      shadow: '0 1px 3px rgba(0, 0, 0, 0.3)',
     },
     navigation: {
-      shadow: '0 2px 12px 0 rgba(0, 0, 0, 0.1)'
-    }
+      shadow: '0 2px 12px 0 rgba(0, 0, 0, 0.1)',
+    },
   },
   colorScheme: {
     light: {
@@ -117,26 +117,26 @@ export const PRIMENG_SEMATIC = {
         700: '{slate.700}',
         800: '{slate.800}',
         900: '{slate.900}',
-        950: '{slate.950}'
+        950: '{slate.950}',
       },
       primary: {
         color: '{primary.600}',
         contrastColor: '#ffffff',
         hoverColor: '{primary.600}',
-        activeColor: '{primary.700}'
+        activeColor: '{primary.700}',
       },
       highlight: {
         background: '{primary.50}',
         focusBackground: '{primary.100}',
         color: '{primary.700}',
-        focusColor: '{primary.800}'
+        focusColor: '{primary.800}',
       },
       focusRing: {
-        shadow: '0 0 0 0.2rem {primary.200}'
+        shadow: '0 0 0 0.2rem {primary.200}',
       },
       mask: {
         background: 'rgba(0,0,0,0.4)',
-        color: '{surface.200}'
+        color: '{surface.200}',
       },
       formField: {
         background: '{surface.0}',
@@ -157,37 +157,37 @@ export const PRIMENG_SEMATIC = {
         floatLabelActiveColor: '{surface.500}',
         floatLabelInvalidColor: '{form.field.invalid.placeholder.color}',
         iconColor: '{surface.500}',
-        shadow: 'none'
+        shadow: 'none',
       },
       text: {
         color: '{surface.700}',
         hoverColor: '{surface.800}',
         mutedColor: '{surface.500}',
-        hoverMutedColor: '{surface.600}'
+        hoverMutedColor: '{surface.600}',
       },
       content: {
         background: '{surface.0}',
         hoverBackground: '{surface.100}',
         borderColor: '{surface.200}',
         color: '{text.color}',
-        hoverColor: '{text.hover.color}'
+        hoverColor: '{text.hover.color}',
       },
       overlay: {
         select: {
           background: '{surface.0}',
           borderColor: '{surface.200}',
-          color: '{text.color}'
+          color: '{text.color}',
         },
         popover: {
           background: '{surface.0}',
           borderColor: '{surface.200}',
-          color: '{text.color}'
+          color: '{text.color}',
         },
         modal: {
           background: '{surface.0}',
           borderColor: '{surface.200}',
-          color: '{text.color}'
-        }
+          color: '{text.color}',
+        },
       },
       list: {
         option: {
@@ -200,13 +200,13 @@ export const PRIMENG_SEMATIC = {
           selectedFocusColor: '{highlight.focus.color}',
           icon: {
             color: '{surface.400}',
-            focusColor: '{surface.500}'
-          }
+            focusColor: '{surface.500}',
+          },
         },
         optionGroup: {
           background: 'transparent',
-          color: '{text.color}'
-        }
+          color: '{text.color}',
+        },
       },
       navigation: {
         item: {
@@ -218,19 +218,19 @@ export const PRIMENG_SEMATIC = {
           icon: {
             color: '{surface.400}',
             focusColor: '{surface.500}',
-            activeColor: '{surface.500}'
-          }
+            activeColor: '{surface.500}',
+          },
         },
         submenuLabel: {
           background: 'transparent',
-          color: '{text.color}'
+          color: '{text.color}',
         },
         submenuIcon: {
           color: '{surface.400}',
           focusColor: '{surface.500}',
-          activeColor: '{surface.500}'
-        }
-      }
+          activeColor: '{surface.500}',
+        },
+      },
     },
     dark: {
       surface: {
@@ -245,26 +245,26 @@ export const PRIMENG_SEMATIC = {
         700: '{zinc.700}',
         800: '{zinc.800}',
         900: '{zinc.900}',
-        950: '{zinc.950}'
+        950: '{zinc.950}',
       },
       primary: {
         color: '{primary.400}',
         contrastColor: '{surface.900}',
         hoverColor: '{primary.300}',
-        activeColor: '{primary.200}'
+        activeColor: '{primary.200}',
       },
       highlight: {
         background: 'color-mix(in srgb, {primary.400}, transparent 84%)',
         focusBackground: 'color-mix(in srgb, {primary.400}, transparent 76%)',
         color: 'rgba(255,255,255,.87)',
-        focusColor: 'rgba(255,255,255,.87)'
+        focusColor: 'rgba(255,255,255,.87)',
       },
       focusRing: {
-        shadow: '0 0 0 0.2rem color-mix(in srgb, {primary.color}, transparent 80%)'
+        shadow: '0 0 0 0.2rem color-mix(in srgb, {primary.color}, transparent 80%)',
       },
       mask: {
         background: 'rgba(0,0,0,0.6)',
-        color: '{surface.200}'
+        color: '{surface.200}',
       },
       formField: {
         background: '{surface.950}',
@@ -285,37 +285,37 @@ export const PRIMENG_SEMATIC = {
         floatLabelActiveColor: '{surface.400}',
         floatLabelInvalidColor: '{form.field.invalid.placeholder.color}',
         iconColor: '{surface.400}',
-        shadow: 'none'
+        shadow: 'none',
       },
       text: {
         color: '{surface.0}',
         hoverColor: '{surface.0}',
         mutedColor: '{surface.400}',
-        hoverMutedColor: '{surface.300}'
+        hoverMutedColor: '{surface.300}',
       },
       content: {
         background: '{surface.900}',
         hoverBackground: '{surface.800}',
         borderColor: '{surface.700}',
         color: '{text.color}',
-        hoverColor: '{text.hover.color}'
+        hoverColor: '{text.hover.color}',
       },
       overlay: {
         select: {
           background: '{surface.900}',
           borderColor: '{surface.700}',
-          color: '{text.color}'
+          color: '{text.color}',
         },
         popover: {
           background: '{surface.900}',
           borderColor: '{surface.700}',
-          color: '{text.color}'
+          color: '{text.color}',
         },
         modal: {
           background: '{surface.900}',
           borderColor: '{surface.700}',
-          color: '{text.color}'
-        }
+          color: '{text.color}',
+        },
       },
       list: {
         option: {
@@ -328,13 +328,13 @@ export const PRIMENG_SEMATIC = {
           selectedFocusColor: '{highlight.focus.color}',
           icon: {
             color: '{surface.500}',
-            focusColor: '{surface.400}'
-          }
+            focusColor: '{surface.400}',
+          },
         },
         optionGroup: {
           background: 'transparent',
-          color: '{text.color}'
-        }
+          color: '{text.color}',
+        },
       },
       navigation: {
         item: {
@@ -346,19 +346,19 @@ export const PRIMENG_SEMATIC = {
           icon: {
             color: '{surface.500}',
             focusColor: '{surface.400}',
-            activeColor: '{surface.400}'
-          }
+            activeColor: '{surface.400}',
+          },
         },
         submenuLabel: {
           background: 'transparent',
-          color: '{text.color}'
+          color: '{text.color}',
         },
         submenuIcon: {
           color: '{surface.500}',
           focusColor: '{surface.400}',
-          activeColor: '{surface.400}'
-        }
-      }
-    }
-  }
+          activeColor: '{surface.400}',
+        },
+      },
+    },
+  },
 };

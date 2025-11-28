@@ -1,5 +1,5 @@
-import {PageQuery} from 'common/utils/pagination.utils';
-import {CpuArchitecture, OsType} from 'common/model/common.model';
+import { PageQuery } from 'common/utils/pagination.utils';
+import { CpuArchitecture, OsType } from 'common/model/common.model';
 
 export interface PageDemoDevicesQuery extends PageQuery {
   osType?: OsType;

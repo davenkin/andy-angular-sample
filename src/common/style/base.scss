@@ -3,13 +3,16 @@
 @layer base {
   // Base global CSS styles
   :root {
-    font-size: calc(14rem / 16); // set the default root font-size to 14px (browsers often set the default root font size to 16px)
+    // set the default root font-size to 14px (browsers often set the default root font size to 16px)
+    font-size: calc(14rem / 16);
   }
 
   body {
     font-size: var(--14px);
     color: var(--primary-text-color);
-    font-family: 'Arial', 'Helvetica', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', 'WenQuanYi Micro Hei', 'STXihei', '华文细黑', 'Georgia', 'Times New Roman', 'sans-serif';
+    font-family:
+      'Arial', 'Helvetica', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', 'WenQuanYi Micro Hei',
+      'STXihei', '华文细黑', 'Georgia', 'Times New Roman', 'sans-serif';
   }
 
   // Base global CSS variables

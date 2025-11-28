@@ -1,5 +1,5 @@
-import {Injectable} from '@angular/core';
-import {NgxSpinnerService, Spinner} from 'ngx-spinner';
+import { inject, Injectable } from '@angular/core';
+import { NgxSpinnerService, Spinner } from 'ngx-spinner';
 
 export const GLOBAL_SPINNER = 'GLOBAL_SPINNER';
 export const CONSOLE_MAIN_SPINNER = 'CONSOLE_MAIN_SPINNER';
@@ -12,12 +12,12 @@ export interface SpinnerConfig {
   providedIn: 'root',
 })
 export class SpinnerService {
-
-  constructor(private spinner: NgxSpinnerService) {
-  }
+  private spinner = inject(NgxSpinnerService);
 
   public showGlobalSpinner(config?: SpinnerConfig) {
-    this.spinner.show(GLOBAL_SPINNER, {bdColor: config?.transparentBackground ? 'rgba(255,255,255,0)' : 'rgba(255,255,255,0.3)'});
+    this.spinner.show(GLOBAL_SPINNER, {
+      bdColor: config?.transparentBackground ? 'rgba(255,255,255,0)' : 'rgba(255,255,255,0.3)',
+    });
   }
 
   public hideGlobalSpinner() {
@@ -25,7 +25,9 @@ export class SpinnerService {
   }
 
   public showConsoleMainSpinner(config?: SpinnerConfig) {
-    this.spinner.show(CONSOLE_MAIN_SPINNER, {bdColor: config?.transparentBackground ? 'rgba(255,255,255,0)' : 'rgba(255,255,255,0.3)'});
+    this.spinner.show(CONSOLE_MAIN_SPINNER, {
+      bdColor: config?.transparentBackground ? 'rgba(255,255,255,0)' : 'rgba(255,255,255,0.3)',
+    });
   }
 
   public hideConsoleMainSpinner() {

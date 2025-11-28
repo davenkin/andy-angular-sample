@@ -1,10 +1,11 @@
 <section class="the-header">
   <div class="header-left">
-    <span style="color:var(--blue-main)">设</span>
-    <span style="color:var(--pink-main)">计</span>
-    <span style="color:var(--green-main)">系</span>
-    <span style="color:var(--amber-main)">统</span>
+    <span style="color: var(--blue-main)">设</span>
+    <span style="color: var(--pink-main)">计</span>
+    <span style="color: var(--green-main)">系</span>
+    <span style="color: var(--amber-main)">统</span>
   </div>
+
   <div class="header-right">
     <a routerLink="/" pButton>
       <span pButtonLabel>主页</span>
@@ -29,31 +30,31 @@
   <h1 class="section-title">文本颜色</h1>
   <section class="text-color-section">
     <div class="text-color-item">
-      <span style="color: var(--primary-text-color);font-size: 20px;font-weight: 700">常规色</span>
+      <span style="color: var(--primary-text-color); font-size: 20px; font-weight: 700">常规色</span>
       var(--primary-text-color)
     </div>
     <div class="text-color-item">
-      <span style="color: var(--emphasis-text-color);font-size: 20px;font-weight: 700">强调色</span>
+      <span style="color: var(--emphasis-text-color); font-size: 20px; font-weight: 700">强调色</span>
       var(--emphasis-text-color)
     </div>
     <div class="text-color-item">
-      <span style="color: var(--secondary-text-color);font-size: 20px;font-weight: 700">弱化色</span>
+      <span style="color: var(--secondary-text-color); font-size: 20px; font-weight: 700">弱化色</span>
       var(--secondary-text-color)
     </div>
     <div class="text-color-item">
-      <span style="color: var(--placeholder-text-color);font-size: 20px;font-weight: 700">占位符</span>
+      <span style="color: var(--placeholder-text-color); font-size: 20px; font-weight: 700">占位符</span>
       var(--placeholder-text-color)
     </div>
     <div class="text-color-item">
-      <span style="color: var(--success-text-color);font-size: 20px;font-weight: 700">成功色</span>
+      <span style="color: var(--success-text-color); font-size: 20px; font-weight: 700">成功色</span>
       var(--success-text-color)
     </div>
     <div class="text-color-item">
-      <span style="color: var(--warn-text-color);font-size: 20px;font-weight: 700">警告色</span>
+      <span style="color: var(--warn-text-color); font-size: 20px; font-weight: 700">警告色</span>
       var(--warn-text-color)
     </div>
     <div class="text-color-item">
-      <span style="color: var(--error-text-color);font-size: 20px;font-weight: 700">错误色</span>
+      <span style="color: var(--error-text-color); font-size: 20px; font-weight: 700">错误色</span>
       var(--error-text-color)
     </div>
   </section>
@@ -61,10 +62,10 @@
   <h1 class="section-title">其他常用颜色</h1>
   <section class="common-color-section">
     @for (color of allCommonColors; track color) {
-      <div class="common-color-item">
-        <div class="common-color-legend" [style]="`background: var(${color})`"></div>
-        <div>var({{ color }})</div>
-      </div>
+    <div class="common-color-item">
+      <div class="common-color-legend" [style]="`background: var(${color})`"></div>
+      <div>var({{ color }})</div>
+    </div>
     }
   </section>
   <h1 class="section-title">边框阴影</h1>
@@ -81,22 +82,25 @@
   药丸，标签，帮助图标，省略文本
 
   <h1 class="section-title">图标</h1>
-  <div> 图标可采用2种方式，一种是直接使用<a href="https://primeng.org/icons">PrimeNG图标</a>；另一种是使用自定义SVG图标，如需添加新的SVG图标，请在<b>icon-registry.ts</b>文件中进行注册。
+  <div>
+    图标可采用2种方式，一种是直接使用
+    <a href="https://primeng.org/icons">PrimeNG图标</a>
+    ；另一种是使用自定义SVG图标，如需添加新的SVG图标，请在
+    <b>icon-registry.ts</b>
+    文件中进行注册。
   </div>
   <h3 class="section-sub-title">SVG图标用法</h3>
   <div class="u-margin-top-10">
-    <code>
-      &lt;app-icon icon="box">&lt;/app-icon&gt;
-    </code>
+    <code>&lt;app-icon icon="box">&lt;/app-icon&gt;</code>
   </div>
   <div class="u-margin-top-10">可以通过CSS的color设置图标颜色，并通过font-size设置图标尺寸。</div>
   <h3 class="section-sub-title">图标列表</h3>
-  <section class="icon-section ">
+  <section class="icon-section">
     @for (icon of allIcons; track icon) {
-      <div class="icon-item">
-        <app-icon [icon]="icon"></app-icon>
-        <div>{{ icon }}</div>
-      </div>
+    <div class="icon-item">
+      <app-icon [icon]="icon"></app-icon>
+      <div>{{ icon }}</div>
+    </div>
     }
   </section>
 

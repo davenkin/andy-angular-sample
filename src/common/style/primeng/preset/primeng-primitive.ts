@@ -5,7 +5,7 @@ export const PRIMENG_PRIMITIVE = {
     sm: 'var(--4px)',
     md: 'var(--6px)',
     lg: 'var(--8px)',
-    xl: 'var(--12px)'
+    xl: 'var(--12px)',
   },
   emerald: {
     50: 'var(--emerald-50)',
@@ -18,7 +18,7 @@ export const PRIMENG_PRIMITIVE = {
     700: 'var(--emerald-700)',
     800: 'var(--emerald-800)',
     900: 'var(--emerald-900)',
-    950: 'var(--emerald-950)'
+    950: 'var(--emerald-950)',
   },
   green: {
     50: 'var(--green-50)',
@@ -31,7 +31,7 @@ export const PRIMENG_PRIMITIVE = {
     700: 'var(--green-700)',
     800: 'var(--green-800)',
     900: 'var(--green-900)',
-    950: 'var(--green-950)'
+    950: 'var(--green-950)',
   },
   lime: {
     50: 'var(--lime-50)',
@@ -44,7 +44,7 @@ export const PRIMENG_PRIMITIVE = {
     700: 'var(--lime-700)',
     800: 'var(--lime-800)',
     900: 'var(--lime-900)',
-    950: 'var(--lime-950)'
+    950: 'var(--lime-950)',
   },
   red: {
     50: 'var(--red-50)',
@@ -57,7 +57,7 @@ export const PRIMENG_PRIMITIVE = {
     700: 'var(--red-700)',
     800: 'var(--red-800)',
     900: 'var(--red-900)',
-    950: 'var(--red-950)'
+    950: 'var(--red-950)',
   },
   orange: {
     50: 'var(--orange-50)',
@@ -70,7 +70,7 @@ export const PRIMENG_PRIMITIVE = {
     700: 'var(--orange-700)',
     800: 'var(--orange-800)',
     900: 'var(--orange-900)',
-    950: 'var(--orange-950)'
+    950: 'var(--orange-950)',
   },
   amber: {
     50: 'var(--amber-50)',
@@ -83,7 +83,7 @@ export const PRIMENG_PRIMITIVE = {
     700: 'var(--amber-700)',
     800: 'var(--amber-800)',
     900: 'var(--amber-900)',
-    950: 'var(--amber-950)'
+    950: 'var(--amber-950)',
   },
   yellow: {
     50: 'var(--yellow-50)',
@@ -96,7 +96,7 @@ export const PRIMENG_PRIMITIVE = {
     700: 'var(--yellow-700)',
     800: 'var(--yellow-800)',
     900: 'var(--yellow-900)',
-    950: 'var(--yellow-950)'
+    950: 'var(--yellow-950)',
   },
   teal: {
     50: 'var(--teal-50)',
@@ -109,7 +109,7 @@ export const PRIMENG_PRIMITIVE = {
     700: 'var(--teal-700)',
     800: 'var(--teal-800)',
     900: 'var(--teal-900)',
-    950: 'var(--teal-950)'
+    950: 'var(--teal-950)',
   },
   cyan: {
     50: 'var(--cyan-50)',
@@ -122,7 +122,7 @@ export const PRIMENG_PRIMITIVE = {
     700: 'var(--cyan-700)',
     800: 'var(--cyan-800)',
     900: 'var(--cyan-900)',
-    950: 'var(--cyan-950)'
+    950: 'var(--cyan-950)',
   },
   sky: {
     50: 'var(--sky-50)',
@@ -135,7 +135,7 @@ export const PRIMENG_PRIMITIVE = {
     700: 'var(--sky-700)',
     800: 'var(--sky-800)',
     900: 'var(--sky-900)',
-    950: 'var(--sky-950)'
+    950: 'var(--sky-950)',
   },
   blue: {
     50: 'var(--blue-50)',
@@ -148,7 +148,7 @@ export const PRIMENG_PRIMITIVE = {
     700: 'var(--blue-700)',
     800: 'var(--blue-800)',
     900: 'var(--blue-900)',
-    950: 'var(--blue-950)'
+    950: 'var(--blue-950)',
   },
   indigo: {
     50: 'var(--indigo-50)',
@@ -161,7 +161,7 @@ export const PRIMENG_PRIMITIVE = {
     700: 'var(--indigo-700)',
     800: 'var(--indigo-800)',
     900: 'var(--indigo-900)',
-    950: 'var(--indigo-950)'
+    950: 'var(--indigo-950)',
   },
   violet: {
     50: 'var(--violet-50)',
@@ -174,7 +174,7 @@ export const PRIMENG_PRIMITIVE = {
     700: 'var(--violet-700)',
     800: 'var(--violet-800)',
     900: 'var(--violet-900)',
-    950: 'var(--violet-950)'
+    950: 'var(--violet-950)',
   },
   purple: {
     50: 'var(--purple-50)',
@@ -187,7 +187,7 @@ export const PRIMENG_PRIMITIVE = {
     700: 'var(--purple-700)',
     800: 'var(--purple-800)',
     900: 'var(--purple-900)',
-    950: 'var(--purple-950)'
+    950: 'var(--purple-950)',
   },
   fuchsia: {
     50: 'var(--fuchsia-50)',
@@ -200,7 +200,7 @@ export const PRIMENG_PRIMITIVE = {
     700: 'var(--fuchsia-700)',
     800: 'var(--fuchsia-800)',
     900: 'var(--fuchsia-900)',
-    950: 'var(--fuchsia-950)'
+    950: 'var(--fuchsia-950)',
   },
   pink: {
     50: 'var(--pink-50)',
@@ -213,7 +213,7 @@ export const PRIMENG_PRIMITIVE = {
     700: 'var(--pink-700)',
     800: 'var(--pink-800)',
     900: 'var(--pink-900)',
-    950: 'var(--pink-950)'
+    950: 'var(--pink-950)',
   },
   rose: {
     50: 'var(--rose-50)',
@@ -226,7 +226,7 @@ export const PRIMENG_PRIMITIVE = {
     700: 'var(--rose-700)',
     800: 'var(--rose-800)',
     900: 'var(--rose-900)',
-    950: 'var(--rose-950)'
+    950: 'var(--rose-950)',
   },
   slate: {
     50: 'var(--slate-50)',
@@ -239,7 +239,7 @@ export const PRIMENG_PRIMITIVE = {
     700: 'var(--slate-700)',
     800: 'var(--slate-800)',
     900: 'var(--slate-900)',
-    950: 'var(--slate-950)'
+    950: 'var(--slate-950)',
   },
   gray: {
     50: 'var(--gray-50)',
@@ -252,7 +252,7 @@ export const PRIMENG_PRIMITIVE = {
     700: 'var(--gray-700)',
     800: 'var(--gray-800)',
     900: 'var(--gray-900)',
-    950: 'var(--gray-950)'
+    950: 'var(--gray-950)',
   },
   zinc: {
     50: 'var(--zinc-50)',
@@ -265,7 +265,7 @@ export const PRIMENG_PRIMITIVE = {
     700: 'var(--zinc-700)',
     800: 'var(--zinc-800)',
     900: 'var(--zinc-900)',
-    950: 'var(--zinc-950)'
+    950: 'var(--zinc-950)',
   },
   neutral: {
     50: 'var(--neutral-50)',
@@ -278,7 +278,7 @@ export const PRIMENG_PRIMITIVE = {
     700: 'var(--neutral-700)',
     800: 'var(--neutral-800)',
     900: 'var(--neutral-900)',
-    950: 'var(--neutral-950)'
+    950: 'var(--neutral-950)',
   },
   stone: {
     50: 'var(--stone-50)',
@@ -291,6 +291,6 @@ export const PRIMENG_PRIMITIVE = {
     700: 'var(--stone-700)',
     800: 'var(--stone-800)',
     900: 'var(--stone-900)',
-    950: 'var(--stone-950)'
-  }
+    950: 'var(--stone-950)',
+  },
 };

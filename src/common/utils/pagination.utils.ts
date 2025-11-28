@@ -15,7 +15,7 @@ export interface PagedResponse<T> {
 
 export enum SortDirection {
   ASC = 'ASC',
-  DESC = 'DESC'
+  DESC = 'DESC',
 }
 
 export function singlePropertySortFor(sortProperty: string, sortDirection: SortDirection = SortDirection.ASC) {
