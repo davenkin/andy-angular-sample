@@ -41,9 +41,12 @@
     "typescript-eslint": "8.40.0"
   },
   "lint-staged": {
-    "*.{ts,html,scss}": [
+    "*.{ts,html}": [
       "prettier --write",
       "eslint --fix"
+    ],
+    "*.{scss}": [
+      "prettier --write"
     ]
   }
 }
