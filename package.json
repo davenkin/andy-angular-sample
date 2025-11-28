@@ -6,7 +6,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "format": "prettier --write \"src/**/*.{ts,html,scss}\"",
+    "format": "prettier --write \"src/**/*.{ts,html,css,scss}\"",
     "prepare": "husky install"
   },
   "private": true,
@@ -45,7 +45,7 @@
       "prettier --write",
       "eslint --fix"
     ],
-    "*.scss": [
+    "*.{css,scss}": [
       "prettier --write"
     ]
   }
