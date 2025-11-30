@@ -44,6 +44,17 @@
   margin-bottom: var(--5px);
 }
 
+.button-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--30px);
+}
+
+.button-card {
+  display: flex;
+  align-items: center;
+}
+
 .text-color-section {
   display: flex;
   flex-wrap: wrap;

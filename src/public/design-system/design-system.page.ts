@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import iconRegistry from 'common/component/icon/icon-registry';
 import { IconComponent, IconType } from 'common/component/icon/icon.component';
-import { ButtonDirective, ButtonLabel } from 'primeng/button';
+import { Button, ButtonDirective, ButtonLabel } from 'primeng/button';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-design-system-page',
-  imports: [IconComponent, RouterLink, ButtonLabel, ButtonDirective],
+  imports: [IconComponent, RouterLink, ButtonLabel, ButtonDirective, Button],
   templateUrl: './design-system.page.html',
   styleUrl: './design-system.page.scss',
 })

@@ -15,9 +15,57 @@
     </a>
   </div>
 </section>
+
 <section class="main-content">
   <h1 class="section-title">按钮</h1>
-  severity，variant，禁用，仅图标，仅文本，尺寸
+  <h3 class="section-sub-title">常规按钮</h3>
+  <section class="button-section">
+    <p-button label="主要按钮" severity="primary"></p-button>
+    <p-button label="次要按钮" severity="secondary"></p-button>
+    <p-button label="警告按钮" severity="warn"></p-button>
+    <p-button label="危险按钮" severity="danger"></p-button>
+    <p-button label="禁用按钮" severity="danger" [disabled]="true"></p-button>
+    <p-button label="小号按钮" severity="primary" size="small"></p-button>
+    <p-button label="大号按钮" severity="primary" size="large"></p-button>
+  </section>
+
+  <h3 class="section-sub-title">纯图标按钮</h3>
+  <section class="button-section">
+    <div class="button-card">
+      <p-button icon="pi pi-times" [text]="true" severity="primary" />
+      主要
+    </div>
+
+    <div class="button-card">
+      <p-button icon="pi pi-times" [text]="true" severity="secondary" />
+      次要
+    </div>
+
+    <div class="button-card">
+      <p-button icon="pi pi-times" [text]="true" severity="secondary" size="small" />
+      小号
+    </div>
+
+    <div class="button-card">
+      <p-button icon="pi pi-times" [text]="true" severity="secondary" size="large" />
+      大号
+    </div>
+
+    <div class="button-card">
+      <p-button icon="pi pi-times" [text]="true" severity="secondary" [disabled]="true" />
+      禁用
+    </div>
+
+    <div class="button-card">
+      <p-button [text]="true">
+        <app-icon icon="box"></app-icon>
+      </p-button>
+      SVG图标
+    </div>
+  </section>
+
+  <h3 class="section-sub-title">纯文本按钮</h3>
+
   <h1 class="section-title">主题色</h1>
   <section class="common-color-section">
     <div class="common-color-item">
