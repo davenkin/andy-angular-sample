@@ -7,19 +7,13 @@ import { ConsolePageBaseComponent } from 'common/component/console-page-base/con
 import { RemoteDesktopPage } from 'console/demo-device/remote-operation/remote-desktop/remote-desktop.page';
 import { inject } from '@angular/core';
 import Keycloak from 'keycloak-js';
-import { SpinnerService } from 'common/service/spinner.service';
 
-const ensureAuthenticatedAuthGuard: CanActivateChildFn = (
-  route: ActivatedRouteSnapshot,
-  state: RouterStateSnapshot,
-) => {
+const ensureAuthenticatedGuard: CanActivateChildFn = (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) => {
   const keycloak = inject(Keycloak);
-  const spinnerService = inject(SpinnerService);
   if (keycloak.authenticated) {
     return true;
   }
 
-  spinnerService.showGlobalSpinner();
   keycloak.login({ redirectUri: window.location.origin + state.url });
   return false;
 };
@@ -28,7 +22,7 @@ export const routes: Routes = [
   {
     path: 'console',
     component: ConsolePageBaseComponent,
-    canActivateChild: [ensureAuthenticatedAuthGuard],
+    canActivateChild: [ensureAuthenticatedGuard],
     children: [
       {
         path: '',

@@ -21,7 +21,10 @@ todo:
 - 状态管理优先使用BehaviourSubject
 - 启用environment
 - 目录命名和文件命名统一采用单数
-- 目录命名可以省去当前的上下文前缀，比如demo-device下的list-page目录，不用叫demo-device-list-page，而文件命名需要始终带上上下文前缀，比如demo-device-list-page.component.ts，不能叫list-page.component.ts。
+-
+
+目录命名可以省去当前的上下文前缀，比如demo-device下的list-page目录，不用叫demo-device-list-page，而文件命名需要始终带上上下文前缀，比如demo-device-list-page.component.ts，不能叫list-page.component.ts。
+
 - CSS命名使用中划线，不用驼峰命名法
 
 ## Introduction
@@ -42,9 +45,10 @@ To start a local development server, run:
 npm start
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will
+automatically reload whenever you modify any of the source files.
 
-## Building
+## Build
 
 To build the project run:
 
@@ -52,7 +56,28 @@ To build the project run:
 npm run build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build
+optimizes your application for performance and speed.
+
+## Docker
+
+To build a docker image, first build the whole project:
+
+```
+npm run build
+```
+
+Then create Docker image:
+
+```
+docker build -t andy-angular-sample:0.0.1 .
+```
+
+Now you can run the application using Docker:
+
+```
+docker run -d -p 4200:8080 andy-angular-sample:0.0.1
+```
 
 ## Running unit tests
 
@@ -62,7 +87,7 @@ npm test
 
 ## Architecture Decision Records (ADRs)
 
-This project uses [Architecture Decision Records (ADRs)](https://adr.github.io/) to document important architectural decisions. Each ADR is stored in the `ADRs` directory and follows a specific format.
-
+This project uses [Architecture Decision Records (ADRs)](https://adr.github.io/) to document important architectural
+decisions. Each ADR is stored in the `ADRs` directory and follows a specific format.
 
 ## test
