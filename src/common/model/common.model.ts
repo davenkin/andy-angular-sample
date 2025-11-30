@@ -1,3 +1,8 @@
+export interface Environment {
+  production: boolean;
+  apiHost: string;
+}
+
 export enum OsType {
   WINDOWS = 'WINDOWS',
   LINUX = 'LINUX',

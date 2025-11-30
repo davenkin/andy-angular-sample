@@ -1,0 +1,6 @@
+import { Environment } from 'common/model/common.model';
+
+export const environment: Environment = {
+  production: false,
+  apiHost: 'to be filled with real value by environment.dev.ts etc.',
+};
