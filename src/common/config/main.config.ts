@@ -14,6 +14,8 @@ import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { apiResponseErrorInterceptor } from './error.config';
 import { PRIMENG_PRESET } from 'common/style/primeng/preset/primeng-preset';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { ConfirmationService, MessageService } from 'primeng/api';
+import { DialogService } from 'primeng/dynamicdialog';
 
 export const applicationConfig: ApplicationConfig = {
   providers: [
@@ -36,5 +38,8 @@ export const applicationConfig: ApplicationConfig = {
     provideKeycloak(),
     importProvidersFrom(NgxSpinnerModule),
     provideHttpClient(withInterceptors([includeBearerTokenInterceptor, apiResponseErrorInterceptor])),
+    MessageService,
+    ConfirmationService,
+    DialogService,
   ],
 };

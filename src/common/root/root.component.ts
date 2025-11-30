@@ -3,10 +3,12 @@ import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { GLOBAL_SPINNER } from 'common/service/spinner.service';
 import { SpinnerComponent } from 'common/component/spinner/spinner.component';
+import { Toast } from 'primeng/toast';
+import { ConfirmDialog } from 'primeng/confirmdialog';
 
 @Component({
   selector: 'app-root',
-  imports: [FormsModule, RouterOutlet, SpinnerComponent],
+  imports: [FormsModule, RouterOutlet, SpinnerComponent, Toast, ConfirmDialog],
   templateUrl: './root.component.html',
   styleUrl: './root.component.scss',
 })

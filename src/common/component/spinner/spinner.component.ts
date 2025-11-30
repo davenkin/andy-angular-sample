@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { NgxSpinnerComponent } from 'ngx-spinner';
 
 @Component({
@@ -6,6 +6,7 @@ import { NgxSpinnerComponent } from 'ngx-spinner';
   templateUrl: './spinner.component.html',
   imports: [NgxSpinnerComponent],
   styleUrl: './spinner.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SpinnerComponent {
   @Input({ required: true }) name = '';
