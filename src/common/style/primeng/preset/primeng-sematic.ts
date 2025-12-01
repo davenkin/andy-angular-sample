@@ -122,7 +122,7 @@ export const PRIMENG_SEMATIC = {
       primary: {
         color: '{primary.600}',
         contrastColor: '#ffffff',
-        hoverColor: '{primary.600}',
+        hoverColor: '{primary.700}',
         activeColor: '{primary.700}',
       },
       highlight: {

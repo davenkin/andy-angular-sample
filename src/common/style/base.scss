@@ -18,13 +18,13 @@
   // Base global CSS variables
   :root {
     --primary-color: var(--blue-600);
+    --emphasis-text-color: var(--neutral-800);
     --primary-text-color: var(--neutral-700);
     --secondary-text-color: var(--neutral-600);
-    --emphasis-text-color: var(--neutral-800);
-    --success-text-color: var(--green-700);
-    --warn-text-color: var(--amber-700);
-    --error-text-color: var(--red-700);
     --placeholder-text-color: var(--neutral-300);
+    --success-color: var(--green-700);
+    --warn-color: var(--amber-700);
+    --error-color: var(--red-700);
     --split-line-color: var(--gray-300);
     --small-control-height: var(--24px);
     --medium-control-height: var(--32px);

@@ -3,3 +3,27 @@
 // Before adding styles in this file, you should firstly consider using PrimeNG theming and then 'primeng-override.scss'
 // Selector naming convention: cp-xxx, the prefix 'cp' means 'Customize PrimeNG'
 // In order avoid conflict, please use cp-xxx selector along with PrimeNG's selectors to target the elements precisely
+
+p-button {
+  button.p-button.p-button-text:not(.p-button-icon-only):has(app-icon) {
+    width: var(--medium-control-height);
+    height: var(--medium-control-height);
+    padding: 0 !important;
+  }
+
+  button.p-button.p-button-text:not(.p-button-icon-only).p-button-sm:has(app-icon) {
+    width: var(--small-control-height);
+    height: var(--small-control-height);
+    padding: 0;
+  }
+
+  button.p-button.p-button-text:not(.p-button-icon-only).p-button-lg:has(app-icon) {
+    width: var(--large-control-height);
+    height: var(--large-control-height);
+    padding: 0;
+  }
+
+  button.p-button.p-button-text:not(.p-button-icon-only):has(app-icon):disabled {
+    color: var(--gray-500);
+  }
+}

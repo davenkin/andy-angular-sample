@@ -11,6 +11,7 @@
   padding: var(--10px) var(--30px);
   background: white;
   border-bottom: var(--1px) solid var(--split-line-color);
+  z-index: 1;
 }
 
 .header-left {
@@ -47,12 +48,14 @@
 .button-section {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: var(--30px);
 }
 
 .button-card {
   display: flex;
   align-items: center;
+  gap: var(--5px);
 }
 
 .text-color-section {

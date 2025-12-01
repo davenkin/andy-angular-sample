@@ -59,10 +59,8 @@ export function includeBearerTokenInterceptor(
   const keycloak = inject(Keycloak);
   return from(
     (async () => {
-      return await keycloak.updateToken(60).catch((result) => {
-        if (!result) {
-          keycloak.login();
-        }
+      return await keycloak.updateToken(60).catch(() => {
+        keycloak.login();
       });
     })(),
   ).pipe(
