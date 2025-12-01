@@ -275,7 +275,26 @@
       var(--error-color)
     </div>
   </section>
-  <h1 class="section-title">背景色</h1>
+  <h1 class="section-title">内容背景色</h1>
+  <section class="common-color-section">
+    <div class="common-color-item width-250">
+      <div class="common-color-legend" [style]="`background: var(--light-background-color)`"></div>
+      <div>var(--light-background-color)</div>
+      <div>浅色背景</div>
+    </div>
+
+    <div class="common-color-item width-250">
+      <div class="common-color-legend" [style]="`background: var(--medium-background-color)`"></div>
+      <div>var(--medium-background-color)</div>
+      <div>中色背景</div>
+    </div>
+
+    <div class="common-color-item width-250">
+      <div class="common-color-legend" [style]="`background: var(--heavy-background-color)`"></div>
+      <div>var(--heavy-background-color)</div>
+      <div>深色背景</div>
+    </div>
+  </section>
   <h1 class="section-title">其他常用颜色</h1>
   <section class="common-color-section">
     @for (color of allCommonColors; track color) {
@@ -311,7 +330,44 @@
     <code>&lt;app-icon icon="box">&lt;/app-icon&gt;</code>
   </div>
   <div class="u-margin-top-10">可以通过CSS的color设置图标颜色，并通过font-size设置图标尺寸。</div>
-  <h3 class="section-sub-title">图标列表</h3>
+
+  <h3 class="section-sub-title">SVG图标颜色</h3>
+  <div class="icon-section">
+    <div class="icon-item">
+      <app-icon icon="box"></app-icon>
+      <div>默认颜色</div>
+    </div>
+
+    <div class="icon-item">
+      <app-icon icon="box" class="colored-icon-blue"></app-icon>
+      <div>主题蓝</div>
+    </div>
+
+    <div class="icon-item">
+      <app-icon icon="box" class="colored-icon-red"></app-icon>
+      <div>危险红</div>
+    </div>
+  </div>
+
+  <h3 class="section-sub-title">SVG图标尺寸</h3>
+  <div class="icon-section">
+    <div class="icon-item">
+      <app-icon icon="box"></app-icon>
+      <div>默认尺寸</div>
+    </div>
+
+    <div class="icon-item">
+      <app-icon icon="box" class="u-font-size-16"></app-icon>
+      <div>var(--16px)</div>
+    </div>
+
+    <div class="icon-item">
+      <app-icon icon="box" class="u-font-size-20"></app-icon>
+      <div>var(--20px)</div>
+    </div>
+  </div>
+
+  <h3 class="section-sub-title">SVG图标列表</h3>
   <section class="icon-section">
     @for (icon of allIcons; track icon) {
     <div class="icon-item">
@@ -320,30 +376,4 @@
     </div>
     }
   </section>
-
-  <h3 class="section-sub-title">图标颜色</h3>
-  <div class="icon-section">
-    <div class="icon-item">
-      <app-icon icon="box" class="colored-icon-red"></app-icon>
-      <div>box</div>
-    </div>
-
-    <div class="icon-item">
-      <app-icon icon="calendar" class="colored-icon-blue"></app-icon>
-      <div>calendar</div>
-    </div>
-  </div>
-
-  <h3 class="section-sub-title">图标尺寸</h3>
-  <div class="icon-section">
-    <div class="icon-item">
-      <app-icon icon="box" class="u-font-size-14"></app-icon>
-      <div>box</div>
-    </div>
-
-    <div class="icon-item">
-      <app-icon icon="calendar" class="u-font-size-20"></app-icon>
-      <div>calendar</div>
-    </div>
-  </div>
 </section>

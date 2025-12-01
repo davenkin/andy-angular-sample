@@ -85,6 +85,10 @@
   width: var(--150px);
 }
 
+.width-250 {
+  width: var(--250px);
+}
+
 .common-color-legend {
   width: var(--30px);
   border-radius: var(--4px);
@@ -107,7 +111,7 @@
 }
 
 .colored-icon-red {
-  color: var(--red-main-color);
+  color: var(--red-main);
 }
 
 .colored-icon-blue {
