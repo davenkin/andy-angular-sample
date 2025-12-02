@@ -2,10 +2,10 @@ export const PRIMENG_PRIMITIVE = {
   borderRadius: {
     none: '0',
     xs: 'var(--2px)',
-    sm: 'var(--4px)',
-    md: 'var(--6px)',
-    lg: 'var(--8px)',
-    xl: 'var(--12px)',
+    sm: 'var(--3px)',
+    md: 'var(--4px)',
+    lg: 'var(--6px)',
+    xl: 'var(--8px)',
   },
   emerald: {
     50: 'var(--emerald-50)',
