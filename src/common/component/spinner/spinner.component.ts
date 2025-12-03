@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { NgxSpinnerComponent } from 'ngx-spinner';
 
 @Component({
@@ -9,6 +9,6 @@ import { NgxSpinnerComponent } from 'ngx-spinner';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SpinnerComponent {
-  @Input({ required: true }) name = '';
-  @Input() fullScreen = false;
+  name = input.required<string>();
+  fullScreen = input<boolean>(false);
 }

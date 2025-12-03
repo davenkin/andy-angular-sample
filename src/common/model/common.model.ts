@@ -3,6 +3,8 @@ export interface Environment {
   apiHost: string;
 }
 
+export type ComponentSize = 'normal' | 'small' | 'large';
+
 export enum OsType {
   WINDOWS = 'WINDOWS',
   LINUX = 'LINUX',
