@@ -44,6 +44,22 @@ export const PRIMENG_COMPONENTS = {
               shadow: 'none',
             },
           },
+          info: {
+            background: 'var(--sky-main)',
+            borderColor: 'var(--sky-main)',
+            focusRing: {
+              color: 'var(--primary-color)',
+              shadow: 'none',
+            },
+          },
+          success: {
+            background: 'var(--green-main)',
+            borderColor: 'var(--green-main)',
+            focusRing: {
+              color: 'var(--primary-color)',
+              shadow: 'none',
+            },
+          },
         },
         text: {
           secondary: {

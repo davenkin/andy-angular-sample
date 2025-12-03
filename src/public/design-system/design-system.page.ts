@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import iconRegistry from 'common/component/icon/icon-registry';
 import { IconComponent, IconType } from 'common/component/icon/icon.component';
 import { Button, ButtonDirective, ButtonLabel } from 'primeng/button';
 import { RouterLink } from '@angular/router';
+import { ToastService } from 'common/service/toast.service';
 
 @Component({
   selector: 'app-design-system-page',
@@ -11,6 +12,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './design-system.page.scss',
 })
 export class DesignSystemPage {
+  private toastService = inject(ToastService);
   get allIcons(): IconType[] {
     return Object.keys(iconRegistry) as IconType[];
   }
@@ -62,5 +64,27 @@ export class DesignSystemPage {
       '--stone-light',
       '--stone-main',
     ];
+  }
+
+  protected showToast(type: string) {
+    const message = '这个一个消息';
+    switch (type) {
+      case 'info': {
+        this.toastService.info(message);
+        break;
+      }
+      case 'success': {
+        this.toastService.success(message);
+        break;
+      }
+      case 'warn': {
+        this.toastService.warn(message);
+        break;
+      }
+      case 'error': {
+        this.toastService.error(message);
+        break;
+      }
+    }
   }
 }

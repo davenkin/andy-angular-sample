@@ -303,7 +303,12 @@
   <h1 class="section-title">常用控件</h1>
   tag
   <h1 class="section-title">消息提示</h1>
-  普通，警告，错误，成功
+  <section class="button-section">
+    <p-button label="常规消息" severity="info" (onClick)="showToast('info')"></p-button>
+    <p-button label="成功消息" severity="success" (onClick)="showToast('success')"></p-button>
+    <p-button label="警告消息" severity="warn" (onClick)="showToast('warn')"></p-button>
+    <p-button label="错误消息" severity="danger" (onClick)="showToast('error')"></p-button>
+  </section>
   <h1 class="section-title">确认框</h1>
   警告，确认，禁止（红色）
   <h1 class="section-title">对话框</h1>
