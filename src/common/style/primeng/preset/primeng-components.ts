@@ -104,4 +104,9 @@ export const PRIMENG_COMPONENTS = {
       },
     },
   },
+  tooltip: {
+    root: {
+      maxWidth: 'var(--600px)',
+    },
+  },
 };

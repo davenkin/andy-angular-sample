@@ -117,3 +117,12 @@
 .colored-icon-blue {
   color: var(--primary-color);
 }
+
+.common-control-item {
+  display: flex;
+  align-items: center;
+}
+
+.common-control-title {
+  font-weight: 700;
+}

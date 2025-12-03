@@ -1,0 +1,19 @@
+:host {
+  display: inline-block;
+  max-width: var(--120px);
+}
+
+.content-wrapper {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &:focus-within {
+    ::ng-deep {
+      * {
+        outline: none !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<div
+  class="content-wrapper u-focus-within-ring"
+  role="none"
+  #contentWrapper
+  [pTooltip]="content"
+  tooltipEvent="both"
+  tooltipPosition="top"
+  [tooltipDisabled]="!isEllipsised || !showToolTip()"
+>
+  <ng-content></ng-content>
+</div>

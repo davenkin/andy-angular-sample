@@ -4,10 +4,11 @@ import { IconComponent, IconType } from 'common/component/icon/icon.component';
 import { Button, ButtonDirective, ButtonLabel } from 'primeng/button';
 import { RouterLink } from '@angular/router';
 import { ToastService } from 'common/service/toast.service';
+import { EllipsisedComponent } from 'common/component/ellipsised-text/ellipsised.component';
 
 @Component({
   selector: 'app-design-system-page',
-  imports: [IconComponent, RouterLink, ButtonLabel, ButtonDirective, Button],
+  imports: [IconComponent, RouterLink, ButtonLabel, ButtonDirective, Button, EllipsisedComponent],
   templateUrl: './design-system.page.html',
   styleUrl: './design-system.page.scss',
 })
@@ -66,8 +67,7 @@ export class DesignSystemPage {
     ];
   }
 
-  protected showToast(type: string) {
-    const message = '这个一个消息';
+  protected showToast(type: string, message: string) {
     switch (type) {
       case 'info': {
         this.toastService.info(message);

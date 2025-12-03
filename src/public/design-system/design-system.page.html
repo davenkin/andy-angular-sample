@@ -301,13 +301,32 @@
   </section>
 
   <h1 class="section-title">常用控件</h1>
-  tag
+  <div class="common-control-item">
+    <div class="common-control-title">带省略号文本（app-ellipsised）：</div>
+    <app-ellipsised>这是一段带省略号的文本，鼠标悬浮时会显示tooltip</app-ellipsised>
+  </div>
   <h1 class="section-title">消息提示</h1>
   <section class="button-section">
-    <p-button label="常规消息" severity="primary" (onClick)="showToast('info')"></p-button>
-    <p-button label="成功消息" severity="success" (onClick)="showToast('success')"></p-button>
-    <p-button label="警告消息" severity="warn" (onClick)="showToast('warn')"></p-button>
-    <p-button label="错误消息" severity="danger" (onClick)="showToast('error')"></p-button>
+    <p-button
+      label="常规消息"
+      severity="primary"
+      (onClick)="showToast('info','常规消息，一般比较少使用，优先用其他类型')"
+    ></p-button>
+    <p-button
+      label="成功消息"
+      severity="success"
+      (onClick)="showToast('success','成功消息，当操作执行成功后显示')"
+    ></p-button>
+    <p-button
+      label="警告消息"
+      severity="warn"
+      (onClick)="showToast('warn','警告消息，用于向用户显示警告信息')"
+    ></p-button>
+    <p-button
+      label="错误消息"
+      severity="danger"
+      (onClick)="showToast('error','错误消息，当发生错误时通知用户')"
+    ></p-button>
   </section>
   <h1 class="section-title">确认框</h1>
   警告，确认，禁止（红色）
