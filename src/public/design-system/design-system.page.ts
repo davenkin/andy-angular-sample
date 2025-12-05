@@ -5,6 +5,7 @@ import { Button, ButtonDirective, ButtonLabel } from 'primeng/button';
 import { RouterLink } from '@angular/router';
 import { ToastService } from 'common/service/toast.service';
 import { EllipsisedComponent } from 'common/component/ellipsised-text/ellipsised.component';
+import { ConfirmationSeverity, ConfirmService } from 'common/service/confirm.service';
 
 @Component({
   selector: 'app-design-system-page',
@@ -14,6 +15,8 @@ import { EllipsisedComponent } from 'common/component/ellipsised-text/ellipsised
 })
 export class DesignSystemPage {
   private toastService = inject(ToastService);
+  private confirmService = inject(ConfirmService);
+
   get allIcons(): IconType[] {
     return Object.keys(iconRegistry) as IconType[];
   }
@@ -86,5 +89,19 @@ export class DesignSystemPage {
         break;
       }
     }
+  }
+
+  protected showConfirmation(severity: ConfirmationSeverity) {
+    this.confirmService.confirm({
+      severity: severity,
+      header: '确认以下',
+      message: '今天你过得开心吗？',
+      accept: () => {
+        this.toastService.success('看来你挺开心的');
+      },
+      reject: () => {
+        this.toastService.error('看来你不开心');
+      },
+    });
   }
 }

@@ -32,6 +32,10 @@
     --small-control-height: var(--24px);
     --medium-control-height: var(--32px);
     --large-control-height: var(--40px);
+    --small-border-radius: var(--2px);
+    --medium-border-radius: var(--4px);
+    --large-border-radius: var(--8px);
+    --rounded-border-radius: 99999px;
 
     --root-font-size: 14;
     --1px: calc(1rem / var(--root-font-size));

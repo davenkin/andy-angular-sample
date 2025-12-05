@@ -290,15 +290,6 @@
       <div>深色背景</div>
     </div>
   </section>
-  <h1 class="section-title">其他常用颜色</h1>
-  <section class="common-color-section">
-    @for (color of allCommonColors; track color) {
-    <div class="common-color-item">
-      <div class="common-color-legend" [style]="`background: var(${color})`"></div>
-      <div>var({{ color }})</div>
-    </div>
-    }
-  </section>
 
   <h1 class="section-title">常用控件</h1>
   <ul>
@@ -339,14 +330,16 @@
     ></p-button>
   </section>
   <h1 class="section-title">确认框</h1>
-  警告，确认，禁止（红色）
+  <section class="button-section">
+    <p-button label="常规确认框" severity="primary" (onClick)="showConfirmation('primary')"></p-button>
+    <p-button label="成功确认框" severity="success" (onClick)="showConfirmation('success')"></p-button>
+    <p-button label="警告确认框" severity="warn" (onClick)="showConfirmation('warn')"></p-button>
+    <p-button label="危险确认框" severity="danger" (onClick)="showConfirmation('danger')"></p-button>
+  </section>
   <h1 class="section-title">对话框</h1>
   几种尺寸
   <h1 class="section-title">表格</h1>
   排序，选择，组件cell
-  <h1 class="section-title">分割线</h1>
-  <h1 class="section-title">边框阴影</h1>
-  药丸，标签，帮助图标，省略文本
 
   <h1 class="section-title">图标</h1>
   <div>
@@ -404,6 +397,16 @@
     <div class="icon-item">
       <app-icon [icon]="icon"></app-icon>
       <div>{{ icon }}</div>
+    </div>
+    }
+  </section>
+
+  <h1 class="section-title">其他常用颜色</h1>
+  <section class="common-color-section">
+    @for (color of allCommonColors; track color) {
+    <div class="common-color-item">
+      <div class="common-color-legend" [style]="`background: var(${color})`"></div>
+      <div>var({{ color }})</div>
     </div>
     }
   </section>

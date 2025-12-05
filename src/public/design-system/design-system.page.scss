@@ -35,13 +35,17 @@
 
 .section-title {
   color: var(--emphasis-text-color);
-  margin-top: var(--30px);
+  margin-top: var(--70px);
   margin-bottom: var(--10px);
+
+  &:first-child {
+    margin-top: var(--30px);
+  }
 }
 
 .section-sub-title {
   color: var(--emphasis-text-color);
-  margin-top: var(--15px);
+  margin-top: var(--30px);
   margin-bottom: var(--5px);
 }
 

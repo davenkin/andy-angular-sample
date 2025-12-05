@@ -84,3 +84,13 @@ p-toast {
     align-items: center;
   }
 }
+
+.p-confirmdialog {
+  .p-dialog-content {
+    width: var(--500px);
+  }
+
+  .p-dialog-header-actions button.p-dialog-close-button {
+    border-radius: var(--medium-border-radius);
+  }
+}
