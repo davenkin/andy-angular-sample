@@ -1,0 +1,29 @@
+.p-confirmdialog {
+  .p-dialog-content {
+    width: var(--500px);
+  }
+
+  .p-dialog-header-actions button.p-dialog-close-button {
+    border-radius: var(--medium-border-radius);
+  }
+}
+
+.p-confirmdialog {
+  &:has(.cp-confirmation-success) {
+    .p-dialog-title {
+      color: var(--success-color);
+    }
+  }
+
+  &:has(.cp-confirmation-danger) {
+    .p-dialog-title {
+      color: var(--error-color);
+    }
+  }
+
+  &:has(.cp-confirmation-warn) {
+    .p-dialog-title {
+      color: var(--warn-color);
+    }
+  }
+}

@@ -94,7 +94,7 @@ export class DesignSystemPage {
   protected showConfirmation(severity: ConfirmationSeverity) {
     this.confirmService.confirm({
       severity: severity,
-      header: '确认以下',
+      header: '确认一下',
       message: '今天你过得开心吗？',
       accept: () => {
         this.toastService.success('看来你挺开心的');
