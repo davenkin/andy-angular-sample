@@ -5,10 +5,12 @@ import { FocusService } from 'common/service/focus.service';
 export type ConfirmationSeverity = 'primary' | 'success' | 'warn' | 'danger';
 
 export interface Confirmation {
-  severity: ConfirmationSeverity;
+  severity?: ConfirmationSeverity;
   header: string;
   message: string;
+  rejectButtonSeverity?: ConfirmationSeverity;
   acceptButtonText?: string;
+  rejectButtonText?: string;
   accept?: () => void;
   reject?: () => void;
 }
@@ -25,14 +27,14 @@ export class ConfirmService {
     this.confirmationService.confirm({
       message: confirmation.message,
       header: confirmation.header,
-      icon: this.iconFor(confirmation.severity),
+      icon: this.iconFor(confirmation.severity ?? 'primary'),
       rejectButtonProps: {
-        label: '取消',
-        severity: 'secondary',
+        label: confirmation.rejectButtonText ?? '取消',
+        severity: confirmation.rejectButtonSeverity ?? 'secondary',
       },
       acceptButtonProps: {
         label: confirmation.acceptButtonText ?? '确定',
-        severity: confirmation.severity,
+        severity: confirmation.severity ?? 'primary',
       },
       accept: () => {
         this.focusService.pop();
