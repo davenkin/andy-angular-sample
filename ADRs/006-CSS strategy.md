@@ -69,7 +69,8 @@ Some examples when deciding where to put CSS styles:
     }
 
   ```
-- For setting background color of `<p-button>`, PrimeNG preset supports this by configuring the `<p-button>` in
+- For setting background color of `<p-button>`, PrimeNG preset has built-in support for this by configuring the
+  `<p-button>` in
   `primeng-components.ts`:
   ```
     button: {
@@ -87,7 +88,7 @@ Some examples when deciding where to put CSS styles:
     }
   ```
 - For setting pure icon `<p-button>`'s width and height to be the same size, this cannot be done by configuring
-  PrimeNG's preset, so we need to do this inside the p-button component's own customize file `p-button.scss`:
+  PrimeNG's preset, so we need to do this inside the p-button's own customization file `p-button.scss`:
   ```
   // pure icon button
   button.p-button.p-button-icon-only {
