@@ -40,7 +40,8 @@ Normally you add your CSS styles in the following places:
 
 When you try to add CSS styles, go through the following steps to decide where to put the styles. (The red boxes are the
 key decision points. There are multiple files related to PrimeNG customization, pay attention to the their applying
-order.)
+order. Basically, for customizing PrimeNG components, first use PrimeNG's built-in theming(preset) mechanism, only if
+that fails to work then you add your CSS styles.)
 
 ![how-to-decide-where-to-put-css-styles](../ADRs/asset/how-to-decide-where-to-put-css-styles.png)
 
@@ -111,7 +112,7 @@ There are 5 CSS layers, from lowest priority to highest priority:
 - `base`: Base global styles, used only in `base.scss`
 - `primeng`: PrimeNG components styles, those configured using PrimeNG's theme mechanism fall into this layer, such as
   `primeng-preset.ts`, `primeng-primitive.ts`, `primeng-sematic.ts` and `primeng-components.ts`. Other customization
-  files, such as `primeng-override.scss` and `primeng-customize.scss`, do not belong to this layer, but stay unlayered.
+  files, such as `primeng-customize.scss`, do not belong to this layer, but stay unlayered.
 - `utility`: Utility styles
 - unlayered: Your own components' styles
 
