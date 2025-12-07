@@ -1,2 +1,9 @@
-<div>demo dialog</div>
-{{ dialogConfig.data?.message }}
+<section class="cp-dialog-content">
+  <div class="main-content">{{ dialogConfig.data?.message }}</div>
+</section>
+
+<section class="cp-dialog-footer">
+  <p-button data-test="cancel-button" severity="secondary" label="取消" (onClick)="cancel()"></p-button>
+
+  <p-button data-test="save-button" severity="primary" label="确定" (onClick)="save()"></p-button>
+</section>

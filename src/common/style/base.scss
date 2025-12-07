@@ -36,6 +36,8 @@
     --medium-border-radius: var(--4px);
     --large-border-radius: var(--8px);
     --rounded-border-radius: 99999px;
+    --content-splitter-border: 1px solid var(--p-content-border-color);
+    --dialog-horizontal-padding: var(--30px);
 
     --root-font-size: 14;
     --1px: calc(1rem / var(--root-font-size));
