@@ -6,6 +6,9 @@ import { RouterLink } from '@angular/router';
 import { ToastService } from 'common/service/toast.service';
 import { EllipsisedComponent } from 'common/component/ellipsised-text/ellipsised.component';
 import { ConfirmationSeverity, ConfirmService } from 'common/service/confirm.service';
+import { DialogCloseResult, DialogService, DialogSize } from 'common/service/dialog.service';
+import { DemoDialog } from 'public/design-system/demo-dialog/demo.dialog';
+import { take } from 'rxjs';
 
 @Component({
   selector: 'app-design-system-page',
@@ -16,6 +19,7 @@ import { ConfirmationSeverity, ConfirmService } from 'common/service/confirm.ser
 export class DesignSystemPage {
   private toastService = inject(ToastService);
   private confirmService = inject(ConfirmService);
+  private dialogService = inject(DialogService);
 
   get allIcons(): IconType[] {
     return Object.keys(iconRegistry) as IconType[];
@@ -102,6 +106,23 @@ export class DesignSystemPage {
       reject: () => {
         this.toastService.error('看来你不开心');
       },
+    });
+  }
+
+  protected showDialog(size: DialogSize) {
+    const dialogRef = this.dialogService.open(DemoDialog, {
+      header: '对话框',
+      size: size,
+      data: {
+        message: '这是传入的数据',
+      },
+    });
+    dialogRef.onClose.pipe(take(1)).subscribe((result) => {
+      if (result === DialogCloseResult.SUCCEED) {
+        this.toastService.success('成功完成某个事项');
+      } else {
+        this.toastService.error('未完成某个事项');
+      }
     });
   }
 }

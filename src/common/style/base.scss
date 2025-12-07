@@ -76,10 +76,14 @@
     --200px: calc(200rem / var(--root-font-size));
     --300px: calc(300rem / var(--root-font-size));
     --400px: calc(400rem / var(--root-font-size));
+    --436px: calc(436rem / var(--root-font-size));
     --500px: calc(500rem / var(--root-font-size));
+    --572px: calc(572rem / var(--root-font-size));
     --600px: calc(600rem / var(--root-font-size));
     --700px: calc(700rem / var(--root-font-size));
     --800px: calc(800rem / var(--root-font-size));
+    --864px: calc(864rem / var(--root-font-size));
+    --1110px: calc(1110rem / var(--root-font-size));
   }
 
   // Common colors, when you need a custom color(for example some status tag might require multiple colors), choose it from here
