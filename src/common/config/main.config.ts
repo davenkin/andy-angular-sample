@@ -1,6 +1,7 @@
 import {
   ApplicationConfig,
   importProvidersFrom,
+  LOCALE_ID,
   provideBrowserGlobalErrorListeners,
   provideZoneChangeDetection,
 } from '@angular/core';
@@ -38,6 +39,7 @@ export const applicationConfig: ApplicationConfig = {
     provideKeycloak(),
     importProvidersFrom(NgxSpinnerModule),
     provideHttpClient(withInterceptors([includeBearerTokenInterceptor, apiResponseErrorInterceptor])),
+    { provide: LOCALE_ID, useValue: 'zh-CN' }, //This is just the default locale, use CurrentContextService.locale() to get the real locale dynamically
     MessageService,
     ConfirmationService,
     DialogService,
