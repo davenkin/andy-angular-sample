@@ -9,11 +9,19 @@ import { ConfirmationSeverity, ConfirmService } from 'common/service/confirm.ser
 import { DialogCloseResult, DialogService, DialogSize } from 'common/service/dialog.service';
 import { DemoDialog } from 'public/design-system/demo-dialog/demo.dialog';
 import { take } from 'rxjs';
-import { DemoDeviceListPage } from 'public/design-system/demo-device/list-page/demo-device-list.page';
+import { DemoDeviceListComponent } from 'public/design-system/demo-device/list/demo-device-list.component';
 
 @Component({
   selector: 'app-design-system-page',
-  imports: [IconComponent, RouterLink, ButtonLabel, ButtonDirective, Button, EllipsisedComponent, DemoDeviceListPage],
+  imports: [
+    IconComponent,
+    RouterLink,
+    ButtonLabel,
+    ButtonDirective,
+    Button,
+    EllipsisedComponent,
+    DemoDeviceListComponent,
+  ],
   templateUrl: './design-system.page.html',
   styleUrl: './design-system.page.scss',
 })
