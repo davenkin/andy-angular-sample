@@ -1,5 +1,13 @@
+<div>{{ currentContext.org()?.name }}</div>
+<div>{{ currentContext.user()?.name }}</div>
+<div>{{ 'CANCEL' | translate }}</div>
+<div>{{ Date() | date:'fullDate':'':currentContext.locale() }}</div>
+
 <div class="title">This is a demo public home page.</div>
-<p-button label="确定"></p-button>
+<p-button label="修改语言中文" (onClick)="currentContext.changeLanguage('zh')"></p-button>
+<p-button label="修改语言英文" (onClick)="currentContext.changeLanguage('en')"></p-button>
+<p-button label="修改orgA" (onClick)="currentContext.changeOrg({id:'aaa',name:'A公司'})"></p-button>
+<p-button label="修改orgB" (onClick)="currentContext.changeOrg({id:'bbb',name:'B公司'})"></p-button>
 <p-button label="确定" size="small"></p-button>
 <p-button label="确定" size="large"></p-button>
 <p-button label="确定" disabled></p-button>

@@ -66,7 +66,7 @@ export function includeBearerTokenInterceptor(
   }
 
   const keycloak = inject(Keycloak);
-  const currentContextService = inject(CurrentContextService);
+  const currentContext = inject(CurrentContextService);
 
   return from(
     (async () => {
@@ -81,7 +81,7 @@ export function includeBearerTokenInterceptor(
           req.clone({
             setHeaders: {
               Authorization: `Bearer ${keycloak.token}`,
-              orgId: currentContextService.orgId() as string,
+              orgId: currentContext.orgId() as string,
             },
           }),
         );

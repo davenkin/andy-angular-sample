@@ -1,7 +1,6 @@
 import {
   ApplicationConfig,
   importProvidersFrom,
-  LOCALE_ID,
   provideBrowserGlobalErrorListeners,
   provideZoneChangeDetection,
 } from '@angular/core';
@@ -17,6 +16,7 @@ import { PRIMENG_PRESET } from 'common/style/primeng/preset/primeng-preset';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { DialogService } from 'primeng/dynamicdialog';
+import { provideI18n } from 'common/config/i18n.config';
 
 export const applicationConfig: ApplicationConfig = {
   providers: [
@@ -39,7 +39,7 @@ export const applicationConfig: ApplicationConfig = {
     provideKeycloak(),
     importProvidersFrom(NgxSpinnerModule),
     provideHttpClient(withInterceptors([includeBearerTokenInterceptor, apiResponseErrorInterceptor])),
-    { provide: LOCALE_ID, useValue: 'zh-CN' }, //This is just the default locale, use CurrentContextService.locale() to get the real locale dynamically
+    provideI18n(),
     MessageService,
     ConfirmationService,
     DialogService,
