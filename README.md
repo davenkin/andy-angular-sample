@@ -6,21 +6,12 @@ todo:
 - 路由时，console下再分2级路由，全空白的一个，有主菜单的一个，其下再分三级路由；public下默认再分一下，只是全部空白的子页面
 - 后端api的数据模型跟着后端api走，模型本身不要和任何组件产生耦合
 - 统一分页查询结构
-- 对于console页面，需要获取当前用户信息，其实也可以在onAuthSuccess时获取，比如基本信息和ui权限信息，CurrentUser
-- 统一几种重要颜色，几种字体颜色，常规字体颜色，强调字体颜色，placeholder字体颜色
-- 统一一些边距尺寸等
-- css名称全部用中划线，css变量也全部用中划线
-- 统一spinner，调用api时传入参数
-- 使用css reset，并通过@layer将其变成最低优先级
 - 统一console页面的整体页面结构
-- 多语言
 - 枚举类型全部用ts的enum
 - 全部使用standalone的组件
 - 使用@for和@if等
-- 使用takeuntildestroy()
-- 状态管理优先使用BehaviourSubject
-- 启用environment
-- 目录命名和文件命名统一采用单数
+- 状态管理优先使用Signal
+- adr common: 目录命名和文件命名统一采用单数
 - docker keycloak从后端迁移到本项目
 
 目录命名可以省去当前的上下文前缀，比如demo-device下的list-page目录，不用叫demo-device-list-page，而文件命名需要始终带上上下文前缀，比如demo-device-list-page.component.ts，不能叫list-page.component.ts。
