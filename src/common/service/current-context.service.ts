@@ -1,4 +1,6 @@
-import { computed, Injectable, signal } from '@angular/core';
+import { computed, inject, Injectable, signal } from '@angular/core';
+import isEqual from 'lodash/isEqual';
+import Keycloak from 'keycloak-js';
 
 const LANGUAGE_TO_LOCALE: Record<string, string> = {
   zh: 'zh-CN',
@@ -10,8 +12,15 @@ export interface CurrentOrg {
   name: string;
 }
 
+export interface CurrentUser {
+  id: string;
+  name: string;
+  email: string;
+}
+
 @Injectable({ providedIn: 'root' })
 export class CurrentContextService {
+  private keycloak = inject(Keycloak);
   private readonly LANGUAGE_KEY = '__language';
   private readonly ORG_KEY = '__org';
   private _language = signal(localStorage.getItem(this.LANGUAGE_KEY) || 'zh');
@@ -34,9 +43,21 @@ export class CurrentContextService {
   }
 
   public setOrg(org: CurrentOrg) {
+    if (isEqual(this.org(), org)) {
+      return;
+    }
     this._org.set(org);
     localStorage.setItem(this.ORG_KEY, JSON.stringify(org));
+    window.location.reload(); // Reload the whole application after org changed
+  }
+
+  public user(): CurrentUser | null {
+    return this.keycloak.tokenParsed
+      ? {
+          id: this.keycloak.tokenParsed.sub as string,
+          name: this.keycloak.tokenParsed['this.keycloak.tokenParsed'] as string,
+          email: this.keycloak.tokenParsed['email'] as string,
+        }
+      : null;
   }
 }
-
-// todo: 需要一个current-org.initilizer.ts或者在ConsolePageBaseComponent完成，对于org用户则通过调用后端api获取org数据后再调用setOrg()，对于超级用户则不用做任何事情。

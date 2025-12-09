@@ -8,5 +8,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './console-page-base.component.scss',
 })
 export class ConsolePageBaseComponent {
-  // todo: add some common logic that are required by all console pages，加载
+  // todo: add some common logic that are required by all console pages, such as org info and user info
 }

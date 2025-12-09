@@ -2,17 +2,26 @@ import { HttpEvent, HttpHandlerFn, HttpRequest } from '@angular/common/http';
 import { from, Observable, switchMap } from 'rxjs';
 import { EnvironmentProviders, inject, makeEnvironmentProviders, provideAppInitializer } from '@angular/core';
 import Keycloak from 'keycloak-js';
+import { CurrentContextService } from 'common/service/current-context.service';
+import { environment } from 'environments/environment';
 
 const AUTH_EXCLUDED_URLS: UrlCondition[] = [];
+
+function resolveKeycloakRealm(): string {
+  return 'test-realm'; // todo: can get the realm from the current URL, and default to a fixed realm
+}
+function resolveKeycloakClientId(): string {
+  return 'test-client'; // todo: can get the clientId from the current URL, and default to a fixed clientId
+}
 
 export function provideKeycloak(): EnvironmentProviders {
   return makeEnvironmentProviders([
     {
       provide: Keycloak,
       useValue: new Keycloak({
-        url: 'http://localhost:8080',
-        realm: 'test-realm',
-        clientId: 'test-client',
+        url: environment.keycloakUrl,
+        realm: resolveKeycloakRealm(),
+        clientId: resolveKeycloakClientId(),
       }),
     },
     provideAppInitializer(async () => {
@@ -57,6 +66,8 @@ export function includeBearerTokenInterceptor(
   }
 
   const keycloak = inject(Keycloak);
+  const currentContextService = inject(CurrentContextService);
+
   return from(
     (async () => {
       return await keycloak.updateToken(60).catch(() => {
@@ -70,6 +81,7 @@ export function includeBearerTokenInterceptor(
           req.clone({
             setHeaders: {
               Authorization: `Bearer ${keycloak.token}`,
+              orgId: currentContextService.orgId() as string,
             },
           }),
         );

@@ -1,6 +1,7 @@
 export interface Environment {
   production: boolean;
   apiHost: string;
+  keycloakUrl: string;
 }
 
 export enum OsType {
