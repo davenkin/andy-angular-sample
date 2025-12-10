@@ -1,6 +1,7 @@
 import { computed, inject, Injectable, signal } from '@angular/core';
 import isEqual from 'lodash/isEqual';
 import Keycloak from 'keycloak-js';
+import { RefreshService } from 'common/service/refresh.service';
 
 const LANGUAGE_TO_LOCALE: Record<string, string> = {
   zh: 'zh-CN',
@@ -21,6 +22,7 @@ export interface CurrentUser {
 @Injectable({ providedIn: 'root' })
 export class CurrentContextService {
   private keycloak = inject(Keycloak);
+  private refreshService = inject(RefreshService);
   private readonly LANGUAGE_KEY = '__language';
   public readonly ORG_KEY = '__org';
   private _language = signal(localStorage.getItem(this.LANGUAGE_KEY) || 'zh');
@@ -50,7 +52,7 @@ export class CurrentContextService {
     this._org.set(org);
     localStorage.setItem(this.ORG_KEY, JSON.stringify(org));
     if (reload) {
-      window.location.reload(); // Reload the whole application after org changed to make a clean environment
+      this.refreshService.refreshWholeApp();
     }
   }
 

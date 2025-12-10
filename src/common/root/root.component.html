@@ -1,4 +1,6 @@
-<router-outlet></router-outlet>
-<app-spinner [name]="GLOBAL_SPINNER" [fullScreen]="true"></app-spinner>
-<p-toast position="top-center"></p-toast>
-<p-confirm-dialog [draggable]="false" closeAriaLabel="关闭"></p-confirm-dialog>
+@if (refreshService.refreshWholeAppNeeded()) {
+  <router-outlet></router-outlet>
+  <app-spinner [name]="GLOBAL_SPINNER" [fullScreen]="true"></app-spinner>
+  <p-toast position="top-center"></p-toast>
+  <p-confirm-dialog [draggable]="false" closeAriaLabel="关闭"></p-confirm-dialog>
+}
