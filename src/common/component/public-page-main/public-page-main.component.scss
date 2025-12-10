@@ -1,0 +1,25 @@
+.the-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  padding: var(--10px) var(--30px);
+  background: white;
+  border-bottom: var(--1px) solid var(--split-line-color);
+  z-index: 1;
+}
+
+.header-left {
+  font-size: var(--32px);
+  font-weight: 700;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--15px);
+}

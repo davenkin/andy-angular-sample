@@ -1,4 +1,5 @@
 export interface Environment {
+  development: boolean;
   production: boolean;
   apiHost: string;
   keycloakUrl: string;
