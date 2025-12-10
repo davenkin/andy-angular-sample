@@ -1,4 +1,13 @@
-<section>nav menu</section>
+<section>
+  nav menu
+  <div>{{ currentContextService.user()?.name }}</div>
+  <div>{{ currentContextService.org()?.name }}</div>
+  <div>
+    <a routerLink="/" pButton data-test="change-me">
+      <span pButtonLabel>主页</span>
+    </a>
+  </div>
+</section>
 <section class="main-content">
   <router-outlet></router-outlet>
   <app-spinner [name]="CONSOLE_MAIN_SPINNER"></app-spinner>

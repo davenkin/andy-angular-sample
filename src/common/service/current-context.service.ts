@@ -22,9 +22,9 @@ export interface CurrentUser {
 export class CurrentContextService {
   private keycloak = inject(Keycloak);
   private readonly LANGUAGE_KEY = '__language';
-  private readonly ORG_KEY = '__org';
+  public readonly ORG_KEY = '__org';
   private _language = signal(localStorage.getItem(this.LANGUAGE_KEY) || 'zh');
-  private _org = signal<CurrentOrg | undefined>(JSON.parse(localStorage.getItem(this.ORG_KEY) || 'null') || undefined);
+  private _org = signal<CurrentOrg | undefined>(undefined);
 
   public language = this._language.asReadonly();
   public locale = computed(() => LANGUAGE_TO_LOCALE[this.language()]);
@@ -43,13 +43,15 @@ export class CurrentContextService {
     }
   }
 
-  public changeOrg(org: CurrentOrg) {
+  public changeOrg(org: CurrentOrg, reload = true) {
     if (isEqual(this.org(), org)) {
       return;
     }
     this._org.set(org);
     localStorage.setItem(this.ORG_KEY, JSON.stringify(org));
-    window.location.reload(); // Reload the whole application after org changed to make a clean environment
+    if (reload) {
+      window.location.reload(); // Reload the whole application after org changed to make a clean environment
+    }
   }
 
   public user(): CurrentUser | null {

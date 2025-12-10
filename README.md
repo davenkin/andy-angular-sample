@@ -81,4 +81,16 @@ npm test
 This project uses [Architecture Decision Records (ADRs)](https://adr.github.io/) to document important architectural
 decisions. Each ADR is stored in the `ADRs` directory and follows a specific format.
 
-## test
+## Local keycloak setup
+
+- Run `./start-docker-compose.sh` to start local keycloak server
+- Open `http://localhost:8765` use account `admin/admin` to login
+- Create a realm named `test-realm`
+- In `test-realm`, create a client named `test-client`:
+  - Enable `Standard flow` for `Authentication flow`
+  - Set `Valid redirect URIs` to `http://localhost:4200/*`
+  - Set `Web origins` to `*`
+- In `test-realm`, create a user named `test-user` and set password credentials for it
+- Now you are ready to open `http://localhost:4200` and login using Keycloak user
+- Run `stop-docker-compose.sh` to stop docker, the next time you run `./start-docker-compose.sh` the previous
+  `test-realm`, `test-client` and `test-user` will stay
