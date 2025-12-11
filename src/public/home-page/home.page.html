@@ -1,37 +1,8 @@
-<div>{{ currentContext.org()?.name }}</div>
-<div>{{ currentContext.user()?.name }}</div>
-<div>{{ 'CANCEL' | translate }}</div>
-<div>{{ Date() | date:'fullDate':'':currentContext.locale() }}</div>
-
-<div class="title">This is a public home page.</div>
-<p-button label="修改语言中文" (onClick)="currentContext.changeLanguage('zh')"></p-button>
-<p-button label="修改语言英文" (onClick)="currentContext.changeLanguage('en')"></p-button>
-<p-button label="修改orgA" (onClick)="currentContext.changeOrg({id:'aaa',name:'A公司'})"></p-button>
-<p-button label="修改orgB" (onClick)="currentContext.changeOrg({id:'bbb',name:'B公司'})"></p-button>
-<p-button label="确定" size="small"></p-button>
-<p-button label="确定" size="large"></p-button>
-<p-button label="确定" disabled></p-button>
-<p-button label="确定" variant="outlined"></p-button>
-<p-button label="确定" variant="outlined" size="small"></p-button>
-<p-button label="确定" variant="outlined" size="large"></p-button>
-<p-button icon="pi pi-user" />
-<app-icon icon="box"></app-icon>
-
-<p-button icon="pi pi-user" severity="info" />
-<p-button icon="pi pi-times" [text]="true" severity="secondary" />
-<p-button icon="pi pi-times" [text]="true" size="small" />
-<p-button icon="pi pi-times" [text]="true" size="large" />
-<p-button label="确定" variant="text" />
-<p-button label="确定" variant="text" size="small" />
-<a routerLink="/design-system">Design System</a>
-<a routerLink="/console/devices">设备列表</a>
-<a routerLink="/console/remote-desktop">远程桌面</a>
-
-<div style="display: flex; align-items: center">
-  <app-icon icon="box" style="color: red"></app-icon>
-  <app-icon icon="calendar" style="color: blue"></app-icon>
-  <p-button label="Toast" variant="outlined" size="small" (onClick)="toast()"></p-button>
-  <p-button label="确定" variant="outlined" size="large"></p-button>
-  <p-button icon="pi pi-user" />
-  <app-icon icon="box" style="color: #0ea5e9; font-size: 30px"></app-icon>
-</div>
+<section class="u-padding-30">
+  <div>该页为首页，无需登录即可访问，可用户产品宣传等页面</div>
+  <div>当前用户：{{ currentContext.user()?.name }}</div>
+  <div>多语言：{{ 'CANCEL' | translate }}</div>
+  <div>当前日期：{{ Date() | date:'fullDate':'':currentContext.locale() }}</div>
+  <p-button class="u-margin-right-15" label="中文" (onClick)="currentContext.changeLanguage('zh')"></p-button>
+  <p-button label="英文" (onClick)="currentContext.changeLanguage('en')"></p-button>
+</section>
