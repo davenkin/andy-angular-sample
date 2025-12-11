@@ -1,16 +1,16 @@
 import { ActivatedRouteSnapshot, CanActivateChildFn, RouterStateSnapshot, Routes } from '@angular/router';
 import { DesignSystemPage } from 'public/design-system/design-system.page';
 import { DeviceListPage } from 'console/device/list-page/device-list.page';
-import { ConsolePageMainComponent } from 'common/component/console-page-main/console-page-main.component';
-import { ConsolePageBaseComponent } from 'common/component/console-page-base/console-page-base.component';
 import { RemoteDesktopPage } from 'console/device/remote-operation/remote-desktop/remote-desktop.page';
 import { inject } from '@angular/core';
 import Keycloak from 'keycloak-js';
-import { PublicPageMainComponent } from 'common/component/public-page-main/public-page-main.component';
 import { HomePage } from 'public/home-page/home.page';
 import { PricingPage } from 'public/pricing-page/pricing.page';
 import { DashboardPage } from 'console/dashboard/dashboard-page/dashboard.page';
 import { MemberListPage } from 'console/member/list-page/member-list.page';
+import { PublicPageMainComponent } from 'common/layout/public-page-main/public-page-main.component';
+import { ConsolePageBaseComponent } from 'common/layout/console-page-base/console-page-base.component';
+import { ConsolePageMainComponent } from 'common/layout/console-page-main/console-page-main.component';
 
 const ensureAuthenticatedGuard: CanActivateChildFn = (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) => {
   const keycloak = inject(Keycloak);
@@ -26,7 +26,7 @@ export const routes: Routes = [
   {
     path: 'console',
     component: ConsolePageBaseComponent,
-    canActivateChild: [ensureAuthenticatedGuard],
+    canActivate: [ensureAuthenticatedGuard],
     children: [
       {
         path: '',
