@@ -1,0 +1,18 @@
+:host {
+  display: contents;
+}
+
+.notes {
+  margin-top: var(--100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.note-content {
+  background: red;
+  color: white;
+  padding: var(--30px);
+  margin-bottom: var(--50px);
+}

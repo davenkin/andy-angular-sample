@@ -14,6 +14,7 @@ todo:
 - adr common: 目录命名和文件命名统一采用单数
 - docker keycloak从后端迁移到本项目
 
+-
 目录命名可以省去当前的上下文前缀，比如demo-device下的list-page目录，不用叫demo-device-list-page，而文件命名需要始终带上上下文前缀，比如demo-device-list-page.component.ts，不能叫list-page.component.ts。
 
 - CSS命名使用中划线，不用驼峰命名法

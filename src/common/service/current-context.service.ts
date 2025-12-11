@@ -2,6 +2,7 @@ import { computed, inject, Injectable, signal } from '@angular/core';
 import isEqual from 'lodash/isEqual';
 import Keycloak from 'keycloak-js';
 import { RefreshService } from 'common/service/refresh.service';
+import { environment } from 'environments/environment';
 
 const LANGUAGE_TO_LOCALE: Record<string, string> = {
   zh: 'zh-CN',
@@ -66,5 +67,9 @@ export class CurrentContextService {
           email: this.keycloak.tokenParsed['email'] as string,
         }
       : null;
+  }
+
+  public isDevelopment() {
+    return environment.development;
   }
 }

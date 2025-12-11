@@ -3,7 +3,7 @@
 <div>{{ 'CANCEL' | translate }}</div>
 <div>{{ Date() | date:'fullDate':'':currentContext.locale() }}</div>
 
-<div class="title">This is a demo public home page.</div>
+<div class="title">This is a public home page.</div>
 <p-button label="修改语言中文" (onClick)="currentContext.changeLanguage('zh')"></p-button>
 <p-button label="修改语言英文" (onClick)="currentContext.changeLanguage('en')"></p-button>
 <p-button label="修改orgA" (onClick)="currentContext.changeOrg({id:'aaa',name:'A公司'})"></p-button>
@@ -24,7 +24,7 @@
 <p-button label="确定" variant="text" />
 <p-button label="确定" variant="text" size="small" />
 <a routerLink="/design-system">Design System</a>
-<a routerLink="/console/demo-devices">设备列表</a>
+<a routerLink="/console/devices">设备列表</a>
 <a routerLink="/console/remote-desktop">远程桌面</a>
 
 <div style="display: flex; align-items: center">

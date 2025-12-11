@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { ButtonDirective, ButtonLabel } from 'primeng/button';
-import { environment } from 'environments/environment';
+import { CurrentContextService } from 'common/service/current-context.service';
 
 @Component({
   selector: 'app-public-page-main',
@@ -10,7 +10,5 @@ import { environment } from 'environments/environment';
   imports: [RouterLink, ButtonLabel, ButtonDirective, RouterOutlet],
 })
 export class PublicPageMainComponent {
-  get isDevelopment() {
-    return environment.development;
-  }
+  protected currentContextService = inject(CurrentContextService);
 }
