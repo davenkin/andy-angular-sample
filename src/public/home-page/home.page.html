@@ -1,8 +1,3 @@
 <section class="u-padding-30">
-  <div>该页为首页，无需登录即可访问，可用户产品宣传等页面</div>
-  <div>当前用户：{{ currentContext.user()?.name }}</div>
-  <div>多语言：{{ 'CANCEL' | translate }}</div>
-  <div>当前日期：{{ Date() | date:'fullDate':'':currentContext.locale() }}</div>
-  <p-button class="u-margin-right-15" label="中文" (onClick)="currentContext.changeLanguage('zh')"></p-button>
-  <p-button label="英文" (onClick)="currentContext.changeLanguage('en')"></p-button>
+  <div>该页为首页，无需登录即可访问，可用户产品宣传等页面。</div>
 </section>
