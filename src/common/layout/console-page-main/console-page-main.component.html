@@ -6,6 +6,11 @@
     <a routerLink="/" pButton data-test="change-me">
       <span pButtonLabel>主页</span>
     </a>
+    @if (currentContextService.isDevelopment()) {
+      <a routerLink="/design-system" pButton data-test="change-me">
+        <span pButtonLabel>设计系统</span>
+      </a>
+    }
   </div>
 </section>
 <section class="main-content">
