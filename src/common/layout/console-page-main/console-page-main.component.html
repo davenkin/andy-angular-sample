@@ -16,6 +16,10 @@
 <section class="main-content">
   <div>{{ 'CANCEL' | translate }}</div>
   <app-language-switcher></app-language-switcher>
+  @if (currentContextService.isSuperAdminUser()) {
+    <app-org-switcher></app-org-switcher>
+  }
+  <div>当前组织：{{ currentContextService.org()?.name }}</div>
   <div>todo:加入切换org组件，以及显示当前org，主页按钮，设计系统按钮，当前用户</div>
   <router-outlet></router-outlet>
   <app-spinner [name]="CONSOLE_MAIN_SPINNER"></app-spinner>

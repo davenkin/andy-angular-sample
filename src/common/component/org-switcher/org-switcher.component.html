@@ -1,0 +1,9 @@
+<!--todo: use other components such as AutoComplete(https://primeng.org/autocomplete) for searching orgs -->
+<p-select
+  [options]="orgs"
+  [ngModel]="currentContextService.org()"
+  class="the-select"
+  optionLabel="name"
+  (onChange)="changeOrg($event)"
+  placeholder="选择组织"
+/>

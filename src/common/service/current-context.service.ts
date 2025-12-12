@@ -3,6 +3,7 @@ import isEqual from 'lodash/isEqual';
 import Keycloak from 'keycloak-js';
 import { RefreshService } from 'common/service/refresh.service';
 import { environment } from 'environments/environment';
+import { SUPER_ADMIN_REALM } from 'common/config/constant';
 
 const LANGUAGE_TO_LOCALE: Record<string, string> = {
   zh: 'zh-CN',
@@ -72,5 +73,9 @@ export class CurrentContextService {
 
   public isDevelopment() {
     return environment.development;
+  }
+
+  public isSuperAdminUser() {
+    return this.keycloak.realm === SUPER_ADMIN_REALM;
   }
 }

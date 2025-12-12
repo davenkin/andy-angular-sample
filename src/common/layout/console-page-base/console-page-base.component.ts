@@ -1,6 +1,5 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import Keycloak from 'keycloak-js';
 import { CurrentContextService, CurrentOrg } from 'common/service/current-context.service';
 import { SpinnerService } from 'common/service/spinner.service';
 import { random } from 'lodash';
@@ -13,14 +12,12 @@ import { finalize, take, timer } from 'rxjs';
   styleUrl: './console-page-base.component.scss',
 })
 export class ConsolePageBaseComponent implements OnInit {
-  private keycloak = inject(Keycloak);
   private currentContextService = inject(CurrentContextService);
   private spinnerService = inject(SpinnerService);
   protected ready = signal(false);
 
   ngOnInit(): void {
-    if (this.keycloak.realm === 'SomeSuperRealm') {
-      // todo: change SomeSuperRealm to your own super realm
+    if (this.currentContextService.isSuperAdminUser()) {
       this.loadCurrentOrgFromLocalStorage();
     } else {
       this.loadCurrentOrgFromServer();
