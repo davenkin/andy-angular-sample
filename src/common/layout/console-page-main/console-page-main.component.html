@@ -3,7 +3,7 @@
   <div>{{ currentContextService.user()?.name }}</div>
   <div>{{ currentContextService.org()?.name }}</div>
   <div>
-    <a routerLink="/" pButton data-test="change-me">
+    <a routerLink="/" pButton data-test="change-me" target="_blank">
       <span pButtonLabel>主页</span>
     </a>
     @if (currentContextService.isDevelopment()) {

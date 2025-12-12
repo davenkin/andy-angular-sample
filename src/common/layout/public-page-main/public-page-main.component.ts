@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { ButtonDirective, ButtonLabel } from 'primeng/button';
 import { CurrentContextService } from 'common/service/current-context.service';
 
@@ -10,5 +10,6 @@ import { CurrentContextService } from 'common/service/current-context.service';
   imports: [RouterLink, ButtonLabel, ButtonDirective, RouterOutlet],
 })
 export class PublicPageMainComponent {
+  protected router = inject(Router);
   protected currentContextService = inject(CurrentContextService);
 }
