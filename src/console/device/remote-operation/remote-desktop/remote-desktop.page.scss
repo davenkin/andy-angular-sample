@@ -11,8 +11,7 @@
 }
 
 .note-content {
-  background: red;
-  color: white;
+  border: 2px solid var(--primary-color);
   padding: var(--30px);
   margin-bottom: var(--50px);
 }
