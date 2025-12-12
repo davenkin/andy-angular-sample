@@ -8,6 +8,16 @@
   flex-shrink: 0;
   width: var(--250px);
   background: var(--slate-main);
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-title {
+  padding: var(--24px) var(--15px);
+  text-align: center;
+  font-size: var(--24px);
+  font-weight: 700;
 }
 
 .content-section {

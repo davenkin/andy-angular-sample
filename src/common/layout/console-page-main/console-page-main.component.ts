@@ -5,7 +5,6 @@ import { CONSOLE_MAIN_SPINNER } from 'common/service/spinner.service';
 import { CurrentContextService } from 'common/service/current-context.service';
 import { ButtonDirective, ButtonLabel } from 'primeng/button';
 import { LanguageSwitcherComponent } from 'common/component/language-switcher/language-switcher.component';
-import { TranslatePipe } from '@ngx-translate/core';
 import { OrgSwitcherComponent } from 'common/component/org-switcher/org-switcher.component';
 
 @Component({
@@ -18,7 +17,6 @@ import { OrgSwitcherComponent } from 'common/component/org-switcher/org-switcher
     ButtonLabel,
     RouterLink,
     LanguageSwitcherComponent,
-    TranslatePipe,
     OrgSwitcherComponent,
   ],
   styleUrl: './console-page-main.component.scss',

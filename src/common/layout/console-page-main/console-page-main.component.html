@@ -1,4 +1,6 @@
-<section class="nav-section"></section>
+<section class="nav-section">
+  <div class="nav-title">控制台</div>
+</section>
 <section class="content-section">
   <div class="content-header">
     <div class="header-left"></div>
@@ -21,7 +23,7 @@
   <div class="main-content-container">
     <div class="main-content">
       <router-outlet></router-outlet>
+      <app-spinner [name]="CONSOLE_MAIN_SPINNER"></app-spinner>
     </div>
-    <app-spinner [name]="CONSOLE_MAIN_SPINNER"></app-spinner>
   </div>
 </section>
