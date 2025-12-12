@@ -14,7 +14,9 @@
   </div>
 </section>
 <section class="main-content">
-  <div>todo:加入切换org组件，以及显示当前org，切换语言组件，主页按钮，设计系统按钮，当前用户</div>
+  <div>{{ 'CANCEL' | translate }}</div>
+  <app-language-switcher></app-language-switcher>
+  <div>todo:加入切换org组件，以及显示当前org，主页按钮，设计系统按钮，当前用户</div>
   <router-outlet></router-outlet>
   <app-spinner [name]="CONSOLE_MAIN_SPINNER"></app-spinner>
 </section>

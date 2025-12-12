@@ -1,0 +1,9 @@
+<p-select
+  [options]="languages"
+  [(ngModel)]="currentLanguage"
+  class="the-select"
+  optionLabel="languageName"
+  optionValue="languageCode"
+  (onChange)="changeLanguage()"
+  placeholder="选择语言"
+/>

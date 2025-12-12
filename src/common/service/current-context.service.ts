@@ -39,6 +39,7 @@ export class CurrentContextService {
     if (supportedLanguages.includes(language)) {
       this._language.set(language);
       localStorage.setItem(this.LANGUAGE_KEY, this.language());
+      this.refreshService.refreshWholeApp();
     } else {
       console.error(
         `Failed to change language to [${language}] as it's not supported, the supported languages are [${supportedLanguages}].`,

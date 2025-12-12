@@ -4,11 +4,21 @@ import { SpinnerComponent } from 'common/component/spinner/spinner.component';
 import { CONSOLE_MAIN_SPINNER } from 'common/service/spinner.service';
 import { CurrentContextService } from 'common/service/current-context.service';
 import { ButtonDirective, ButtonLabel } from 'primeng/button';
+import { LanguageSwitcherComponent } from 'common/component/language-switcher/language-switcher.component';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-console-page-main',
   templateUrl: './console-page-main.component.html',
-  imports: [RouterOutlet, SpinnerComponent, ButtonDirective, ButtonLabel, RouterLink],
+  imports: [
+    RouterOutlet,
+    SpinnerComponent,
+    ButtonDirective,
+    ButtonLabel,
+    RouterLink,
+    LanguageSwitcherComponent,
+    TranslatePipe,
+  ],
   styleUrl: './console-page-main.component.scss',
 })
 export class ConsolePageMainComponent {
