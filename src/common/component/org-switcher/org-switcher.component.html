@@ -1,9 +1,13 @@
 <!--todo: use other components such as AutoComplete(https://primeng.org/autocomplete) for searching orgs -->
-<p-select
-  [options]="orgs"
-  [ngModel]="currentContextService.org()"
-  class="the-select"
-  optionLabel="name"
-  (onChange)="changeOrg($event)"
-  placeholder="选择组织"
-/>
+<p-floatlabel variant="on">
+  <p-select
+    inputId="org-switcher-input"
+    [options]="orgs"
+    [ngModel]="currentContextService.org()"
+    class="the-select"
+    optionLabel="name"
+    (onChange)="changeOrg($event)"
+    placeholder="选择组织"
+  />
+  <label for="org-switcher-input">{{ 'CURRENT_ORG' | translate }}</label>
+</p-floatlabel>

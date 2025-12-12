@@ -3,13 +3,15 @@ import { Select, SelectChangeEvent } from 'primeng/select';
 import { FormsModule } from '@angular/forms';
 import { CurrentContextService, CurrentOrg } from 'common/service/current-context.service';
 import { random } from 'lodash';
+import { FloatLabel } from 'primeng/floatlabel';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-org-switcher',
   templateUrl: './org-switcher.component.html',
   styleUrl: './org-switcher.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [Select, FormsModule],
+  imports: [Select, FormsModule, FloatLabel, TranslatePipe],
 })
 export class OrgSwitcherComponent implements OnInit {
   protected currentContextService = inject(CurrentContextService);

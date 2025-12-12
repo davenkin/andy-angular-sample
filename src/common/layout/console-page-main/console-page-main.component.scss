@@ -4,8 +4,41 @@
   width: 100vw;
 }
 
-.main-content {
+.nav-section {
+  flex-shrink: 0;
+  width: var(--250px);
+  background: var(--slate-main);
+}
+
+.content-section {
   flex: 1;
-  background: wheat;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--10px) var(--30px);
+  border-bottom: var(--1px) solid var(--split-line-color);
+}
+
+.header-right {
+  display: flex;
+  gap: var(--15px);
+  align-items: center;
+}
+
+.main-content-container {
+  flex: 1;
+  padding: var(--24px);
+  background-color: var(--light-background-color);
+}
+
+.main-content {
   position: relative;
+  height: 100%;
+  background-color: white;
+  border-radius: var(--medium-border-radius);
 }

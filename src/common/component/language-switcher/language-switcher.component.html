@@ -1,9 +1,13 @@
-<p-select
-  [options]="languages"
-  [(ngModel)]="currentLanguage"
-  class="the-select"
-  optionLabel="languageName"
-  optionValue="languageCode"
-  (onChange)="changeLanguage()"
-  placeholder="选择语言"
-/>
+<p-floatlabel variant="on">
+  <p-select
+    inputId="language-switcher-input"
+    [options]="languages"
+    [(ngModel)]="currentLanguage"
+    class="the-select"
+    optionLabel="languageName"
+    optionValue="languageCode"
+    (onChange)="changeLanguage()"
+    placeholder="选择语言"
+  />
+  <label for="language-switcher-input">{{ 'LANGUAGE' | translate }}</label>
+</p-floatlabel>
