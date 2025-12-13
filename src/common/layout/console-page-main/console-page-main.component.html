@@ -19,7 +19,7 @@
       @if (currentContextService.isSuperAdminUser()) {
         <app-org-switcher></app-org-switcher>
       }
-      <a routerLink="/" pButton data-test="change-me" target="_blank">
+      <a routerLink="/" pButton data-test="change-me">
         <span pButtonLabel>主页</span>
       </a>
       @if (currentContextService.isDevelopment()) {
