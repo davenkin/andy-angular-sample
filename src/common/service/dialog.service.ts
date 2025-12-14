@@ -2,6 +2,7 @@ import { inject, Injectable } from '@angular/core';
 import { FocusService } from 'common/service/focus.service';
 import { DialogService as PrimeDialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { take } from 'rxjs';
+import { TranslateService } from '@ngx-translate/core';
 
 export type DialogSize = 'small' | 'medium' | 'large' | 'x-large';
 
@@ -25,6 +26,7 @@ export enum DialogCloseResult {
 export class DialogService {
   private focusService = inject(FocusService);
   private primeDialogService = inject(PrimeDialogService);
+  private translate = inject(TranslateService);
 
   public open(component: any, setting: DialogSetting): DynamicDialogRef {
     this.focusService.push();
@@ -34,7 +36,7 @@ export class DialogService {
       modal: true,
       closable: true,
       closeOnEscape: true,
-      closeAriaLabel: '关闭对话框',
+      closeAriaLabel: this.translate.instant('CLOSE_DIALOG'),
       width: width,
       data: setting.data,
     });

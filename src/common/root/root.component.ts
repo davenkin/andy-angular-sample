@@ -6,10 +6,11 @@ import { SpinnerComponent } from 'common/component/spinner/spinner.component';
 import { Toast } from 'primeng/toast';
 import { ConfirmDialog } from 'primeng/confirmdialog';
 import { RefreshService } from 'common/service/refresh.service';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
-  imports: [FormsModule, RouterOutlet, SpinnerComponent, Toast, ConfirmDialog],
+  imports: [FormsModule, RouterOutlet, SpinnerComponent, Toast, ConfirmDialog, TranslatePipe],
   templateUrl: './root.component.html',
   styleUrl: './root.component.scss',
 })

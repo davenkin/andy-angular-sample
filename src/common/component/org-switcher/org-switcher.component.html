@@ -7,7 +7,7 @@
     class="the-select"
     optionLabel="name"
     (onChange)="changeOrg($event)"
-    placeholder="选择组织"
+    [placeholder]="'CHOOSE_ORG' | translate"
   />
   <label for="org-switcher-input">{{ 'CURRENT_ORG' | translate }}</label>
 </p-floatlabel>

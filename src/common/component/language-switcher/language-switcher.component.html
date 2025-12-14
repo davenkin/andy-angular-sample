@@ -7,7 +7,7 @@
     optionLabel="languageName"
     optionValue="languageCode"
     (onChange)="changeLanguage()"
-    placeholder="选择语言"
+    [placeholder]="'CHOOSE_LANG' | translate"
   />
   <label for="language-switcher-input">{{ 'LANGUAGE' | translate }}</label>
 </p-floatlabel>

@@ -23,7 +23,5 @@ import { OrgSwitcherComponent } from 'common/component/org-switcher/org-switcher
 })
 export class ConsolePageMainComponent {
   protected currentContextService = inject(CurrentContextService);
-
-  // todo: 添加左侧导航菜单
   protected readonly CONSOLE_MAIN_SPINNER = CONSOLE_MAIN_SPINNER;
 }

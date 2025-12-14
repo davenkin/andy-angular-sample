@@ -1,23 +1,23 @@
 <section class="the-header">
-  <div class="header-left">Andy的Angular模板</div>
+  <div class="header-left">Andy's template project for Angular</div>
 
   <div class="header-right">
     @if (router.url !== '/') {
       <a routerLink="/" pButton data-test="change-me">
-        <span pButtonLabel>主页</span>
+        <span pButtonLabel>Home</span>
       </a>
     }
     @if (router.url !== '/pricing') {
       <a routerLink="/pricing" pButton data-test="change-me">
-        <span pButtonLabel>价格</span>
+        <span pButtonLabel>Pricing</span>
       </a>
     }
     <a routerLink="/console" pButton data-test="change-me">
-      <span pButtonLabel>控制台</span>
+      <span pButtonLabel>Console</span>
     </a>
     @if (currentContextService.isDevelopment()) {
       <a routerLink="/design-system" pButton data-test="change-me" target="_blank">
-        <span pButtonLabel>设计系统</span>
+        <span pButtonLabel>Design System</span>
       </a>
     }
   </div>

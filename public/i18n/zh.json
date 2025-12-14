@@ -14,6 +14,10 @@
   },
   "CANCEL": "取消",
   "OK": "确定",
+  "CLOSE": "关闭",
+  "CHOOSE_ORG": "选择组织",
+  "CHOOSE_LANG": "选择语言",
+  "CLOSE_DIALOG": "关闭对话框",
   "ENUM": {
     "OS_TYPE": {
       "WINDOWS": "Windows",
