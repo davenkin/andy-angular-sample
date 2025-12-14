@@ -3,8 +3,10 @@
     <p-select
       class="filter-select"
       inputId="os-type-select-input"
+      [focusOnHover]="false"
       [options]="enumService.allableOptionsOf(OS_TYPE_NAMES)"
       [(ngModel)]="selectedOsType"
+      (onChange)="filterByOsType($event.value)"
     ></p-select>
     <label for="os-type-select-input">{{ 'OS_TYPE' | translate }}</label>
   </p-floatlabel>
@@ -13,8 +15,10 @@
     <p-select
       class="filter-select"
       inputId="cpu-architecture-select-input"
+      [focusOnHover]="false"
       [options]="enumService.allableOptionsOf(CPU_ARCHITECTURE_NAMES)"
       [(ngModel)]="selectedCpuArchitectureType"
+      (onChange)="filterByCpuArchitecture($event.value)"
     ></p-select>
     <label for="cpu-architecture-select-input">{{ 'CPU_ARCHITECTURE' | translate }}</label>
   </p-floatlabel>

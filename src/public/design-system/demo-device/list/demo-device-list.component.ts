@@ -17,6 +17,7 @@ import { FloatLabel } from 'primeng/floatlabel';
 import { TranslatePipe } from '@ngx-translate/core';
 import { singlePropertySortForNumber } from 'common/utils/pagination.utils';
 import { TableEmptyPlaceholderComponent } from 'common/component/table-empty-placeholder/table-empty-placeholder.component';
+import { CpuArchitecture, OsType } from 'common/model/common.model';
 
 @Component({
   selector: 'app-demo-device-list',
@@ -52,6 +53,18 @@ export class DemoDeviceListComponent implements OnInit {
   };
 
   ngOnInit(): void {
+    this.fetchDemoDevices();
+  }
+
+  protected filterByOsType(type: OsType | typeof ALL) {
+    this.query.osType = type === ALL ? undefined : type;
+    this.query.pageNumber = 0;
+    this.fetchDemoDevices();
+  }
+
+  protected filterByCpuArchitecture(architecture: CpuArchitecture | typeof ALL) {
+    this.query.cpuArchitecture = architecture === ALL ? undefined : architecture;
+    this.query.pageNumber = 0;
     this.fetchDemoDevices();
   }
 
