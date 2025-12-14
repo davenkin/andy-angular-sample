@@ -1,4 +1,8 @@
 {
   "CURRENT_ORG": "当前组织",
-  "LANGUAGE": "语言"
+  "LANGUAGE": "语言",
+  "PAGINATION": {
+    "SELECTION_SUMMARY": "共{{total}}条，已选中{{selectedCount}}条",
+    "TOTAL_SUMMARY": "共{{total}}条"
+  }
 }

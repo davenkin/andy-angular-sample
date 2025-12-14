@@ -109,4 +109,9 @@ export const PRIMENG_COMPONENTS = {
       maxWidth: 'var(--600px)',
     },
   },
+  paginator: {
+    navButton: {
+      borderRadius: 'var(--4px)',
+    },
+  },
 };

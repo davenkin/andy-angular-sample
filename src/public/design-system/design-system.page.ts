@@ -10,6 +10,7 @@ import { DialogCloseResult, DialogService, DialogSize } from 'common/service/dia
 import { DemoDialog } from 'public/design-system/demo-dialog/demo.dialog';
 import { take } from 'rxjs';
 import { DemoDeviceListComponent } from 'public/design-system/demo-device/list/demo-device-list.component';
+import { PaginatorComponent } from 'common/component/paginator/paginator.component';
 
 @Component({
   selector: 'app-design-system-page',
@@ -21,6 +22,7 @@ import { DemoDeviceListComponent } from 'public/design-system/demo-device/list/d
     Button,
     EllipsisedComponent,
     DemoDeviceListComponent,
+    PaginatorComponent,
   ],
   templateUrl: './design-system.page.html',
   styleUrl: './design-system.page.scss',

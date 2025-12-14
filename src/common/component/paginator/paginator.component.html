@@ -1,0 +1,12 @@
+@if (showSelectionSummary() || showTotalSummary()) {
+  <div class="selection-summary" [innerHtml]="summary"></div>
+}
+<p-paginator
+  (onPageChange)="changePage($event)"
+  [rows]="pageSize()"
+  [first]="pageSize() * pageNumber()"
+  [totalRecords]="totalElements()"
+  [rowsPerPageOptions]="[10, 25, 50, 100]"
+  [appendTo]="appendTo()"
+  [dropdownAppendTo]="appendTo()"
+/>

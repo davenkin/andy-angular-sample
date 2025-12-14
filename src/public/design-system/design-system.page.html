@@ -370,16 +370,22 @@
 
   <h1 class="section-title">常用控件</h1>
   <ul>
-    <li>
+    <li class="common-control-container">
       <div class="common-control-item">
         <div class="common-control-title">带省略号文本（app-ellipsised）：</div>
         <app-ellipsised>这是一段带省略号的文本，鼠标悬浮时会显示tooltip</app-ellipsised>
       </div>
     </li>
-    <li>
+    <li class="common-control-container">
       <div class="common-control-item">
         <div class="common-control-title">SVG图标（app-icon）：</div>
         <app-icon icon="box"></app-icon>
+      </div>
+    </li>
+    <li class="common-control-container">
+      <div class="common-control-item">
+        <div class="common-control-title">分页器：</div>
+        <app-paginator [totalElements]="123"></app-paginator>
       </div>
     </li>
   </ul>
