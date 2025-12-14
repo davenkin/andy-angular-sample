@@ -5,6 +5,9 @@
   "DEVICE_NAME": "Device Name",
   "OS_TYPE": "OS Type",
   "CPU_ARCHITECTURE": "CPU Arch",
+  "TABLE": {
+    "EMPTY_PLACEHOLDER": "No data"
+  },
   "PAGINATION": {
     "SELECTION_SUMMARY": "Total: {{total}}, {{selectedCount}} selected",
     "TOTAL_SUMMARY": "Total: {{total}}"

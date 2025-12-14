@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+::ng-deep {
+  p-table tr:has(app-table-empty-placeholder) {
+    background: none !important;
+    color: inherit !important;
+
+    td {
+      border: none;
+    }
+
+    app-table-empty-placeholder {
+      margin-top: var(--100px);
+    }
+  }
+}

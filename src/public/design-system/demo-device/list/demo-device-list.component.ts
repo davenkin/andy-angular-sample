@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { TableModule } from 'primeng/table';
+import { TableLazyLoadEvent, TableModule } from 'primeng/table';
 import {
   DemoDeviceApi,
   ListDemoDevicesQuery,
@@ -15,15 +15,27 @@ import { ALL } from 'common/config/constant';
 import { SpinnerComponent } from 'common/component/spinner/spinner.component';
 import { FloatLabel } from 'primeng/floatlabel';
 import { TranslatePipe } from '@ngx-translate/core';
+import { singlePropertySortForNumber } from 'common/utils/pagination.utils';
+import { TableEmptyPlaceholderComponent } from 'common/component/table-empty-placeholder/table-empty-placeholder.component';
 
 @Component({
   selector: 'app-demo-device-list',
   templateUrl: './demo-device-list.component.html',
   styleUrl: './demo-device-list.component.scss',
-  imports: [TableModule, PaginatorComponent, Select, FormsModule, SpinnerComponent, FloatLabel, TranslatePipe],
+  imports: [
+    TableModule,
+    PaginatorComponent,
+    Select,
+    FormsModule,
+    SpinnerComponent,
+    FloatLabel,
+    TranslatePipe,
+    TableEmptyPlaceholderComponent,
+  ],
 })
 export class DemoDeviceListComponent implements OnInit {
   protected readonly OS_TYPE_NAMES = OS_TYPE_NAMES;
+  protected readonly CPU_ARCHITECTURE_NAMES = CPU_ARCHITECTURE_NAMES;
   protected demoDeviceSpinner = 'demoDeviceSpinner';
   private demoDeviceApi = inject(DemoDeviceApi);
   protected enumService = inject(EnumService);
@@ -32,13 +44,20 @@ export class DemoDeviceListComponent implements OnInit {
   protected selectedCpuArchitectureType = ALL;
   protected devices: QListedDemoDevice[] = [];
   protected totalElements = 0;
-  protected selected: QListedDemoDevice[] = [];
+  protected selectedDevices: QListedDemoDevice[] = [];
   protected query: ListDemoDevicesQuery = {
     pageNumber: 0,
     pageSize: 25,
+    pageSort: ['name,DESC'],
   };
 
   ngOnInit(): void {
+    this.fetchDemoDevices();
+  }
+
+  protected sort(event: TableLazyLoadEvent) {
+    this.query.pageSort = singlePropertySortForNumber(event.sortField as string, event.sortOrder as number);
+    this.query.pageNumber = 0;
     this.fetchDemoDevices();
   }
 
@@ -61,9 +80,7 @@ export class DemoDeviceListComponent implements OnInit {
       .subscribe((response) => {
         this.devices = response.content;
         this.totalElements = response.totalElements;
-        this.selected = [];
+        this.selectedDevices = [];
       });
   }
-
-  protected readonly CPU_ARCHITECTURE_NAMES = CPU_ARCHITECTURE_NAMES;
 }

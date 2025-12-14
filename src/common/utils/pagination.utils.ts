@@ -17,6 +17,17 @@ export enum SortDirection {
   DESC = 'DESC',
 }
 
-export function singlePropertySortFor(sortProperty: string, sortDirection: SortDirection = SortDirection.ASC) {
+export function singlePropertySortForEnum(sortProperty: string, sortDirection: SortDirection = SortDirection.ASC) {
+  if (!sortProperty) {
+    return undefined;
+  }
+
   return [`${sortProperty},${sortDirection}`];
+}
+
+export function singlePropertySortForNumber(sortProperty: string, sortDirection = 1) {
+  if (!sortProperty) {
+    return undefined;
+  }
+  return [`${sortProperty},${sortDirection === 1 ? SortDirection.ASC : SortDirection.DESC}`];
 }

@@ -5,6 +5,9 @@
   "DEVICE_NAME": "设备名称",
   "OS_TYPE": "系统类型",
   "CPU_ARCHITECTURE": "处理器类型",
+  "TABLE": {
+    "EMPTY_PLACEHOLDER": "无数据"
+  },
   "PAGINATION": {
     "SELECTION_SUMMARY": "共{{total}}条，已选中{{selectedCount}}条",
     "TOTAL_SUMMARY": "共{{total}}条"
