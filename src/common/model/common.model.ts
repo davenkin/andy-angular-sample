@@ -5,6 +5,11 @@ export interface Environment {
   keycloakUrl: string;
 }
 
+export interface Option {
+  value: string;
+  label: string;
+}
+
 export enum OsType {
   WINDOWS = 'WINDOWS',
   LINUX = 'LINUX',

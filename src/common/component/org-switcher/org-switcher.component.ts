@@ -22,7 +22,7 @@ export class OrgSwitcherComponent implements OnInit {
     let orgs = [
       {
         id: random(1, 10000).toFixed(0),
-        name: '公司' + random(1, 10000).toFixed(0),
+        name: 'Company ' + random(1, 10000).toFixed(0),
       },
     ];
     const currentOrg = this.currentContextService.org();

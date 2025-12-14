@@ -1,0 +1,23 @@
+:host {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 0;
+}
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--15px);
+  padding-bottom: var(--10px);
+}
+
+.filter-select {
+  width: var(--150px);
+}
+
+.the-table {
+  flex-grow: 1;
+  height: 1px;
+}

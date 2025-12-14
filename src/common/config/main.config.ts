@@ -6,7 +6,6 @@ import {
 } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { routes } from 'common/config/route.config';
-import { all } from 'primelocale';
 import { providePrimeNG } from 'primeng/config';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { includeBearerTokenInterceptor, provideKeycloak } from 'common/config/auth.config';
@@ -25,7 +24,6 @@ export const applicationConfig: ApplicationConfig = {
     provideRouter(routes),
     provideAnimationsAsync(),
     providePrimeNG({
-      translation: all.zh_CN,
       theme: {
         preset: PRIMENG_PRESET,
         options: {

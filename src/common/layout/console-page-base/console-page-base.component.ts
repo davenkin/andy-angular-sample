@@ -44,7 +44,7 @@ export class ConsolePageBaseComponent implements OnInit {
         }),
       )
       .subscribe(() => {
-        this.currentContextService.changeOrg({ id: '12345', name: '永丰公司' + random(1, 10) }, false);
+        this.currentContextService.changeOrg({ id: '12345', name: 'My company' + random(1, 10) }, false);
         this.ready.set(true);
       });
   }

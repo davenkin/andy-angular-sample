@@ -1,8 +1,26 @@
 {
+  "ALL": "所有",
   "CURRENT_ORG": "当前组织",
   "LANGUAGE": "语言",
+  "DEVICE_NAME": "设备名称",
+  "OS_TYPE": "系统类型",
+  "CPU_ARCHITECTURE": "处理器类型",
   "PAGINATION": {
     "SELECTION_SUMMARY": "共{{total}}条，已选中{{selectedCount}}条",
     "TOTAL_SUMMARY": "共{{total}}条"
+  },
+  "ENUM": {
+    "OS_TYPE": {
+      "WINDOWS": "Windows",
+      "LINUX": "Linux",
+      "ANDROID": "Android",
+      "MACOS": "MacOS"
+    },
+    "CPU_ARCHITECTURE": {
+      "X86": "X86",
+      "X86_64": "X86_64",
+      "ARM": "ARM",
+      "ARM_64": "ARM_64"
+    }
   }
 }

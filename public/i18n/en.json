@@ -1,4 +1,26 @@
 {
+  "ALL": "All",
   "CURRENT_ORG": "Current Organization",
-  "LANGUAGE": "Language"
+  "LANGUAGE": "Language",
+  "DEVICE_NAME": "Device Name",
+  "OS_TYPE": "OS Type",
+  "CPU_ARCHITECTURE": "CPU Arch",
+  "PAGINATION": {
+    "SELECTION_SUMMARY": "Total: {{total}}, {{selectedCount}} selected",
+    "TOTAL_SUMMARY": "Total: {{total}}"
+  },
+  "ENUM": {
+    "OS_TYPE": {
+      "WINDOWS": "Windows",
+      "LINUX": "Linux",
+      "ANDROID": "Android",
+      "MACOS": "MacOS"
+    },
+    "CPU_ARCHITECTURE": {
+      "X86": "X86",
+      "X86_64": "X86_64",
+      "ARM": "ARM",
+      "ARM_64": "ARM_64"
+    }
+  }
 }
