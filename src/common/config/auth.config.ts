@@ -10,6 +10,7 @@ const AUTH_EXCLUDED_URLS: UrlCondition[] = [];
 function resolveKeycloakRealm(): string {
   return 'test-realm'; // todo: can get the realm from the current URL, and default to a fixed realm
 }
+
 function resolveKeycloakClientId(): string {
   return 'test-client'; // todo: can get the clientId from the current URL, and default to a fixed clientId
 }
