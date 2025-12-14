@@ -1,72 +1,64 @@
 <section class="the-header">
   <div class="header-left">
-    <span style="color: var(--blue-main)">设</span>
-    <span style="color: var(--pink-main)">计</span>
-    <span style="color: var(--green-main)">系</span>
-    <span style="color: var(--amber-main)">统</span>
+    <span style="color: var(--blue-main)">Design</span>
+    <span style="color: var(--pink-main)">System</span>
   </div>
 
   <div class="header-right">
     <a routerLink="/" pButton data-test="change-me">
-      <span pButtonLabel>主页</span>
+      <span pButtonLabel>Home</span>
     </a>
     <a routerLink="/console" pButton data-test="change-me">
-      <span pButtonLabel>控制台</span>
+      <span pButtonLabel>Console</span>
     </a>
   </div>
 </section>
 
 <section class="main-content">
-  <h1 class="section-title">按钮</h1>
-  <h3 class="section-sub-title">常规按钮</h3>
+  <h1 class="section-title">Button</h1>
+  <h3 class="section-sub-title">Regular Button</h3>
   <section class="button-section">
-    <p-button data-test="change-me" label="主要按钮" severity="primary"></p-button>
-    <p-button data-test="change-me" label="次要按钮" severity="secondary"></p-button>
-    <p-button data-test="change-me" label="警告按钮" severity="warn"></p-button>
-    <p-button data-test="change-me" label="危险按钮" severity="danger"></p-button>
-    <p-button data-test="change-me" label="禁用按钮" severity="danger" [disabled]="true"></p-button>
-    <p-button data-test="change-me" label="小号按钮" severity="primary" size="small"></p-button>
-    <p-button data-test="change-me" label="大号按钮" severity="primary" size="large"></p-button>
+    <p-button data-test="change-me" label="Primary" severity="primary"></p-button>
+    <p-button data-test="change-me" label="Secondary" severity="secondary"></p-button>
+    <p-button data-test="change-me" label="Warn" severity="warn"></p-button>
+    <p-button data-test="change-me" label="Danger" severity="danger"></p-button>
+    <p-button data-test="change-me" label="Disabled" severity="danger" [disabled]="true"></p-button>
+    <p-button data-test="change-me" label="Small" severity="primary" size="small"></p-button>
+    <p-button data-test="change-me" label="Large" severity="primary" size="large"></p-button>
   </section>
 
-  <h3 class="section-sub-title">常规按钮（带PrimeNG图标）</h3>
+  <h3 class="section-sub-title">Regular button（with PrimeNG icon）</h3>
   <section class="button-section">
-    <p-button data-test="change-me" icon="pi pi-home" label="PrimeNG主要" severity="primary"></p-button>
-    <p-button data-test="change-me" icon="pi pi-home" label="PrimeNG次要" severity="secondary"></p-button>
-    <p-button data-test="change-me" icon="pi pi-home" label="PrimeNG警告" severity="warn"></p-button>
-    <p-button data-test="change-me" icon="pi pi-home" label="PrimeNG危险" severity="danger"></p-button>
-    <p-button
-      data-test="change-me"
-      icon="pi pi-home"
-      label="PrimeNG禁用"
-      severity="primary"
-      [disabled]="true"
-    ></p-button>
-    <p-button data-test="change-me" icon="pi pi-home" label="PrimeNG小号" severity="primary" size="small"></p-button>
-    <p-button data-test="change-me" icon="pi pi-home" label="PrimeNG大号" severity="primary" size="large"></p-button>
+    <p-button data-test="change-me" icon="pi pi-home" label="Primary" severity="primary"></p-button>
+    <p-button data-test="change-me" icon="pi pi-home" label="Secondary" severity="secondary"></p-button>
+    <p-button data-test="change-me" icon="pi pi-home" label="Warn" severity="warn"></p-button>
+    <p-button data-test="change-me" icon="pi pi-home" label="Danger" severity="danger"></p-button>
+    <p-button data-test="change-me" icon="pi pi-home" label="Diabled" severity="primary" [disabled]="true"></p-button>
+    <p-button data-test="change-me" icon="pi pi-home" label="Small" severity="primary" size="small"></p-button>
+    <p-button data-test="change-me" icon="pi pi-home" label="Large" severity="primary" size="large"></p-button>
   </section>
 
-  <h3 class="section-sub-title">常规按钮（带SVG图标）</h3>
+  <h3 class="section-sub-title">Regular button（with SVG icon）</h3>
   <section class="button-section">
-    <p-button data-test="change-me" severity="primary" label="SVG主要">
+    <p-button data-test="change-me" severity="primary" label="Primary">
       <app-icon icon="box"></app-icon>
     </p-button>
-    <p-button data-test="change-me" severity="secondary" label="SVG次要">
+    <p-button data-test="change-me" severity="secondary" label="Secondary">
       <app-icon icon="box"></app-icon>
     </p-button>
-    <p-button data-test="change-me" severity="warn" label="SVG警告">
+    <p-button data-test="change-me" severity="warn" label="Warn">
       <app-icon icon="box"></app-icon>
     </p-button>
-    <p-button data-test="change-me" severity="danger" label="SVG危险">
+    <p-button data-test="change-me" severity="danger" label="Danger">
       <app-icon icon="box"></app-icon>
     </p-button>
-    <p-button data-test="change-me" severity="primary" label="SVG禁用" disabled>
+    <p-button data-test="change-me" severity="primary" label="Disabled" disabled>
       <app-icon icon="box"></app-icon>
     </p-button>
-    <p-button data-test="change-me" severity="primary" size="small" label="SVG小号">
+    <p-button data-test="change-me" severity="primary" size="small" label="Small">
       <app-icon icon="box"></app-icon>
     </p-button>
-    <p-button data-test="change-me" severity="primary" size="large" label="SVG大号">
+    <p-button data-test="change-me" severity="primary" size="large" label="Large">
       <app-icon icon="box"></app-icon>
     </p-button>
   </section>

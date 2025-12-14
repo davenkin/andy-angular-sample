@@ -22,6 +22,8 @@
     ></p-select>
     <label for="cpu-architecture-select-input">{{ 'CPU_ARCHITECTURE' | translate }}</label>
   </p-floatlabel>
+
+  <p-button label="Batch operation" severity="primary" [disabled]="selectedDevices.length === 0"></p-button>
 </div>
 
 <p-table

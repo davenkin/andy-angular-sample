@@ -18,6 +18,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { sortFieldFrom, SortOrder, sortOrderFrom } from 'common/utils/pagination.utils';
 import { TableEmptyPlaceholderComponent } from 'common/component/table-empty-placeholder/table-empty-placeholder.component';
 import { CpuArchitecture, OsType } from 'common/model/common.model';
+import { Button } from 'primeng/button';
 
 @Component({
   selector: 'app-demo-device-page',
@@ -32,6 +33,7 @@ import { CpuArchitecture, OsType } from 'common/model/common.model';
     FloatLabel,
     TranslatePipe,
     TableEmptyPlaceholderComponent,
+    Button,
   ],
 })
 export class DemoDeviceListPage implements OnInit {
