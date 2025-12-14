@@ -9,7 +9,7 @@ import { ConfirmationSeverity, ConfirmService } from 'common/service/confirm.ser
 import { DialogCloseResult, DialogService, DialogSize } from 'common/service/dialog.service';
 import { DemoDialog } from 'public/design-system/demo-dialog/demo.dialog';
 import { take } from 'rxjs';
-import { DemoDeviceListComponent } from 'public/design-system/demo-device/list/demo-device-list.component';
+import { DemoDeviceListPage } from 'public/design-system/demo-device/list/demo-device-list.page';
 import { PaginatorComponent } from 'common/component/paginator/paginator.component';
 
 @Component({
@@ -21,7 +21,7 @@ import { PaginatorComponent } from 'common/component/paginator/paginator.compone
     ButtonDirective,
     Button,
     EllipsisedComponent,
-    DemoDeviceListComponent,
+    DemoDeviceListPage,
     PaginatorComponent,
   ],
   templateUrl: './design-system.page.html',

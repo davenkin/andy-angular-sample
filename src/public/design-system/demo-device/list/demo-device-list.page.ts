@@ -15,14 +15,14 @@ import { ALL } from 'common/config/constant';
 import { SpinnerComponent } from 'common/component/spinner/spinner.component';
 import { FloatLabel } from 'primeng/floatlabel';
 import { TranslatePipe } from '@ngx-translate/core';
-import { singlePropertySortForNumber } from 'common/utils/pagination.utils';
+import { sortFieldFrom, SortOrder, sortOrderFrom } from 'common/utils/pagination.utils';
 import { TableEmptyPlaceholderComponent } from 'common/component/table-empty-placeholder/table-empty-placeholder.component';
 import { CpuArchitecture, OsType } from 'common/model/common.model';
 
 @Component({
-  selector: 'app-demo-device-list',
-  templateUrl: './demo-device-list.component.html',
-  styleUrl: './demo-device-list.component.scss',
+  selector: 'app-demo-device-page',
+  templateUrl: './demo-device-list.page.html',
+  styleUrl: './demo-device-list.page.scss',
   imports: [
     TableModule,
     PaginatorComponent,
@@ -34,7 +34,7 @@ import { CpuArchitecture, OsType } from 'common/model/common.model';
     TableEmptyPlaceholderComponent,
   ],
 })
-export class DemoDeviceListComponent implements OnInit {
+export class DemoDeviceListPage implements OnInit {
   protected readonly OS_TYPE_NAMES = OS_TYPE_NAMES;
   protected readonly CPU_ARCHITECTURE_NAMES = CPU_ARCHITECTURE_NAMES;
   protected demoDeviceSpinner = 'demoDeviceSpinner';
@@ -49,7 +49,8 @@ export class DemoDeviceListComponent implements OnInit {
   protected query: ListDemoDevicesQuery = {
     pageNumber: 0,
     pageSize: 25,
-    pageSort: ['name,DESC'],
+    sortField: 'name',
+    sortOrder: SortOrder.DESC,
   };
 
   ngOnInit(): void {
@@ -69,7 +70,8 @@ export class DemoDeviceListComponent implements OnInit {
   }
 
   protected sort(event: TableLazyLoadEvent) {
-    this.query.pageSort = singlePropertySortForNumber(event.sortField as string, event.sortOrder as number);
+    this.query.sortField = sortFieldFrom(event);
+    this.query.sortOrder = sortOrderFrom(event);
     this.query.pageNumber = 0;
     this.fetchDemoDevices();
   }

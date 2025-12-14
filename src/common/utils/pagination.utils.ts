@@ -1,7 +1,10 @@
+import { TableLazyLoadEvent } from 'primeng/table';
+
 export interface PageQuery {
   pageNumber: number;
   pageSize: number;
-  pageSort?: string[];
+  sortField?: string;
+  sortOrder?: SortOrder;
 }
 
 export interface PagedResponse<T> {
@@ -12,22 +15,15 @@ export interface PagedResponse<T> {
   pageSize: number;
 }
 
-export enum SortDirection {
+export enum SortOrder {
   ASC = 'ASC',
   DESC = 'DESC',
 }
 
-export function singlePropertySortForEnum(sortProperty: string, sortDirection: SortDirection = SortDirection.ASC) {
-  if (!sortProperty) {
-    return undefined;
-  }
-
-  return [`${sortProperty},${sortDirection}`];
+export function sortFieldFrom(event: TableLazyLoadEvent) {
+  return event.sortField as string;
 }
 
-export function singlePropertySortForNumber(sortProperty: string, sortDirection = 1) {
-  if (!sortProperty) {
-    return undefined;
-  }
-  return [`${sortProperty},${sortDirection === 1 ? SortDirection.ASC : SortDirection.DESC}`];
+export function sortOrderFrom(event: TableLazyLoadEvent) {
+  return event.sortOrder === -1 ? SortOrder.DESC : SortOrder.ASC;
 }
