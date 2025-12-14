@@ -12,6 +12,8 @@
     "SELECTION_SUMMARY": "Total: {{total}}, {{selectedCount}} selected",
     "TOTAL_SUMMARY": "Total: {{total}}"
   },
+  "CANCEL": "Cancel",
+  "OK": "OK",
   "ENUM": {
     "OS_TYPE": {
       "WINDOWS": "Windows",

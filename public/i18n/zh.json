@@ -12,6 +12,8 @@
     "SELECTION_SUMMARY": "共{{total}}条，已选中{{selectedCount}}条",
     "TOTAL_SUMMARY": "共{{total}}条"
   },
+  "CANCEL": "取消",
+  "OK": "确定",
   "ENUM": {
     "OS_TYPE": {
       "WINDOWS": "Windows",

@@ -109,30 +109,30 @@ export class DesignSystemPage {
   protected showConfirmation(severity: ConfirmationSeverity) {
     this.confirmService.confirm({
       severity: severity,
-      header: '确认一下',
-      message: '今天你过得开心吗？',
+      header: 'Confirm',
+      message: 'Are you happy today？',
       accept: () => {
-        this.toastService.success('看来你挺开心的');
+        this.toastService.success('Seems you are happy.');
       },
       reject: () => {
-        this.toastService.error('看来你不开心');
+        this.toastService.error('Seems you are not happey.');
       },
     });
   }
 
   protected showDialog(size: DialogSize) {
     const dialogRef = this.dialogService.open(DemoDialog, {
-      header: '对话框',
+      header: 'Dialog',
       size: size,
       data: {
-        message: '这是传入的数据',
+        message: 'This is passed in data',
       },
     });
     dialogRef.onClose.pipe(take(1)).subscribe((result) => {
       if (result === DialogCloseResult.SUCCEED) {
-        this.toastService.success('成功完成某个事项');
+        this.toastService.success('Succeed in something.');
       } else {
-        this.toastService.error('未完成某个事项');
+        this.toastService.error('Failed in something.');
       }
     });
   }

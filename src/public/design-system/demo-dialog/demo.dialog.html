@@ -3,7 +3,12 @@
 </section>
 
 <section class="cp-dialog-footer">
-  <p-button data-test="cancel-button" severity="secondary" label="取消" (onClick)="cancel()"></p-button>
+  <p-button
+    data-test="cancel-button"
+    severity="secondary"
+    [label]="'CANCEL' | translate"
+    (onClick)="cancel()"
+  ></p-button>
 
-  <p-button data-test="save-button" severity="primary" label="确定" (onClick)="save()"></p-button>
+  <p-button data-test="save-button" severity="primary" [label]="'OK' | translate" (onClick)="save()"></p-button>
 </section>

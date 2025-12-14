@@ -1,6 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { ConfirmationService } from 'primeng/api';
 import { FocusService } from 'common/service/focus.service';
+import { TranslateService } from '@ngx-translate/core';
 
 export type ConfirmationSeverity = 'primary' | 'success' | 'warn' | 'danger';
 
@@ -21,6 +22,7 @@ export interface Confirmation {
 export class ConfirmService {
   private confirmationService = inject(ConfirmationService);
   private focusService = inject(FocusService);
+  private translate = inject(TranslateService);
 
   public confirm(confirmation: Confirmation) {
     this.focusService.push();
@@ -29,11 +31,11 @@ export class ConfirmService {
       header: confirmation.header,
       icon: this.iconFor(confirmation.severity ?? 'primary'),
       rejectButtonProps: {
-        label: confirmation.rejectButtonText ?? '取消',
+        label: confirmation.rejectButtonText ?? this.translate.instant('CANCEL'),
         severity: confirmation.rejectButtonSeverity ?? 'secondary',
       },
       acceptButtonProps: {
-        label: confirmation.acceptButtonText ?? '确定',
+        label: confirmation.acceptButtonText ?? this.translate.instant('OK'),
         severity: confirmation.severity ?? 'primary',
       },
       accept: () => {
