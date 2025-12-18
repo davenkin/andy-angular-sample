@@ -7,7 +7,7 @@ import { ToastService } from 'common/service/toast.service';
 import { EllipsisedComponent } from 'common/component/ellipsised-text/ellipsised.component';
 import { ConfirmationSeverity, ConfirmService } from 'common/service/confirm.service';
 import { DialogCloseResult, DialogService, DialogSize } from 'common/service/dialog.service';
-import { DemoDialog } from 'public/design-system/demo-dialog/demo.dialog';
+import { DemoDialogComponent } from 'public/design-system/demo-dialog/demo-dialog.component';
 import { take } from 'rxjs';
 import { DemoDeviceListPage } from 'public/design-system/demo-device/list/demo-device-list.page';
 import { PaginatorComponent } from 'common/component/paginator/paginator.component';
@@ -121,7 +121,7 @@ export class DesignSystemPage {
   }
 
   protected showDialog(size: DialogSize) {
-    const dialogRef = this.dialogService.open(DemoDialog, {
+    const dialogRef = this.dialogService.open(DemoDialogComponent, {
       header: 'Dialog',
       size: size,
       data: {

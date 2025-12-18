@@ -6,11 +6,11 @@ import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-demo-dialog',
-  templateUrl: './demo.dialog.html',
-  styleUrl: './demo.dialog.scss',
+  templateUrl: './demo-dialog.component.html',
+  styleUrl: './demo-dialog.component.scss',
   imports: [Button, TranslatePipe],
 })
-export class DemoDialog {
+export class DemoDialogComponent {
   protected dialogConfig = inject(DynamicDialogConfig);
   private dialogRef = inject(DynamicDialogRef);
 
