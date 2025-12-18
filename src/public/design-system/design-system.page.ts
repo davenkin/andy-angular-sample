@@ -9,7 +9,7 @@ import { ConfirmationSeverity, ConfirmService } from 'common/service/confirm.ser
 import { DialogCloseResult, DialogService, DialogSize } from 'common/service/dialog.service';
 import { DemoDialogComponent } from 'public/design-system/demo-dialog/demo-dialog.component';
 import { take } from 'rxjs';
-import { DemoDeviceListPage } from 'public/design-system/demo-device/list/demo-device-list.page';
+import { DemoDeviceListPage } from 'public/design-system/demo-device/list-page/demo-device-list.page';
 import { PaginatorComponent } from 'common/component/paginator/paginator.component';
 
 @Component({

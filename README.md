@@ -1,28 +1,13 @@
 todo:
 
-- 目录结构
 - keycloak引入，以及interceptor添加access token和updatetoken()
-- 统一处理401，403，404和500错误，不统一处理409业务错误
-- 路由时，console下再分2级路由，全空白的一个，有主菜单的一个，其下再分三级路由；public下默认再分一下，只是全部空白的子页面
 - 后端api的数据模型跟着后端api走，模型本身不要和任何组件产生耦合
-- 统一分页查询结构
-- 统一console页面的整体页面结构
-- 枚举类型全部用ts的enum
-- 全部使用standalone的组件
-- 使用@for和@if等
-- 状态管理优先使用Signal
-- adr common: 目录命名和文件命名统一采用单数
-- docker keycloak从后端迁移到本项目
-
--
-目录命名可以省去当前的上下文前缀，比如demo-device下的list-page目录，不用叫demo-device-list-page，而文件命名需要始终带上上下文前缀，比如demo-device-list-page.component.ts，不能叫list-page.component.ts。
-
-- CSS命名使用中划线，不用驼峰命名法
 
 ## Introduction
 
 This is a sample Angular project with the following features:
 
+- Contains both public pages and authenticated pages
 - Use PrimeNG built-in icon library `primeicons`
 
 ## Tech stacks

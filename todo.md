@@ -1,5 +1,0 @@
-- console需要加载用户上下文后方可显示页面
-- 有一个ADR来讲解keycloak的用法，以及为什么要这么用
-- 路由与页面层级结构，ConsolePageMainComponent和ConsolePageBaseComponent等，画一个图来解释
-- 说明：该代码库针对同时包含免登录页面和需登录页面，如果你的项目仅仅包含需登录页面，请请参考xxx.
-- 统一primeng的focus visible：u-focus-visible-ring和u-focus-within-ring，有时需要负的outline-offset，则需要进一步针对特定场景进行定制
