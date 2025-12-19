@@ -1,8 +1,3 @@
-todo:
-
-- keycloak引入，以及interceptor添加access token和updatetoken()
-- 后端api的数据模型跟着后端api走，模型本身不要和任何组件产生耦合
-
 ## Introduction
 
 This is a sample Angular project with the following features:
