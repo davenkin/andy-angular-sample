@@ -6,7 +6,7 @@ A consistent hierarchical page layout structure is easy to understand and good f
 
 ## Decision
 
-A page layout structure that covers both public pages as well as authenticated(console) pages is implemented.
+A page layout structure that covers both public pages and authenticated(console) pages is implemented.
 
 ## Implementation
 
