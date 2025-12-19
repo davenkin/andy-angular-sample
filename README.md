@@ -3,7 +3,21 @@
 This is a sample Angular project with the following features:
 
 - Contains both public pages and authenticated pages
-- Use PrimeNG built-in icon library `primeicons`
+- Use [PrimeNG](https://primeng.org/) as the component library
+- Use PrimeNG [theme](https://primeng.org/theming) to customize the UI style
+- Use PrimeNG's [primeicons](https://github.com/primefaces/primeicons) for icons, together with customized SVG icons using `<app-icon>`
+  component
+- Use [ngx-translate](https://github.com/ngx-translate/core) for i18n
+- Use [keycloak-js](https://github.com/keycloak/keycloak-js) for integration with Keycloak server
+- Use [ngx-spinner](https://github.com/Napster2210/ngx-spinner) for displaying loading spinners
+- Use [husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/lint-staged/lint-staged) to run Eslint and Prettier
+- Use [Eslint](https://eslint.org/) for finding bugs
+- Use [Prettier](https://prettier.io/) to format code
+- A consistent [project structure](./ADRs/002_project_structure.md)
+- A consistent [naming convention](./ADRs/003_naming_convention.md)
+- A consistent [CSS strategy](./ADRs/006_css_strategy.md)
+- A consistent [page layout structure](./ADRs/008_page_layout_structure.md)
+- A consistent [API calling strategy](./ADRs/005_how_to_call_apis.md)
 
 ## Tech stacks
 

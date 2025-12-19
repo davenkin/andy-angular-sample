@@ -5,7 +5,11 @@ import Keycloak from 'keycloak-js';
 import { CurrentContextService } from 'common/service/current-context.service';
 import { environment } from 'environments/environment';
 
-const AUTH_EXCLUDED_URLS: UrlCondition[] = [];
+const AUTH_EXCLUDED_URLS: UrlCondition[] = [
+  {
+    urlIncluded: '/this-is-an-example',
+  },
+];
 
 function resolveKeycloakRealm(): string {
   return 'test-realm'; // todo: can get the realm from the current URL, and default to a fixed realm
@@ -41,10 +45,11 @@ export function provideKeycloak(): EnvironmentProviders {
 type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'OPTIONS' | 'HEAD' | 'PATCH';
 
 // either urlPattern or urlIncluded matches
+// if both urlPattern and urlIncluded are configured, either one matches will meet the condition
 interface UrlCondition {
-  urlPattern?: RegExp;
-  urlIncluded?: string;
-  httpMethods?: HttpMethod[];
+  urlPattern?: RegExp; // if the URL matches urlPattern, then the condition is met
+  urlIncluded?: string; // if the URL contains urlIncluded, then the condition is met
+  httpMethods?: HttpMethod[]; //constraint which HTTP methods to apply to,  if not specified, it applies to all HTTP methods
 }
 
 function canMatch(req: HttpRequest<unknown>, condition: UrlCondition) {
