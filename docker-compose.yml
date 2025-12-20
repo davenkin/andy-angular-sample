@@ -8,7 +8,7 @@ services:
       - KC_BOOTSTRAP_ADMIN_PASSWORD=admin
     volumes:
       - andy-angular-template-volume:/opt/keycloak/data
-    command: start-dev --import-realm
+    command: start-dev
     networks:
       - andy-angular-template-network
     restart: always
