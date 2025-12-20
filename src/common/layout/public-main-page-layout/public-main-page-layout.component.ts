@@ -4,12 +4,12 @@ import { ButtonDirective, ButtonLabel } from 'primeng/button';
 import { CurrentContextService } from 'common/service/current-context.service';
 
 @Component({
-  selector: 'app-public-page-main',
-  templateUrl: './public-page-main.component.html',
-  styleUrl: './public-page-main.component.scss',
+  selector: 'app-public-main-page-layout',
+  templateUrl: './public-main-page-layout.component.html',
+  styleUrl: './public-main-page-layout.component.scss',
   imports: [RouterLink, ButtonLabel, ButtonDirective, RouterOutlet],
 })
-export class PublicPageMainComponent {
+export class PublicMainPageLayoutComponent {
   protected router = inject(Router);
   protected currentContextService = inject(CurrentContextService);
 }

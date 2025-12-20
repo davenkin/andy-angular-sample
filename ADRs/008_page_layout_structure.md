@@ -19,7 +19,7 @@ A page layout structure that covers both public pages and authenticated(console)
     navigation menu, such as `DashboardPage` and `DeviceListPage`.
   - Any other pages that have their own page layout, such as `RemoteDesktopPage`.
 - All public pages are split into two categories:
-  - Child pages of `PublicPageMainComponent`, these pages share the same page layout, such as `HomePage` and
+  - Child pages of `PublicMainPageLayoutComponent`, these pages share the same page layout, such as `HomePage` and
     `PricingPage`.
   - Any other public pages that have their own page layout, such as `DesignSystemPage`.
 

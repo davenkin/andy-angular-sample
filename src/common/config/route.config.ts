@@ -8,7 +8,7 @@ import { HomePage } from 'public/home-page/home.page';
 import { PricingPage } from 'public/pricing-page/pricing.page';
 import { DashboardPage } from 'console/dashboard/dashboard-page/dashboard.page';
 import { MemberListPage } from 'console/member/list-page/member-list.page';
-import { PublicPageMainComponent } from 'common/layout/public-page-main/public-page-main.component';
+import { PublicMainPageLayoutComponent } from 'common/layout/public-main-page-layout/public-main-page-layout.component';
 import { ConsolePageBaseComponent } from 'common/layout/console-page-base/console-page-base.component';
 import { ConsolePageMainComponent } from 'common/layout/console-page-main/console-page-main.component';
 
@@ -54,7 +54,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    component: PublicPageMainComponent,
+    component: PublicMainPageLayoutComponent,
     children: [
       {
         path: '',
