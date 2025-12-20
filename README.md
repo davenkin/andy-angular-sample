@@ -3,7 +3,7 @@
 This is a sample Angular project with the following features:
 
 - Contains both public pages and authenticated pages, if you need all pages to be authenticated, please refer
-  to https://github.com/davenkin/andy-angular-portal-template
+  to [andy-angular-portal-template](https://github.com/davenkin/andy-angular-portal-template)
 - Use [PrimeNG](https://primeng.org/) as the component library
 - Use PrimeNG [theme](https://primeng.org/theming) to customize the UI style
 - Use PrimeNG's [primeicons](https://github.com/primefaces/primeicons) for icons, together with customized SVG icons
