@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "andy-angular-sample": {
+    "andy-angular-template": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -69,10 +69,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "andy-angular-sample:build:production"
+              "buildTarget": "andy-angular-template:build:production"
             },
             "development": {
-              "buildTarget": "andy-angular-sample:build:development"
+              "buildTarget": "andy-angular-template:build:development"
             }
           },
           "defaultConfiguration": "development"

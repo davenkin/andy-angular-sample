@@ -56,13 +56,13 @@ npm run build
 Then create Docker image:
 
 ```
-docker build -t andy-angular-sample:0.0.1 .
+docker build -t andy-angular-template:0.0.1 .
 ```
 
 Now you can run the application using Docker:
 
 ```
-docker run -d -p 4200:8080 andy-angular-sample:0.0.1
+docker run -d -p 4200:8080 andy-angular-template:0.0.1
 ```
 
 ## Running unit tests
