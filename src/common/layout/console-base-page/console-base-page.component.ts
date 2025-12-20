@@ -6,12 +6,12 @@ import { random } from 'lodash';
 import { finalize, take, timer } from 'rxjs';
 
 @Component({
-  selector: 'app-console-page-base',
-  templateUrl: './console-page-base.component.html',
+  selector: 'app-console-base-page',
+  templateUrl: './console-base-page.component.html',
   imports: [RouterOutlet],
-  styleUrl: './console-page-base.component.scss',
+  styleUrl: './console-base-page.component.scss',
 })
-export class ConsolePageBaseComponent implements OnInit {
+export class ConsoleBasePageComponent implements OnInit {
   private currentContextService = inject(CurrentContextService);
   private spinnerService = inject(SpinnerService);
   protected ready = signal(false);
