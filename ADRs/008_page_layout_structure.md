@@ -15,7 +15,7 @@ A page layout structure that covers both public pages and authenticated(console)
 - All console pages are child pages of `ConsoleBasePageComponent`, this component is used to load user context data(such
   as user profile and user permission etc.) from backend servers before showing the console page.
 - The `ConsoleBasePageComponent` is further split into the following sub categories:
-  - `ConsolePageMainComponent` to cover all console pages which share the same layout containing a top bar and left
+  - `ConsoleMainPageLayoutComponent` to cover all console pages which share the same layout containing a top bar and left
     navigation menu, such as `DashboardPage` and `DeviceListPage`.
   - Any other pages that have their own page layout, such as `RemoteDesktopPage`.
 - All public pages are split into two categories:

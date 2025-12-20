@@ -10,7 +10,7 @@ import { DashboardPage } from 'console/dashboard/dashboard-page/dashboard.page';
 import { MemberListPage } from 'console/member/list-page/member-list.page';
 import { PublicMainPageLayoutComponent } from 'common/layout/public-main-page-layout/public-main-page-layout.component';
 import { ConsoleBasePageComponent } from 'common/layout/console-base-page/console-base-page.component';
-import { ConsolePageMainComponent } from 'common/layout/console-page-main/console-page-main.component';
+import { ConsoleMainPageLayoutComponent } from 'common/layout/console-page-main/console-main-page-layout.component';
 
 const ensureAuthenticatedGuard: CanActivateChildFn = (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) => {
   const keycloak = inject(Keycloak);
@@ -30,7 +30,7 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        component: ConsolePageMainComponent,
+        component: ConsoleMainPageLayoutComponent,
         children: [
           {
             path: '',

@@ -8,8 +8,8 @@ import { LanguageSwitcherComponent } from 'common/component/language-switcher/la
 import { OrgSwitcherComponent } from 'common/component/org-switcher/org-switcher.component';
 
 @Component({
-  selector: 'app-console-page-main',
-  templateUrl: './console-page-main.component.html',
+  selector: 'app-console-main-page-layout',
+  templateUrl: './console-main-page-layout.component.html',
   imports: [
     RouterOutlet,
     SpinnerComponent,
@@ -19,9 +19,9 @@ import { OrgSwitcherComponent } from 'common/component/org-switcher/org-switcher
     LanguageSwitcherComponent,
     OrgSwitcherComponent,
   ],
-  styleUrl: './console-page-main.component.scss',
+  styleUrl: './console-main-page-layout.component.scss',
 })
-export class ConsolePageMainComponent {
+export class ConsoleMainPageLayoutComponent {
   protected currentContextService = inject(CurrentContextService);
   protected readonly CONSOLE_MAIN_SPINNER = CONSOLE_MAIN_SPINNER;
 }
