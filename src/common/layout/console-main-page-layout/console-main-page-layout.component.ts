@@ -10,6 +10,7 @@ import { OrgSwitcherComponent } from 'common/component/org-switcher/org-switcher
 @Component({
   selector: 'app-console-main-page-layout',
   templateUrl: './console-main-page-layout.component.html',
+  styleUrl: './console-main-page-layout.component.scss',
   imports: [
     RouterOutlet,
     SpinnerComponent,
@@ -19,7 +20,6 @@ import { OrgSwitcherComponent } from 'common/component/org-switcher/org-switcher
     LanguageSwitcherComponent,
     OrgSwitcherComponent,
   ],
-  styleUrl: './console-main-page-layout.component.scss',
 })
 export class ConsoleMainPageLayoutComponent {
   protected currentContextService = inject(CurrentContextService);
