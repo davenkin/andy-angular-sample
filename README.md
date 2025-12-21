@@ -22,20 +22,21 @@ This is a sample Angular project with the following features:
 - A consistent [page layout structure](./ADRs/008_page_layout_structure.md)
 - A consistent [API calling strategy](./ADRs/005_how_to_call_apis.md)
 
-## Tech stacks
+## Tech stack
 
 - Angular 20
+- PrimeNG 20
 
 ## Local run
 
-To start a local development server, run:
+First, finish the steps in [Local keycloak setup](#local-keycloak-setup), then run:
 
 ```
 npm start
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will
-automatically reload whenever you modify any of the source files.
+Once the server is running, open your browser and navigate to [http://localhost:4200/](http://localhost:4200/). The
+application will automatically reload whenever you modify any of the source files.
 
 ## Build
 
