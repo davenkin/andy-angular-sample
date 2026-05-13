@@ -83,14 +83,11 @@ export function includeBearerTokenInterceptor(
   ).pipe(
     switchMap(() => {
       if (keycloak.token) {
-        return next(
-          req.clone({
-            setHeaders: {
-              Authorization: `Bearer ${keycloak.token}`,
-              orgId: currentContext.orgId() as string,
-            },
-          }),
-        );
+        const headers: Record<string, string> = { Authorization: `Bearer ${keycloak.token}` };
+        if (currentContext.orgId()) {
+          headers['orgId'] = currentContext.orgId()!;
+        }
+        return next(req.clone({ setHeaders: headers }));
       }
       return next(req);
     }),
