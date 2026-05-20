@@ -1,5 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { ResponseId } from 'common/model/common.model';
 
 export interface AboutInfo {
   status: string;
@@ -9,10 +10,10 @@ export interface AboutInfo {
 @Injectable({
   providedIn: 'root',
 })
-export class AboutApi {
+export class EquipmentApi {
   private httpClient = inject(HttpClient);
 
-  public about() {
-    return this.httpClient.get<AboutInfo>('http://localhost:5125/about');
+  public createEquipment() {
+    return this.httpClient.post<ResponseId>('http://localhost:5125/equipments', { name: 'some name' });
   }
 }

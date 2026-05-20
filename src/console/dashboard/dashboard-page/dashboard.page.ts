@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Button } from 'primeng/button';
 import { take } from 'rxjs';
-import { AboutApi } from 'console/dashboard/about.api';
+import { EquipmentApi } from 'console/dashboard/equipment-api';
 import { ToastService } from 'common/service/toast.service';
 
 @Component({
@@ -12,15 +12,15 @@ import { ToastService } from 'common/service/toast.service';
   imports: [Button],
 })
 export class DashboardPage {
-  private aboutApi = inject(AboutApi);
+  private equipmentApi = inject(EquipmentApi);
   private toastService = inject(ToastService);
 
-  protected callAbout() {
-    this.aboutApi
-      .about()
+  protected createEquipment() {
+    this.equipmentApi
+      .createEquipment()
       .pipe(take(1))
-      .subscribe((aboutInfo) => {
-        this.toastService.info(aboutInfo.fetchTime);
+      .subscribe((response) => {
+        this.toastService.info(response.id);
       });
   }
 }

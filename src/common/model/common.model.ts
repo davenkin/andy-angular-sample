@@ -45,3 +45,7 @@ export enum CpuArchitecture {
   ARM = 'ARM',
   ARM_64 = 'ARM_64',
 }
+
+export interface ResponseId {
+  id: string;
+}
